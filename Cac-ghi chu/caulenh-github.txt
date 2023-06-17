@@ -1,0 +1,7 @@
+ //Cac cau lenh trong github khi push code len
+ git init
+ git add -m
+ git commit -m "noi dung commit"
+ git branch -M main
+ git remote add origin "duong link den github"
+ git push -u origin main 

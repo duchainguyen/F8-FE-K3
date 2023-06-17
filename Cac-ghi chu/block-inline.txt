@@ -1,0 +1,8 @@
+block-level:
+-the nam o hang moi
+-width mac dinh full 100% so voi the cha truc tiep
+
+inline: 
+-width bang chinh noi dung
+-cac the inline truc tiep no deu nam chung mot dong
+-neu no vuot quá the cha thì no xuong dong
