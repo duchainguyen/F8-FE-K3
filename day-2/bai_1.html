@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Đặt Hàng</title>
+    <style>
+      div {
+        width: 800px;
+        /* padding: 5px; */
+      }
+      th {
+        text-align: left;
+      }
+      input {
+        width: 100%;
+        height: 30px;
+      }
+      td .btn {
+        margin-top: 5px;
+        background-color: rgb(30, 152, 152);
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Try a free sample</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br />
+        Nulla magni blanditiis labore modi voluptas architecto non <br />
+        at consectetur doloribus dolor magnam nihil a odit deleniti
+      </p>
+
+      <table width="100%" cellspacing="0" cellpadding="5">
+        <tr>
+          <th>First name</th>
+          <th width="10%" rowspan="8"></th>
+          <th>Last name</th>
+        </tr>
+        <tr>
+          <td><input type="Text" placeholder="John" /></td>
+          <!-- <td></td> -->
+          <td><input type="text" placeholder="Smith" /></td>
+        </tr>
+        <tr>
+          <th>Email address</th>
+          <!-- <td></td> -->
+          <th>Address</th>
+        </tr>
+        <tr>
+          <td><input type="email" placeholder="John@example.com" /></td>
+          <!-- <td></td> -->
+          <td><input type="address" placeholder="Silk St" /></td>
+        </tr>
+        <tr>
+          <th>City</th>
+          <!-- <th></th> -->
+          <th>State</th>
+        </tr>
+        <tr>
+          <td><input type="Text" placeholder="London" /></td>
+          <!-- <td></td> -->
+          <td><input type="text" placeholder="" /></td>
+        </tr>
+        <tr>
+          <th>Zip code</th>
+          <!-- <td></td> -->
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td><input type="Text" placeholder="EC2Y 8DS" /></td>
+          <!-- <td></td> -->
+          <td>
+            <input
+              type="text"
+              required
+              minlength="4"
+              placeholder="United Kingdom"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3"><button class="btn">SEND ME FREE COFFEE</button></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
