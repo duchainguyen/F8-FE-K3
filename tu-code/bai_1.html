@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form đặt hàng</title>
+    <style>
+      th {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contain">
+      <h1 class="title">Try a free sample</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt dicta
+        nulla quibusdam laboriosam porro. Nesciunt sint expedita, quisquam iusto
+        inventore soluta dolor vero laboriosam ducimus omnis magni molestias
+        aspernatur enim!
+      </p>
+    </div>
+    <div>
+      <table cellpadding="5px">
+        <tr>
+          <th>First name</th>
+          <th width="10%" rowspan="8"></th>
+          <th>Last name</th>
+        </tr>
+        <tr>
+          <td><input type="text" placeholder="John" name="" id="" /></td>
+          <td><input type="text" placeholder="John" name="" id="" /></td>
+        </tr>
+        <tr>
+          <th>Email address</th>
+
+          <th>Address</th>
+        </tr>
+        <tr>
+          <td>
+            <input type="email" placeholder="John@example.com" name="" id="" />
+          </td>
+          <td><input type="text" placeholder="Silk St" name="" id="" /></td>
+        </tr>
+        <tr>
+          <th>City</th>
+
+          <th>State</th>
+        </tr>
+        <tr>
+          <td><input type="text" placeholder="London" name="" id="" /></td>
+          <td><input type="text" placeholder="" name="" id="" /></td>
+        </tr>
+        <tr>
+          <th>Zip code</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td><input type="text" placeholder="AC2Y8D" name="" id="" /></td>
+          <td>
+            <!-- sử dụng select để tạo list danh sách -->
+            <select name="country" id="register_country" style="width: 100%">
+              <option value="india">india</option>
+              <option value="pakistan">pakistan</option>
+              <option value="africa">africa</option>
+              <option value="china">china</option>
+              <option value="other">other</option>
+            </select>
+            <!-- End select -->
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4"><button style="width: 33%">Tạo</button></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

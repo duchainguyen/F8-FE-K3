@@ -21,6 +21,10 @@
         background-color: rgb(30, 152, 152);
         height: 30px;
       }
+      #_country {
+        width: 100%;
+        padding: 10px 0;
+      }
     </style>
   </head>
   <body>
@@ -72,12 +76,15 @@
           <td><input type="Text" placeholder="EC2Y 8DS" /></td>
           <!-- <td></td> -->
           <td>
-            <input
-              type="text"
-              required
-              minlength="4"
-              placeholder="United Kingdom"
-            />
+            <!-- sử dụng select để tạo list danh sách -->
+            <select name="country" id="_country">
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="pakistan">pakistan</option>
+              <option value="africa">africa</option>
+              <option value="china">china</option>
+              <option value="other">other</option>
+            </select>
+            <!-- end  -->
           </td>
         </tr>
         <tr>
