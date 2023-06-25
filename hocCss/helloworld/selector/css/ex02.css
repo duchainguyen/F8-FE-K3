@@ -1,0 +1,23 @@
+/* thẻ ul nằm sau thẻ h2 sử dụng dấu ~ phải ngang hàng cùng thuộc một trang */
+/* h2 ~ ul,
+h2 ~ div ul {
+  color: red;
+} */
+/* h2 ~ div ul {
+  color: red;
+} */
+
+/* dấu cộng là tính sau p và lấy liền kề để css */
+/* .box p + h2,
+.box p + h2 + h2 {
+  color: red;
+} */
+/* đi từ phải qua trái chọn ra thẻ h2 đứng đằng sau liền kề h2 */
+/* .box h2 + h2 {
+  color: red;
+} */
+
+.todos input:checked ~ span {
+  color: red;
+  text-decoration: line-through;
+}

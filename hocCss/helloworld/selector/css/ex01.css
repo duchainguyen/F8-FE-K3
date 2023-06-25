@@ -1,0 +1,33 @@
+/* Chọn tất cả trong html */
+* {
+  color: brown;
+}
+#title {
+  color: aqua;
+}
+.title {
+  color: blue;
+}
+p {
+  color: blueviolet;
+}
+
+/*cha đứng trc  */
+.box h1 {
+  color: aqua;
+}
+/* trỏ trực tiếp đến con */
+.box > h1 {
+  color: black;
+}
+
+.menu > li > a {
+  color: aqua;
+}
+
+h2.title {
+  color: blue;
+}
+h3.title {
+  color: aqua;
+}

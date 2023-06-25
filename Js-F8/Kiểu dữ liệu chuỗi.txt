@@ -1,0 +1,50 @@
+Các cách tạo chuỗi
+1. var fullName = 'DucHai'
+2. var fullName = newString('DucHai')
+
+một số cách sd backslash(\)
+var fullName = 'duchai là \'vip\''
+Xem độ dài chuỗi sử dụng length
++console.log(fullName.length)
+
++Template string ES6
+console.log('toi là: ${firstName} $(lastName)')
+
++Làm việc với chuỗi
+var myString = 'Hoc JS tại F8'
+
+1.length
+2. find index
+//tìm vị trí
+console.log(myString.indexOf('JS'), 6)
+lastIndexOf: là tìm kiếm từ cuối lên
+3. cut string
+cắt chuỗi
+console.log(myString.slice(4, 6))
+
+4. replace
+ghi đè
+console.log(myString.replace('JS', 'Javascript'))
+
+sử dụng biểu thức chính quy tìm tất cả JS để ghi đè
+console.log(myString.replace(/JS/g, 'Javascript'))
+
+5. conver to upper case
+Viết hoa
+console.log(myString.toUpperCase())
+
+6. conver to lower case
+
+7. Trim
+loại bỏ tất cả khoảng trắng 2 đầu
+console.log(myString.trim())
+
+8. split
+dựa vào điểm chung để cắt nó thành array
+var languages = 'JS, PHP, Ruby'
+console.log(languges.split(','))
+
+9. get a character by index
+lấy ra đc vị trí cần gọi
+var myString2 = 'Hoc JS tại F8'
+console.log(myString2[4]);

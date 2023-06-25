@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* flex dua chung len cung hang */
+main {
+  display: flex;
+}
+/*  */
+.title,
+.info,
+.info-form {
+  margin: 20px 50px;
+}
+.contact-list {
+  list-style-type: none;
+}
+/* đưa list lên cùng hàng icon */
+.contact-list li p {
+  display: inline-block;
+  padding: 10px 0;
+}
+.contact-list li i {
+  padding: 10px;
+}
+.info-title {
+  padding-bottom: 20px;
+}
+.info-form {
+  /* margin-left: 50px; */
+  width: 500px;
+}
+.info-form input,
+.info-form textarea {
+  /* display: flex; */
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+.text-contact {
+  color: #868686;
+}
+button {
+  padding: 10px;
+  background-color: aqua;
+  border: 0;
+}

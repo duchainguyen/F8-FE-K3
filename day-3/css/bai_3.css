@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.Form-login {
+  padding: 20px;
+  width: 400px;
+}
+
+.user-name input,
+.pass-word input,
+.city input {
+  width: 150%;
+  padding: 3px 5px;
+  /* margin-left: 50px; */
+}
+.left,
+.right {
+  display: inline-block;
+  padding: 5px 0;
+}
+.left {
+  width: 100px;
+}
+
+.role .right label,
+.sign-on .right label {
+  display: block;
+  padding: 2px 0;
+}
+
+.btn {
+  text-align: center;
+}
+.btn button:hover {
+  opacity: 0.5;
+  color: aqua;
+}
+.btn button {
+  padding: 3px 5px;
+}

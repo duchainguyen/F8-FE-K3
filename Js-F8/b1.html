@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact map</title>
+    <style>
+      ul {
+        list-style: none;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "roboto";
+      }
+
+      .contact-map {
+        margin: 30px;
+      }
+
+      nav {
+        display: inline-block;
+        border: 2px solid goldenrod;
+      }
+
+      nav ul {
+        display: flex;
+        color: goldenrod;
+      }
+
+      nav ul li {
+        padding: 10px 20px;
+        transition: all 0.2s linear;
+        cursor: pointer;
+      }
+
+      /* nav ul li:not(.active):hover {
+        background-color: rgb(245, 219, 152);
+        color: #fff;
+      } */
+
+      /* .active {
+        background-color: goldenrod;
+        color: #fff;
+      } */
+    </style>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./css/bai4.css" />
+  </head>
+
+  <body>
+    <section class="contact-map">
+      <!-- Nav -->
+      <nav>
+        <ul>
+          <li class="active">United Arab Eminates</li>
+          <li>London</li>
+          <li>Singapore</li>
+          <li>Hong Kong</li>
+        </ul>
+      </nav>
+    </section>
+  </body>
+</html>

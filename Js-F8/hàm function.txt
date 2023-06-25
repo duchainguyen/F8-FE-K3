@@ -1,0 +1,57 @@
+hàm function là hàm tự định nghĩa
+có các tính chất
+k thực thi khi định nghĩa
+sẽ thực thi khi đc gọi
+có thể nhận tham số
+có thể trả về 1 giá trị
+
+
++Cấu trúc hàm
+function showDialog() {
+    alert('Xin chào các bạn');
+}
+
+showDialog();
+//end
+
+Tham số
+function writeLog(message, message2) {
+    consolog.log(message)
+    consolog.log(message2)
+}
+
+writeLog('Test', 22 )
+
+3. Arguments?
+-đối tượng Arguments
+-giới thiệu vòng lặp for of
+
+function writeLog(){
+    //Arguments là một myArray
+    //lần 1 chạy param lấy đc phần tử đầu tiên của Arguments
+    var myString= '';
+    for(var param of Arguments){
+        myString += '&{param} -'
+    }
+    consolog.log(myString)
+}
+writeLog('log1', 'log2', 'log 3')
+
+//Return trong hàm
+function cong(a,b){
+    return a+b;
+}
+var result= cong(2, 8);
+consolog.log(result)
+
+//khi gọi 2 function trùng tên thì function đầu tiên bị function sau cùng ghi đè lên
+
+//Các loại Function
+1. Declaration function
+function showMessage(){
+    consolog.log('Declaration')
+}
+2. Expression function
+var showMessage2 = function (){
+    consolog.log('Expression')
+}

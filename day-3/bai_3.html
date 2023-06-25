@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bai_3.css" />
+    <title>Form Access Manager</title>
+  </head>
+  <body>
+    <div class="Form-login">
+      <form
+        action="https://api-gateway.fullstack.edu.vn/action_page.php"
+        method="get"
+      >
+        <div class="user-name">
+          <div class="left"><label for="">Username</label></div>
+          <div class="right"><input type="text" name="name" required /></div>
+        </div>
+        <div class="pass-word">
+          <div class="left"><label for="pass-word">pass-word</label></div>
+          <div class="right">
+            <input type="password" name="pass-word" required />
+          </div>
+        </div>
+        <div class="city">
+          <div class="left"><label for="">City of Employment</label></div>
+          <div class="right">
+            <input type="text" name="city of Employment" required />
+          </div>
+        </div>
+        <div class="web-server">
+          <div class="left"><label for="webserver">Web server</label></div>
+          <div class="right">
+            <select name="webserver" id="webserver">
+              <option value="0" selected>--Choose a server--</option>
+              <option value="1">Hà Nội</option>
+              <option value="2">Phú Thọ</option>
+              <option value="3">Hồ Chí Minh</option>
+              <option value="4">Nghệ An</option>
+              <option value="5">Thanh Hóa</option>
+            </select>
+          </div>
+        </div>
+        <!-- checkbox ko cần sử dụng for ở laber -->
+        <div class="role">
+          <div class="left"><label>Please specify your role:</label></div>
+          <div class="right">
+            <label
+              ><input type="radio" name="role" id="" value="0" />Admin</label
+            >
+            <label
+              ><input type="radio" name="role" id="" value="1" />Engineer</label
+            >
+            <label
+              ><input type="radio" name="role" id="" value="2" />Manager</label
+            >
+            <label
+              ><input type="radio" name="role" id="" value="3" />Guest</label
+            >
+          </div>
+        </div>
+        <div class="sign-on">
+          <div class="left"><label>single sign-on so the following</label></div>
+          <div class="right">
+            <label
+              ><input
+                type="checkbox"
+                name="sign-on[]"
+                id=""
+                value="0"
+              />Mail</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="sign-on[]"
+                id=""
+                value="1"
+              />Payroll</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="sign-on[]"
+                id=""
+                value="2"
+              />Self-service</label
+            >
+          </div>
+        </div>
+        <div class="btn">
+          <button type="submit">Login</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

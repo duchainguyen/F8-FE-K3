@@ -1,0 +1,17 @@
+các cách tạo
+1. var age = 22;
+   var PI= 3.14;
+-->Nên sử dụng cách 1
+2. var otherNumber = new Number(8);
+
+var result = 20/ 'ABC';
+NaN đại diện cho kiểu số ko hợp lệ
+
+Làm việc với Number
+To string
+chuyển kiểu number sang String
+console.log(age.toString());
+
++To Fixed
+làm tròn số
+console.log(PI.toFixed())

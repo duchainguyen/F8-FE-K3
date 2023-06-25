@@ -1,0 +1,53 @@
+hàm consolog thì chú ý log warn error
+hàm confirm là xác nhận xem có đủ điều kiện để xem nội dung này không
+hàm prompt cũng như hàm confirm nhưng có ô input để nhập dữ liệu vào
+setTimeout sau 1 khoảng thời gian thì nó chạy nhưng chỉ chạy 1 lần
+setinterval sau 1 khoảng thời gian nó chạy nhưng nó sẽ chạy lặp lại
+
+
++++Note
+Js có 6 giá trị sau
++ 0
++ false
++ "-"
++ undefined
++ NaN
++ null
+-->khi có những từ trên luôn trả giá trị về false còn lại là True
+
+if-else: câu điều kiện 
+
+Các toán tử logic
+&& - And
+|| - Or 
+! - Nơt
+Với toán tử hoặc (||), nếu xuất hiện ít nhất 1 vế bằng true thì kết quả trả về sẽ là true.
+
+Còn với toán tử và (&&), nếu xuất hiện ít nhất 1 vế bằng false thì kết quả trả về sẽ là false
+
+
+DATA TYPEOF
+//Kieu du lieu
+Dữ liệu nguyên thủy gồm có 
+Number
+String
+Boolean
+Underfined là tạo ra biến k gán cho nó giá trị
+null
+Sybol
+
+
+//Kiểu phưc tạp
+Function
+Object
+--> 
+
+//Oject types 
+var myOject = {
+    name: 'Duc Hai',
+    age: 22,
+    adrees: 'Ha Noi',
+};
+
+var myArray = ['Duc Hai', 22, 'Ha Noi']
+

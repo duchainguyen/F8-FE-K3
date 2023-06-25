@@ -7,36 +7,44 @@
   </head>
   <body>
     <table border="1" width="100%" cellspacing="0" cellpadding="5">
-      <tr>
-        <th colspan="2">Thông tin sản phẩm</th>
-        <th rowspan="2">SL</th>
-        <th rowspan="2">Đơn Giá</th>
-        <th rowspan="2">Thành TIền</th>
-      </tr>
+      <thead>
+        <tr>
+          <!-- colspan dùng để kết hợp cột -->
+          <!-- rowspan dùng để kết hợp hàng  -->
+          <th colspan="2">Thông tin sản phẩm</th>
+          <th rowspan="2">SL</th>
+          <th rowspan="2">Đơn Giá</th>
+          <th rowspan="2">Thành TIền</th>
+        </tr>
 
-      <tr>
-        <th>Hình ảnh</th>
-        <th>Tên SP</th>
-      </tr>
-      <tr>
-        <td>Hình ảnh</td>
-        <td>aaaaaaa</td>
-        <td>1</td>
-        <td>22222</td>
-        <td>22222</td>
-      </tr>
-      <tr>
-        <td colspan="2">Cộng</td>
+        <tr>
+          <th>Hình ảnh</th>
+          <th>Tên SP</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Hình ảnh</td>
+          <td>aaaaaaa</td>
+          <td>1</td>
+          <td>22222</td>
+          <td>22222</td>
+        </tr>
+        <tr>
+          <td colspan="2">Cộng</td>
 
-        <td>1</td>
-        <td></td>
-        <td>133333</td>
-      </tr>
-      <tr>
-        <td colspan="4">Tổng cộng</td>
+          <td>1</td>
+          <td></td>
+          <td>133333</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">Tổng cộng</td>
 
-        <td>50000</td>
-      </tr>
+          <td>50000</td>
+        </tr>
+      </tfoot>
     </table>
   </body>
 </html>

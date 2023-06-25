@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form
+      action="https://api-gateway.fullstack.edu.vn/action_page.php"
+      method="post"
+    >
+      <!-- type text -->
+      <div>
+        <label for="name">Họ tên</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Họ và tên"
+          required
+        />
+      </div>
+      <!-- End -->
+
+      <!-- type email -->
+      <div>
+        <label for="emai">Emai</label>
+        <input type="email" name="email" id="email" placeholder="Email" />
+      </div>
+      <!-- End -->
+      <!-- type password -->
+      <div>
+        <label for="password">mật khẩu</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="password"
+        />
+      </div>
+      <!-- end -->
+
+      <!-- type number   -->
+      <div>
+        <label for="age">age</label>
+        <input
+          type="number"
+          name="age"
+          id="age"
+          placeholder="Tuổi"
+          min="18"
+          max="50"
+          step="0.1"
+        />
+      </div>
+      <!-- end -->
+      <!-- type file  -->
+      <div>
+        <label for="avatar">Avatar</label>
+        <input type="file" name="avatar" id="avatar" />
+      </div>
+      <!-- end file -->
+
+      <!-- checkbox ko cần sử dụng for ở laber -->
+      <div>
+        <label>Giới tính</label>
+        <label
+          ><input type="radio" name="gender" id="" value="0" />không biết</label
+        >
+        <label><input type="radio" name="gender" id="" value="1" />Nam</label>
+        <label><input type="radio" name="gender" id="" value="2" />Nữ</label>
+      </div>
+      <!-- end -->
+      <!-- type checkbox -->
+      <div>
+        <label>Nguồn</label>
+        <label
+          ><input type="checkbox" name="source[]" id="" value="0" />không
+          biết</label
+        >
+        <label
+          ><input type="checkbox" name="source[]" id="" value="1" />Fb</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            name="source[]"
+            id=""
+            value="2"
+          />Google</label
+        >
+      </div>
+      <!-- end -->
+      <!-- textra dùng làm nhập nhiều dòng -->
+      <div>
+        <label for="message">Tin nhắn</label>
+        <textarea
+          name="message"
+          id="message"
+          placeholder="Tin nhắn..."
+          cols="30"
+          rows="10"
+        ></textarea>
+      </div>
+      <!-- end textra dùng làm nhập nhiều dòng -->
+      <!-- select: list  -->
+      <div>
+        <label for="provinces">Thành phố/Tỉnh</label>
+        <select name="provinces" id="provinces" multiple>
+          <optgroup label="Bắc">
+            <option value="1">Hà Nội</option>
+            <option value="2">Phú Thọ</option>
+          </optgroup>
+          <optgroup label="Nam">
+            <option value="3" selected>Hồ Chí Minh</option>
+          </optgroup>
+          <optgroup label="Trung">
+            <option value="4">Nghệ an</option>
+            <option value="5">Thanh Hóa</option>
+          </optgroup>
+        </select>
+      </div>
+      <!-- end select -->
+
+      <button type="submit">Đăng kí</button>
+      <button type="reset">Nhập lại</button>
+      <button type="button">button</button>
+    </form>
+  </body>
+</html>
