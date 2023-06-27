@@ -1,0 +1,26 @@
+/* Atribute selector */
+/*  */
+/* .website a[target] {
+  color: red;
+} */
+/*  */
+/* .website a[href="https://fullstack.edu.vn/"]
+{
+  color: red;
+} */
+
+/* sử dụng ^ thể hiện cho khi có đường link https ở đầu vế sau có gì ko quan trọng */
+/* .website a[href^="https://fullstack.edu.vn/"]
+{
+  color: red;
+} */
+
+/* sử dụng dấu * thể hiện chọn tất cả các link có chưa web đấy */
+/* .website a[href*="fullstack.edu.vn/"] {
+  color: red;
+} */
+
+/* dấu $ sẽ chọn tất cả vế cuối có đuôi là .jpg */
+.images a[href$=".jpg"] {
+  color: red;
+}

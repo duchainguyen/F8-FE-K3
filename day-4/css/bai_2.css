@@ -1,0 +1,54 @@
+.content {
+  text-align: center;
+  /* width: 50%; */
+  background-color: #ddd;
+  padding: 20px 10px;
+}
+.title-small {
+  font-family: "Roboto", sans-serif;
+  color: rgb(81, 51, 51);
+}
+.title-big {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  color: rgb(81, 51, 51);
+  font-weight: bold;
+}
+
+.left-form,
+.right-form,
+.left input,
+.right input {
+  display: inline-block;
+  /* width: 100%; */
+}
+.left input,
+.right input {
+  width: 100%;
+  padding: 5px;
+}
+.left,
+.right {
+  margin: 5px 10px;
+  /* padding: 5px 10px; */
+  /* width: 100%; */
+}
+.btn {
+  background: brown;
+  border-radius: 4px;
+}
+
+.btn button {
+  width: 100%;
+  background: brown;
+  padding: 6px;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+input::placeholder {
+  font-weight: bold;
+  font-size: "Alfa Slab One";
+  color: rgb(81, 51, 51);
+}

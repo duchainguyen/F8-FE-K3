@@ -1,0 +1,42 @@
+.footer {
+  background-color: rgb(46, 46, 141);
+  width: 80%;
+  height: 160px;
+  border-radius: 7px;
+  padding: 5px 15px;
+}
+
+.title .active {
+  color: rgb(197, 197, 9);
+}
+/* chon tat ca tru active roi no doi mau */
+.footer h2:not(.active) {
+  color: white;
+}
+.p-text {
+  color: white;
+}
+
+input,
+.btn {
+  padding: 5px;
+}
+.btn {
+  background: yellow;
+  /* padding: 5px; */
+}
+/* Khi hover vao footer placeholder doi mau text */
+.footer:hover input::placeholder {
+  color: rgb(197, 197, 9);
+  /* background-color: #ddd;s */
+  /* background-color: aqua; */
+}
+/* khi hover vao footer thi input doi nen ddd */
+.footer:hover input {
+  background: #ddd;
+}
+
+.footer:hover button {
+  background: rgb(197, 197, 9);
+  color: white;
+}

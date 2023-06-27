@@ -1,0 +1,30 @@
+/* phân biệt hover active focus */
+/* hover khi di chuột vào nó đổi màu */
+.title:hover {
+  color: red;
+}
+
+/* active là khi click chuột vào nó đổi màu */
+.title:active {
+  color: aqua;
+}
+
+/* focus chỉ dùng cho form */
+.btn:focus {
+  background: violet;
+}
+/* khi click vào input thì placeholder chữ sẽ đổi màu trắng */
+.pleid-item:focus::placeholder {
+  color: white;
+}
+
+/* khi click vào thì nó sẽ đổi màu */
+.pleid-item:focus {
+  background: red;
+  color: white;
+}
+/* end focus */
+
+.text:focus {
+  background: aqua;
+}

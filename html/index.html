@@ -4,14 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Khóa học F8</title>
+    <style>
+      .image-container {
+        position: relative;
+        display: inline-block;
+      }
+
+      .hover-image {
+        opacity: 0;
+        transition: opacity 0.5s;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .image-container:hover .image {
+        opacity: 0;
+      }
+
+      .image-container:hover .hover-image {
+        opacity: 1;
+      }
+    </style>
   </head>
   <body>
-    <!--  -->
-    <h1>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis nisi ipsam
-      quam eaque tenetur natus ullam modi nemo deserunt, neque asperiores,
-      blanditiis voluptatem rerum tempore. Assumenda rem sapiente sit iste.
-    </h1>
-    <input type="text" placeholder="Họ tên" />
+    <div class="image-container">
+      <img src="../day-4/images/con-meo1.jpg" alt="Ảnh 1" class="image" />
+      <img src="../day-4/images/meo-con.jpg" alt="Ảnh 2" class="hover-image" />
+    </div>
   </body>
 </html>

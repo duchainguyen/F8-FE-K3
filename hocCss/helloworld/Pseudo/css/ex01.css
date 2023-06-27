@@ -1,0 +1,52 @@
+/* Pseudo selector thành phần giả
+cú pháp 
+selector::pseudo{
+
+} */
+
+/* 
+a::after{
+
+} */
+
+.title::before {
+  content: "A";
+}
+.title::after {
+  content: "B";
+}
+
+.pega-title::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 3px;
+  background: red;
+  transition: all 0.4s linear;
+}
+/* làm về animation */
+.pega-title:hover::after {
+  width: 150px;
+}
+
+/* làm cho dòng đàu tiên nó thay màu */
+.content p::first-line {
+  color: red;
+}
+/* làm chữ cái đầu tiên nó to hơn và in nghiêng */
+.content p::first-letter {
+  font-size: 2rem;
+  font-style: italic;
+}
+/* Dùng làm bôi đen chữ vàng của p */
+.content p::selection {
+  background: black;
+  color: yellow;
+}
+/* End */
+
+/* đổi màu chữ của placeholder */
+/* currentColor lấy màu chữ của thằng trên */
+.email::placeholder {
+  color: aqua;
+}

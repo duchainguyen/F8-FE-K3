@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Dat Ban</title>
+    <link rel="stylesheet" href="./css/bai_2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="content">
+      <div class="title-small"><span>RESERVATION</span></div>
+
+      <span class="title-big">Book your table</span>
+      <div class="form-book">
+        <form
+          action="https://api-gateway.fullstack.edu.vn/action_page.php"
+          method="get"
+        >
+          <div class="left-form">
+            <div class="left">
+              <input type="text" name="name" id="name" placeholder="NAME" />
+            </div>
+            <div class="left">
+              <input type="text" name="date" id="date" placeholder="DATE" />
+            </div>
+            <div class="left">
+              <input
+                type="text"
+                name="people"
+                id="people"
+                placeholder="PEOPLE"
+              />
+            </div>
+          </div>
+          <div class="right-form">
+            <div class="right">
+              <input type="email" name="email" id="email" placeholder="EMAIL" />
+            </div>
+            <div class="right">
+              <input type="text" name="time" id="time" placeholder="TIME" />
+            </div>
+            <div class="right btn">
+              <button type="submit">Find A Table</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,3 @@
+.box .content span ~ a {
+  color: red;
+}

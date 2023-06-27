@@ -1,0 +1,33 @@
+/* sử dụng lớp giả not để khi đổi màu nó loại trừ .active */
+/* .products h2:not(.active):not(.ignore) {
+  color: aqua;
+} */
+/* .products h2:first-child {
+  color: red;
+} */
+
+/* chọn tp đầu để đổi màu sau h1 */
+/* .products h2:first-of-type {
+  color: red;
+} */
+
+/*  */
+/* .products h2:last-child {
+  color: aqua;
+} */
+
+/* Chọn thành phần cuối cùng của cha để đổi màu */
+/* .products h2:last-of-type {
+  color: green;
+} */
+
+/* chọn thứ tự để đổi màu  */
+/* 2n+1 để đổi chữ lẻ */
+/* .products h2:nth-child(2n + 2) {
+  color: red;
+} */
+
+/* nó k tính thẻ p trong đấy  */
+.products h2:nth-of-type(2n + 2) {
+  color: red;
+}

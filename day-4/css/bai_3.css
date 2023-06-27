@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "roboto";
+}
+.about {
+  text-align: center;
+  margin: 20px;
+}
+/* Làm phần heading */
+.heading {
+  border: 1px solid #49ae50;
+  margin: 20px;
+  display: inline-block;
+}
+.heading-Vn {
+  background: #49ae50;
+}
+.heading ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  /* color: aqua; */
+}
+.heading ul li {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.heading li a {
+  text-decoration: none;
+  color: black;
+}
+
+.heading ul li:hover {
+  background-color: #49ae50;
+}
+.heading ul li a:hover {
+  color: white;
+}
+
+/* end heading */
+
+/* products */
+.section {
+  /* align-items: center; */
+  padding: 0 50px;
+}
+.section ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.section ul li {
+  flex-basis: 25%;
+}
+.products li img {
+  max-width: 100%;
+  height: 200px;
+  /* width: 300px; */
+  border-radius: 20px;
+}
+
+.product-item {
+  padding: 0 10px;
+}
+.product-info {
+  text-align: center;
+}
+.product-price {
+  font-weight: 600;
+}
+/*cách hover khi hover vào ảnh chuyển sang ảnh khác  */
+.product {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tham khảo */
+.hover-image {
+  opacity: 0;
+  transition: opacity 0.5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* Khi hover vào ảnh 1 thì nó ẩn đi */
+.product:hover .image {
+  opacity: 0;
+}
+
+/* khi hover ảnh 2 thì nó hiện ra */
+.product:hover .hover-image {
+  opacity: 1;
+}
+
+/*task khi chuyển tab nó sẽ ra nội dung của tab đó  */
+
+.section {
+  display: none;
+}
+.section:target {
+  display: block;
+}
+
+/*  */
+.products .product-item .product {
+  position: relative;
+  overflow: hidden;
+}
+.table {
+  position: absolute;
+  width: 100%;
+  bottom: -42px;
+  transition: 0.5s ease-in-out;
+}
+.table table {
+  width: 100%;
+  color: white;
+  background: #241ecb;
+}
+.add-card {
+  /* margin-top: 10px; */
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}
+.products .product-item .product a img {
+  display: block;
+}
+.products li:hover .table {
+  bottom: 0px;
+}

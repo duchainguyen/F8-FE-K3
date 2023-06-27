@@ -5,45 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact map</title>
     <style>
-      ul {
-        list-style: none;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        font-family: "roboto";
-      }
-
-      .contact-map {
-        margin: 30px;
-      }
-
-      nav {
+      .image-container {
+        position: relative;
         display: inline-block;
-        border: 2px solid goldenrod;
       }
 
-      nav ul {
-        display: flex;
-        color: goldenrod;
+      .button-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
       }
 
-      nav ul li {
+      .image-container:hover .button-container {
+        opacity: 1;
+      }
+
+      .button {
+        display: inline-block;
         padding: 10px 20px;
-        transition: all 0.2s linear;
-        cursor: pointer;
+        background-color: #ccc;
+        color: #000;
+        border: none;
+        margin-right: 10px;
       }
 
-      /* nav ul li:not(.active):hover {
-        background-color: rgb(245, 219, 152);
-        color: #fff;
-      } */
-
-      /* .active {
-        background-color: goldenrod;
-        color: #fff;
-      } */
+      .button:hover {
+        background-color: #aaa;
+      }
     </style>
 
     <!-- Link CSS -->
@@ -51,16 +42,17 @@
   </head>
 
   <body>
-    <section class="contact-map">
-      <!-- Nav -->
-      <nav>
-        <ul>
-          <li class="active">United Arab Eminates</li>
-          <li>London</li>
-          <li>Singapore</li>
-          <li>Hong Kong</li>
-        </ul>
-      </nav>
-    </section>
+    <div class="image-container">
+      <img
+        src="../day-4/images/lambo3.jpg"
+        alt="Ảnh"
+        width="400px"
+        class="image"
+      />
+      <div class="button-container">
+        <button class="button">Button 1</button>
+        <button class="button">Button 2</button>
+      </div>
+    </div>
   </body>
 </html>

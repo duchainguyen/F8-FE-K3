@@ -1,0 +1,10 @@
+cách này sẽ chọn tất cả phần đầu có col- chạy border
+class^=["col-"]{
+    border: 1px solide #ccc
+}
+
+Tổng kết selector
+-nhớ các selector đơn lẻ: #, . 
+-nhớ các selector 
++ nằm ngay bên cạnh
+~ là nằm sau 
