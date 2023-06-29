@@ -1,9 +1,13 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 .footer {
   background-color: rgb(46, 46, 141);
-  width: 80%;
-  height: 160px;
-  border-radius: 7px;
-  padding: 5px 15px;
+  /* height: 160px; */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
 }
 
 .title .active {
@@ -16,7 +20,9 @@
 .p-text {
   color: white;
 }
-
+.form {
+  padding: 10px 0;
+}
 input,
 .btn {
   padding: 5px;
@@ -28,8 +34,6 @@ input,
 /* Khi hover vao footer placeholder doi mau text */
 .footer:hover input::placeholder {
   color: rgb(197, 197, 9);
-  /* background-color: #ddd;s */
-  /* background-color: aqua; */
 }
 /* khi hover vao footer thi input doi nen ddd */
 .footer:hover input {

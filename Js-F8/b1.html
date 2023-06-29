@@ -5,35 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact map</title>
     <style>
-      .image-container {
-        position: relative;
+      input[type="radio"] {
+        display: none;
+      }
+
+      label {
         display: inline-block;
-      }
 
-      .button-container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-
-      .image-container:hover .button-container {
-        opacity: 1;
-      }
-
-      .button {
-        display: inline-block;
         padding: 10px 20px;
+
         background-color: #ccc;
+
         color: #000;
-        border: none;
-        margin-right: 10px;
+        cursor: pointer;
       }
 
-      .button:hover {
+      input[type="radio"]:checked + label {
         background-color: #aaa;
+      }
+
+      .content {
+        margin-top: 20px;
+      }
+
+      /* .tab-content {
+        display: none;
+      } */
+
+      input[type="radio"]:checked + label + .content .tab-content {
+        display: block;
       }
     </style>
 
@@ -42,17 +42,19 @@
   </head>
 
   <body>
-    <div class="image-container">
-      <img
-        src="../day-4/images/lambo3.jpg"
-        alt="Ảnh"
-        width="400px"
-        class="image"
-      />
-      <div class="button-container">
-        <button class="button">Button 1</button>
-        <button class="button">Button 2</button>
-      </div>
+    <input type="radio" id="tab1" name="tabs" checked />
+    <label for="tab1">Mục 1</label>
+    <input type="radio" id="tab2" name="tabs" />
+    <label for="tab2">Mục 2</label>
+    <input type="radio" id="tab3" name="tabs" />
+    <label for="tab3">Mục 3</label>
+
+    <div class="content">
+      <div class="tab-content" id="content1">Nội dung mục 1</div>
+
+      <div class="tab-content" id="content2">Nội dung mục 2</div>
+
+      <div class="tab-content" id="content3">Nội dung mục 3</div>
     </div>
   </body>
 </html>
