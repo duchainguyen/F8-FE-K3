@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.heading {
+  padding: 20px;
+  /* margin: ; */
+  display: inline-block;
+  border-radius: 5px;
+}
+.heading ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  border: 1px solid #333;
+}
+/* .active {
+  background: aqua;
+} */
+.heading ul li {
+  /* background: aqua; */
+  padding: 10px 10px;
+  cursor: pointer;
+}
+.heading ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.heading ul li:hover {
+  background: aqua;
+}
+.heading ul li:focus {
+  background: aqua;
+}
+.heading ul li a:active {
+  color: white;
+}
+
+.heading ul li:first-child {
+  background: aqua;
+}

@@ -79,7 +79,7 @@
 /* Tham khảo */
 .hover-image {
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 0.5s ease-in;
   position: absolute;
   top: 0;
   left: 0;
@@ -92,6 +92,7 @@
 /* khi hover ảnh 2 thì nó hiện ra */
 .product:hover .hover-image {
   opacity: 1;
+  transition: 0.5s ease-in;
 }
 
 /*task khi chuyển tab nó sẽ ra nội dung của tab đó  */
@@ -103,7 +104,7 @@
   display: block;
 }
 
-/*  */
+/* đoạn code khi hover vào ảnh thì các nút sẽ hiển thị lên  */
 .products .product-item .product {
   position: relative;
   overflow: hidden;
@@ -132,4 +133,8 @@
 }
 .products li:hover .table {
   bottom: 0px;
+}
+/* End */
+.vote {
+  color: rgb(199, 199, 17);
 }
