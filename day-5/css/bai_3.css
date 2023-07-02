@@ -38,18 +38,18 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .product-img {
-  text-align: center;
+  /* text-align: center; */
   border: 2px solid yellow;
   border-radius: 50%;
+  max-width: 200px;
   height: 200px;
-  margin: 20px 75px;
-  position: relative;
+  margin: 20px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .product-img img {
   width: 100px;
-  position: absolute;
-  left: 80px;
-  top: 50px;
 }
 
 .product-info,
@@ -80,4 +80,8 @@
 .product-cart:hover a {
   opacity: 0.8;
   color: black;
+}
+.title-product {
+  font-size: 30px;
+  padding: 10px 0;
 }
