@@ -1,0 +1,19 @@
+/* background-color: thay đổi màu nền
+    background-image: url
+    background-repeat: độ lặp của hình nền
+*/
+body {
+  color: white;
+  height: 100vh;
+  background-image: url("https://fastly.picsum.photos/id/211/1000/500.jpg?hmac=2vIpo8UVC48awLrbun0BaymRH2c5HsNWlsSKUCTWQPg");
+  background-size: 50%;
+  background-color: aqua;
+
+  /* background: bisque
+    url("https://fastly.picsum.photos/id/211/1000/500.jpg?hmac=2vIpo8UVC48awLrbun0BaymRH2c5HsNWlsSKUCTWQPg")
+    no-repeat 0 0 / cover fixed; */
+  /* background-size: cover; */
+}
+.box {
+  background-color: aqua;
+}

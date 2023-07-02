@@ -1,0 +1,27 @@
+.box {
+  /* border-width: 2px; kích thước của viền
+  border-style: double; kiểu của viền 
+  background-color: aqua; màu của viền */
+  /* border: 3px double aqua; cách viết rút gọn */
+  border-bottom: 5px solid #333;
+  border-top: 5px solid #c72a2a;
+  border-left: 5px solid #31e24e;
+  border-right: 5px solid #5b16cb;
+}
+.content {
+  width: 0px;
+  height: 0px;
+  border-width: 100px;
+  border-radius: 60%;
+  border-style: solid;
+  border-color: transparent blueviolet transparent blueviolet;
+  /* border-width: 200px; */
+}
+
+/* Border style
+    +nome: 
+    +solid nét liền
+    +double: 2 nét
+    +dotted:
+    +dashed: là nét đứt
+*/

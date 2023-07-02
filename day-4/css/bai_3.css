@@ -3,6 +3,9 @@
   margin: 0;
   font-family: "roboto";
 }
+html {
+  scroll-behavior: smooth;
+}
 .about {
   text-align: center;
   margin: 20px;

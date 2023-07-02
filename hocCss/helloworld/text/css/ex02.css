@@ -1,0 +1,33 @@
+.content {
+  /* letter là từng chữ cách ra */
+  /* letter-spacing: 3px; */
+  word-spacing: 3px;
+  /* từng từ cách ra */
+}
+
+.content h1 {
+  /* underline: là gach chân dưới
+    overline là gạch trên
+    line-through: là gạch giữa */
+  text-decoration: underline overline line-through;
+  /* capitalaze: là chữ cái đầu viết hoa */
+  text-transform: capitalize;
+  /* font-style là kiểu chữ nghiêng đậm 
+  dùng 2 thứ italic nomal */
+  font-style: italic;
+}
+.box {
+  /* khi hết màn hình nó tự bẻ xuống  */
+  word-wrap: break-word;
+  /* word-break: break-all; */
+}
+.element {
+  /* dùng để thụt đầu dòng */
+  /* text-indent: 15px; */
+  text-align: justify;
+  text-align-last: center;
+}
+.span {
+  display: block;
+  text-align: center;
+}

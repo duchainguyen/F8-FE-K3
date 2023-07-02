@@ -1,0 +1,207 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: "Lato";
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url(../font/Lato-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Lato";
+  src: url(../font/Lato-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Lato";
+  src: url(../font/Lato-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Lobster";
+  src: url(../font/Lobster-Regular.ttf);
+}
+.content {
+  padding: 20px;
+}
+.title {
+  font-family: "Lobster";
+  font-size: 50px;
+  padding: 10px 0px;
+}
+.text {
+  color: red;
+}
+.input-name,
+.input-email,
+.input-phone,
+.input-message {
+  margin: 15px 0px;
+  position: relative;
+  /* display: inline-block; */
+  width: 50%;
+}
+/* chèn ảnh user vào input */
+input[type="text"] {
+  background-color: white;
+  background-image: url("../images/user.png");
+  /* position: absolute; */
+  background-size: 36px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  border: 1px solid #ccc;
+  padding: 10px 50px;
+  background-position-x: left;
+  width: 50%;
+}
+
+/* input email */
+input[type="email"] {
+  background-color: white;
+  background-image: url("../images/email-white.png");
+  /* position: absolute; */
+  background-size: 37px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  border: 1px solid #ccc;
+  padding: 10px 50px;
+  background-position-x: left;
+  width: 50%;
+}
+input[type="email"]:hover {
+  border: 1px solid black;
+  background-image: url("../images/user-black.png");
+
+  background-position-x: left;
+}
+/* End */
+/* input email */
+input[type="number"] {
+  background-color: white;
+  background-image: url("../images/phone.png");
+  /* position: absolute; */
+  background-size: 37px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  border: 1px solid #ccc;
+  padding: 10px 50px;
+  background-position-x: left;
+  width: 50%;
+}
+input[type="number"]:hover {
+  border: 1px solid black;
+  /* background-image: url("../images/email.png"); */
+  background-image: url("../images/user-black.png");
+
+  background-position-x: left;
+}
+/* End */
+
+/* Subject */
+.subject {
+  margin: 15px 0px;
+
+  width: 50%;
+}
+select {
+  background-color: white;
+  background-image: url("../images/subject.png");
+  /* position: absolute; */
+  background-size: 37px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  border: 1px solid #ccc;
+  padding: 10px 50px;
+  background-position-x: left;
+  width: 63.5%;
+}
+
+/* end */
+
+/* Textarea */
+textarea {
+  background-color: white;
+  background-image: url("../images/tera.png");
+  /* position: absolute; */
+  background-size: 37px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  border: 1px solid #ccc;
+  padding: 4px 50px;
+  background-position-x: left;
+  width: 50%;
+}
+
+.icon-tera {
+  position: absolute;
+  top: 10px;
+  right: 275px;
+  /* transform: translateY(-50%); */
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/star.png");
+  background-size: cover;
+}
+textarea::placeholder {
+  padding: 10px;
+}
+
+/* end */
+input:hover {
+  border: 1px solid black;
+  background-image: url("../images/user-black.png");
+  background-position-x: left;
+}
+
+input:active {
+  border: 1px solid black;
+  background-image: url("../images/user-black.png");
+  background-position-x: left;
+}
+
+input:focus {
+  border: 1px solid black;
+  background-image: url("../images/user-black.png");
+  background-position-x: left;
+}
+.icon {
+  position: absolute;
+  top: 50%;
+  right: 275px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/star.png");
+  background-size: cover;
+}
+.checkbox {
+  padding: 8px 50px;
+  border: 1px solid #ccc;
+  width: 25%;
+  position: relative;
+}
+input[type="checkbox"] {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  width: 30px;
+  height: 20px;
+}
+.checkbox span {
+  color: #575151;
+}
+button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 9.5px 22px;
+  background-color: #ff691c;
+  border: none;
+  color: white;
+}
+button:hover {
+  opacity: 0.8;
+  color: black;
+}

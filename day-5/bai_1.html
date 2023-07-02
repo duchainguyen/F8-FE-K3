@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài Tập 1</title>
+    <link rel="stylesheet" href="./css/bai_1.css" />
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-6.4.0-web/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="content">
+      <h1 class="title">Hey There</h1>
+      <p>
+        <span class="text">We'd like to hear from you.</span> Send us your
+        message or just say hy with our contact<br />
+        form or directly via phone, we love to chat
+      </p>
+      <div class="form">
+        <form action="" method="get">
+          <div class="input-name">
+            <input
+              class="ibs"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Your name"
+              title="Nhập thông tin"
+              required
+            /><span class="icon"></span>
+          </div>
+          <div class="input-email">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="abc@gmail.com"
+              required
+            /><span class="icon"></span>
+          </div>
+          <div class="input-phone">
+            <input
+              type="number"
+              name="phone"
+              id="phone"
+              placeholder="+84129383"
+              required
+            /><span class="icon"></span>
+          </div>
+          <div class="subject">
+            <!-- <input type="text" name="subject" id="subject" /> -->
+            <select name="subject" id="subject">
+              <option value="1">Subject</option>
+              <option value="2">Hà Nội</option>
+              <option value="3">Subject</option>
+              <option value="4">Subject</option>
+            </select>
+          </div>
+          <div class="input-message">
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Message"
+            ></textarea>
+            <span class="icon-tera"></span>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" />
+            <span>Send me a copy of this message</span>
+            <button type="submit">SEND</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- <div class="input-wrapper">
+      <input type="text" class="input-field" />
+      <span class="icon"></span>
+    </div> -->
+  </body>
+</html>
