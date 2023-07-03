@@ -30,7 +30,7 @@ body {
   color: white;
   top: 8px;
   left: 5px;
-  /* display: none; */
+  display: none;
 }
 .checkbox1 .fa-plus1,
 .checkbox2 .fa-plus2,
@@ -41,15 +41,15 @@ body {
   left: 5px;
   /* display: none; */
 }
-
-.checkbox1:hover .fa-plus1 {
+.checkbox1 input:checked ~ .fa-plus1,
+.checkbox2 input:checked ~ .fa-plus2,
+.checkbox3 input:checked ~ .fa-plus3 {
   display: none;
 }
-.checkbox2:hover .fa-plus2 {
-  display: none;
-}
-.checkbox3:hover .fa-plus3 {
-  display: none;
+.checkbox1 input:checked ~ .fa-minus1,
+.checkbox2 input:checked ~ .fa-minus2,
+.checkbox3 input:checked ~ .fa-minus3 {
+  display: block;
 }
 /*  */
 .toggle-label1 {
