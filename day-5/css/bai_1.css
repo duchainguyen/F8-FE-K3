@@ -149,23 +149,26 @@ textarea::placeholder {
 }
 
 /* end */
-input:hover {
+/* name */
+input[type="text"]:hover {
   border: 1px solid black;
   background-image: url("../images/user-black.png");
   background-position-x: left;
 }
 
-input:active {
+input[type="text"]:active {
   border: 1px solid black;
   background-image: url("../images/user-black.png");
   background-position-x: left;
 }
 
-input:focus {
+input[type="text"]:focus {
   border: 1px solid black;
   background-image: url("../images/user-black.png");
   background-position-x: left;
 }
+
+/* end name */
 .icon {
   position: absolute;
   top: 50%;
@@ -205,3 +208,54 @@ button:hover {
   opacity: 0.8;
   color: black;
 }
+/* Email */
+input[type="email"]:hover {
+  background-image: url("../images/email-black.png");
+}
+input[type="email"]:active {
+  background-image: url("../images/email-black.png");
+}
+input[type="email"]:focus {
+  background-image: url("../images/email-black.png");
+}
+
+/* end email */
+
+/* Phone */
+input[type="number"]:hover {
+  background-image: url("../images/phone-black.png");
+}
+input[type="number"]:active {
+  background-image: url("../images/phone-black.png");
+}
+input[type="number"]:focus {
+  background-image: url("../images/phone-black.png");
+}
+
+/* end phone */
+
+/* subject */
+select:hover {
+  background-image: url("../images/subject-black.png");
+}
+select:active {
+  background-image: url("../images/subject-black.png");
+}
+select:focus {
+  background-image: url("../images/subject-black.png");
+}
+
+/* end subject */
+
+/* Message */
+textarea:hover {
+  background-image: url("../images/messger-black.png");
+}
+textarea:active {
+  background-image: url("../images/messger-black.png");
+}
+textarea:focus {
+  background-image: url("../images/messger-black.png");
+}
+
+/* end */
