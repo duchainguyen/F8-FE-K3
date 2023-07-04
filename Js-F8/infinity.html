@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vô cực</title>
+  </head>
+  <style>
+    .infinity-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .infinity {
+      width: 200px;
+      height: 100px;
+      position: relative;
+    }
+
+    .loop {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: #000;
+      transform: rotate(-45deg);
+      border-radius: 50%;
+    }
+
+    .loop::before,
+    .loop::after {
+      content: "";
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      background-color: #000;
+    }
+
+    .loop::before {
+      top: -50px;
+      left: 50%;
+      border-radius: 50% 50% 0 0;
+      transform: translateX(-50%);
+    }
+
+    .loop::after {
+      bottom: -50px;
+      left: 50%;
+      border-radius: 0 0 50% 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+  <body>
+    <div class="infinity-container">
+      <div class="infinity">
+        <div class="loop"></div>
+      </div>
+    </div>
+  </body>
+</html>

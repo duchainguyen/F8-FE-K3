@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  /* color: #717171; */
+  font-family: "nunito";
+  font-weight: 300;
+}
+body {
+  height: 730px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../images/login-bg2.jpg);
+  background-repeat: no-repeat;
+}
+@font-face {
+  font-family: "nunito";
+  src: url(../font/Nunito-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "nunito";
+  font-weight: 400;
+  src: url(../font/Nunito-Regular.ttf);
+}
+@font-face {
+  font-family: "nunito";
+  src: url(../font/Nunito-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "nunito";
+  src: url(../font/Nunito-Bold.ttf);
+  font-weight: 700;
+}
+.content {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+/* làm phần thông tin */
+.title {
+  width: 290px;
+  background: #ff574d;
+  text-align: center;
+  border-radius: 15px 0 0 15px;
+}
+.title-img {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+.title-img h1 {
+  padding: 0 10px;
+
+  color: white;
+}
+.title p {
+  padding-top: 20px;
+  color: white;
+}
+.read-more {
+  padding-top: 20px;
+}
+.read-more:hover {
+  opacity: 0.6;
+}
+.read-more a {
+  margin-top: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  background-color: white;
+  color: #ff574d;
+}
+.icon {
+  padding-top: 35px;
+}
+.icon i {
+  color: white;
+}
+
+/* làm bên form login */
+.form {
+  width: 350px;
+  background: white;
+  text-align: center;
+  border-radius: 0 15px 15px 0;
+}
+
+.form h2 {
+  padding-top: 60px;
+  padding-bottom: 20px;
+  color: #272323;
+}
+.form h2 span {
+  color: #ff574d;
+}
+input[type="email"],
+input[type="password"] {
+  padding: 10px 10px;
+  width: 75%;
+  margin: 10px 0;
+}
+.btn {
+  margin: 10px 0;
+  padding: 10px 0;
+  width: 82%;
+  border: none;
+  background: #ff574d;
+  color: white;
+}
+.btn:hover {
+  opacity: 0.6;
+}
+.check-box {
+  color: #717171;
+  display: flex;
+  padding: 0 15px;
+  justify-content: space-around;
+}
+.check-box a {
+  text-decoration: none;
+  /* color: #939393; */
+  color: #717171;
+}
+
+.account {
+  padding: 10px 0;
+  color: #717171;
+}
+.account a {
+  text-decoration: none;
+  color: #717171;
+}
+.account a:hover,
+.check-box a:hover {
+  opacity: 0.5;
+}
+
+/* làm phần right */
+.right {
+  position: absolute;
+  padding: 10px;
+  border-radius: 50%;
+  background: white;
+  color: #ff574d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  margin-left: 255px;
+  margin-top: -190px;
+}
+/*  */

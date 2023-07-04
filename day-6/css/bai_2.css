@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "roboto";
+  font-weight: 400;
+  /* width: 1440px; */
+}
+@font-face {
+  font-family: "roboto";
+  src: url(../font/Roboto-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "roboto";
+  font-weight: 400;
+  src: url(../font/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "roboto";
+  src: url(../font/Roboto-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "roboto";
+  src: url(../font/Roboto-Bold.ttf);
+  font-weight: 700;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ebf5fe;
+  color: #666666;
+}
+.products {
+  /* max-width: 100%; */
+  width: 1280px;
+  display: flex;
+  flex-wrap: wrap;
+  /* wrap tự động xuống dòng */
+  align-items: center;
+  justify-content: center;
+  margin: 20px 40px;
+}
+.title {
+  margin: 15px 0;
+  color: black;
+  font-size: 14px;
+}
+.product {
+  /* width: 300px; */
+  margin: 15px;
+  background: white;
+  flex: 0 0 calc(33.33% - 40px);
+  border: 2px solid #ccc;
+  /* padding: 10px; */
+  /* margin: 10px 0px; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.product:hover {
+  border: 2px solid red;
+}
+.clear-fix {
+  clear: both;
+}
+.product img {
+  width: 80px;
+  height: 80px;
+  float: left;
+  border-radius: 50%;
+  padding: 10px 20px;
+}
+p {
+  padding: 0px 20px;
+}
+.learn-more {
+  padding: 20px 20px;
+}
+.learn-more a {
+  text-decoration: none;
+  font-weight: 900;
+  color: #146ebe;
+}

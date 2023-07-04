@@ -1,0 +1,8 @@
+/* can ngoai le */
+/* can giua thi dung margin-left, right auto */
+.box {
+  border: 1px solid red;
+  width: 300px;
+  padding: 30px;
+  margin: 30px;
+}

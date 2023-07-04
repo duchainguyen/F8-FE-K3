@@ -1,0 +1,23 @@
+/* display hiển thị
+none ẩn
+block chuyển về thẻ block
+inline chuyển vể thẻ inline
+inline-block chuyển về thẻ inline-block
+inline block cùng nằm trên một dòng Kt mặc định theo nội dung
+
+
+Ngoài ra
+list-item
+flex
+inline-flex
+gird
+table
+table-cell
+*/
+.box {
+  border: 1px solid red;
+  display: inline-block;
+  /* visibility: hidden; */
+}
+span {
+}

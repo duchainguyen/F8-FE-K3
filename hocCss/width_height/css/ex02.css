@@ -1,0 +1,13 @@
+.images {
+  width: 300px;
+  height: 400px;
+  border: 1px solid red;
+}
+/* max-width chieu rong lon nhat
+width se chay tu min-width den max-width
+height se chay tu min-height den max-height */
+
+.images img {
+  max-width: 100%;
+  height: auto;
+}

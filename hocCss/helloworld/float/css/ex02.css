@@ -1,0 +1,22 @@
+.box {
+  width: 400px;
+  padding: 20px;
+  border: 1px solid red;
+}
+/* tránh tràn viền */
+.box::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.box img {
+  width: 200px;
+  height: 200px;
+  float: left;
+  display: block;
+  margin-right: 20px;
+  padding: 160px 0;
+  border-radius: 50%;
+  /* Chữ bo lại quanh img */
+  shape-outside: circle();
+}

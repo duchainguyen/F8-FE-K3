@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "open-sans";
+  font-weight: 500;
+  color: #666;
+}
+@font-face {
+  font-family: "open-sans";
+  src: url(../font/OpenSans-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "open-sans";
+  font-weight: 400;
+  src: url(../font/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: "open-sans";
+  src: url(../font/OpenSans-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "open-sans";
+  src: url(../font/OpenSans-Bold.ttf);
+  font-weight: 700;
+}
+.menu ul {
+  display: flex;
+  /* border: 1px solid #ccc; */
+  padding: 10px 20px;
+  margin: 20px;
+}
+.menu ul li {
+  padding: 10px 20px;
+  /* text-decoration: none; */
+  list-style: none;
+  border: 1px solid #ccc;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  /* color: #e0d3d3; */
+}
+.khoang_trang {
+  width: 20%;
+}
+
+.fa-chevron-down {
+  padding: 0 5px;
+}
+/* .fa-bullhorn {
+  position: relative;
+} */
+.menu-item {
+  position: relative;
+}
+.menu-2 {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.25s linear;
+}
+.menu-2 ul {
+  display: block;
+  margin: 15px -25px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px 1px #ccc;
+}
+.menu-2 ul li {
+  padding: 20px 140px 0 0px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  display: inline-flex;
+}
+.menu-item:hover {
+  background: #6dade4;
+  /* color: white; */
+}
+.menu-item:hover .menu-2 {
+  /* background: rgb(38, 38, 232); */
+  opacity: 1;
+  visibility: visible;
+}

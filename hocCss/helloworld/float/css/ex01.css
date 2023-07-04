@@ -1,0 +1,41 @@
+/* Float trôi nổi theo thành phần trái phải
+left
+right
+
+
+clear sử lý tình trạng trôi các thành phần khi đặt dưới thành phần sử dụng
+
+both sử dụng cho cả 2 left right
+
+*/
+.box {
+  border: 1px solid red;
+  width: 300px;
+  margin: 30px auto;
+  /* overflow: auto; */
+}
+.box::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.col-1 {
+  width: 100px;
+  height: 50px;
+  background: green;
+  color: #fff;
+  float: left;
+}
+.col-2 {
+  background: red;
+  color: #fff;
+  width: 100px;
+  height: 70px;
+  float: left;
+}
+
+/* muốn cho thẻ p xuống thì sử dụng clear both: chặn chống trôi */
+.text {
+  clear: both;
+}

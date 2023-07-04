@@ -1,0 +1,22 @@
+/* width height chỉ đc đặt ở thẻ block */
+/* inline-block đều cùng nằm trên một hàng 
+    block thì nó xuống hàng dưới*/
+/* Thẻ inline ko đc đặt width height */
+/* inline :replace 
+    inline : none-replace*/
+.box {
+  width: 100px;
+  height: 200px;
+  background: green;
+}
+.img img {
+  width: 300px;
+  height: auto;
+  display: inline-block;
+  /* font-size: 10px; */
+}
+.img {
+  /* Làm 2 khoảng cách của nó mất đi */
+  font-size: 0;
+  /* display: block; */
+}

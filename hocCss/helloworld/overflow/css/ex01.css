@@ -1,0 +1,19 @@
+.box {
+  width: 200px;
+  height: 200px;
+  border: 1px solid red;
+  /* scroll là thanh cuộn  */
+  /* overflow: scroll; */
+  /* auto thì đủ thì nó mới cho cuộn */
+  /* overflow: auto; */
+  /* overflow-y: hidden; */
+  overflow: auto;
+  /* overflow-x: hidden; */
+
+  /* nếu chỉ muốn thanh cuộn dọc thì dùng overflow-y: auto
+    overflow-x: hidden */
+}
+
+.box ul {
+  width: 500px;
+}
