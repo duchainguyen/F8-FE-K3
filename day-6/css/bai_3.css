@@ -152,4 +152,23 @@ input[type="password"] {
   margin-left: 255px;
   margin-top: -190px;
 }
+
+.right:hover {
+  opacity: 0.6;
+  color: red;
+}
 /*  */
+
+/*  */
+.text {
+  position: relative;
+}
+.text::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 40%;
+  background: #ff574d;
+  left: 0;
+  bottom: 0;
+}

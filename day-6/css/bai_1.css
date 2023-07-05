@@ -49,9 +49,7 @@
 .fa-chevron-down {
   padding: 0 5px;
 }
-/* .fa-bullhorn {
-  position: relative;
-} */
+
 .menu-item {
   position: relative;
 }
@@ -71,11 +69,11 @@
   padding: 20px 140px 0 0px;
   border: none;
   border-bottom: 1px solid #ccc;
-  display: inline-flex;
+  display: block;
+  width: 95px;
 }
 .menu-item:hover {
   background: #6dade4;
-  /* color: white; */
 }
 .menu-item:hover .menu-2 {
   /* background: rgb(38, 38, 232); */
