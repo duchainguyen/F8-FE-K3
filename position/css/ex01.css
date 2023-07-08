@@ -1,0 +1,57 @@
+body {
+  height: 2000px;
+}
+.box {
+  border: 1px solid red;
+  width: 300px;
+  height: 300px;
+  margin: 300px auto;
+  /* position: relative; */
+}
+
+.item {
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+  background-color: green;
+  border: 1px solid #fff;
+}
+
+.item:nth-child(2) {
+  /* abosolute */
+  /* position: absolute;
+  right: 0;
+  bottom: 0; */
+  /*  */
+
+  /* inset: 10px; */
+  /* top: 0px; */
+  /* z-index: 1; */
+
+  /* fixed cố định và chỉ nhận body làm cha */
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* End fixed */
+}
+/* .item:nth-child(3) {
+  position: relative;
+} */
+
+/* position 
+Thuộc tính position
+relative: vị trí tương đối
+absolute vị trì tuyệt đối
+fixed vị trí cố định
+static không có position */
+
+/* Thuộc tính mở rộng
+sừ dụng đc z-index
+top
+left
+inset: là dùng cho cả top left right bottom
+
+
+ */

@@ -48,10 +48,9 @@ body {
   font-size: 14px;
 }
 .product {
-  /* width: 300px; */
   margin: 15px;
   background: white;
-  flex: 0 0 calc(33.33% - 40px);
+  flex: 0 0 calc(100% / 3 - 40px);
   border: 2px solid #ccc;
   /* padding: 10px; */
   /* margin: 10px 0px; */

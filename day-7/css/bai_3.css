@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Asap", sans-serif;
+  font-size: 14px;
+}
+@font-face {
+  font-family: "Asap";
+  src: url(../font/Asap-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Asap";
+  font-weight: 400;
+  src: url(../font/Asap-Regular.ttf);
+}
+@font-face {
+  font-family: "Asap";
+  src: url(../font/Asap-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Asap";
+  src: url(../font/Asap-Bold.ttf);
+  font-weight: 700;
+}
+.title {
+  padding: 10px 65px;
+}
+.title h1 {
+  color: #333;
+  font-weight: 500;
+  font-size: 20px;
+}
+.Provinces {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+  /* justify-content: center; */
+}
+.Provinces li {
+  background: #ccc;
+  /* border: 1px solid red; */
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+.Provinces .active {
+  background-color: #b87926;
+}
+.Provinces .active .item-name a,
+.Provinces .active .item-text {
+  color: white;
+}
+.item-name a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.item-text {
+  font-style: italic;
+}
+/*  */
+
+.row {
+  display: flex;
+  gap: 20px 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* text-align: center; */
+}
+.product {
+  /* margin: 15px 0; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  position: relative;
+  color: white;
+}
+
+.product-images {
+  width: 450px;
+  height: 300px;
+  /* background-color: rgba(0, 0, 0, 0.25); */
+}
+.product-images img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  /* opacity: 0.25; */
+}
+
+.product-title {
+  position: absolute;
+  top: 40px;
+  left: 50px;
+}
+.product-info {
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+}
+
+.product-title h2 {
+  font-size: 20px;
+}
+.product-info span {
+  font-weight: 700;
+}

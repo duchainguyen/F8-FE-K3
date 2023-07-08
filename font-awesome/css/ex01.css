@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+.social {
+  width: 300px;
+  border: 1px solid red;
+  margin: 30px auto;
+  list-style: none;
+  padding: 15px;
+}
+.social li {
+  padding: 10px;
+}
+/* Cách sử dụng icon đc viết trong html */
+/* .social li i {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background: aqua;
+  color: white;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 0.9rem;
+} */
+/* End */
+
+/* Cách sử dụng icon trong before  */
+.social li::before {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background: aqua;
+  color: white;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  font-family: "Font Awesome 6 Brands";
+  margin-right: 5px;
+}
+.facebook::before {
+  content: "\f09a";
+}
+.Twitter::before {
+  content: "\f099";
+}
+.Youtube::before {
+  content: "\f167";
+}
+/* End */

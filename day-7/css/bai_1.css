@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Asap", sans-serif;
+  font-weight: 300;
+}
+
+body {
+  background-image: url("../images/ha-noi-melody.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+/* Font- Asap */
+@font-face {
+  font-family: "Asap";
+  src: url(../font/Asap-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Asap";
+  font-weight: 400;
+  src: url(../font/Asap-Regular.ttf);
+}
+@font-face {
+  font-family: "Asap";
+  src: url(../font/Asap-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Asap";
+  src: url(../font/Asap-Bold.ttf);
+  font-weight: 700;
+}
+
+/* END */
+/* Font SFU */
+@font-face {
+  font-family: "SFU";
+  font-weight: 400;
+  src: url(../font/SFUSolexRegular.TTF);
+}
+@font-face {
+  font-family: "SFU";
+  src: url(../font/SFUSolexMedium.TTF);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "SFU";
+  src: url(../font/SFUSolexBold.TTF);
+  font-weight: 700;
+}
+/* End */
+.title-house {
+  position: absolute;
+  bottom: 350px;
+  left: 200px;
+  width: 650px;
+  height: 200px;
+  padding: 30px;
+  border-radius: 5px;
+  background-color: rgba(250, 249, 250, 0.7);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.title-house h1 {
+  font-weight: 500;
+  padding-bottom: 15px;
+  color: #bf4240;
+}
+.title-house p {
+  line-height: 1.5;
+  color: #3f3424;
+}
+.address {
+  padding: 15px 0;
+  color: #3f3424;
+}
+
+.price {
+  padding: 12px 22px;
+  display: inline-block;
+  background: #bf4240;
+  color: white;
+  position: absolute;
+  bottom: -20px;
+  right: 50px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.price span {
+  font-family: "SFU";
+  font-weight: 700;
+  font-size: 20px;
+}

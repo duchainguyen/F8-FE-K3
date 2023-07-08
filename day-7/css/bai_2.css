@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Asap", sans-serif;
+}
+
+@font-face {
+  font-family: "Asap";
+  src: url(../font/Asap-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Asap";
+  font-weight: 400;
+  src: url(../font/Asap-Regular.ttf);
+}
+@font-face {
+  font-family: "Asap";
+  src: url(../font/Asap-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Asap";
+  src: url(../font/Asap-Bold.ttf);
+  font-weight: 700;
+}
+
+/* image-vin */
+.image-vin {
+  font-size: 0;
+}
+.image-vin img {
+  width: 100%;
+  filter: grayscale(40%);
+  /* opacity: 0.6; */
+}
+/* end */
+
+.container-company {
+  position: relative;
+}
+/* Company-name */
+.company-name {
+  width: 400px;
+  position: absolute;
+  bottom: 100px;
+  left: 320px;
+  color: #ffffff;
+}
+
+.company-name .info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.company-name h1 {
+  padding: 0 25px;
+  font-weight: 500;
+}
+.info {
+  font-weight: 500;
+}
+
+.info span {
+  font-weight: 700;
+  font-size: 20px;
+}
+/* end */
+
+/* Nav-company */
+.nav-company ul {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 50px;
+}
+.nav-company ul li {
+  list-style: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+.nav-company ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+.nav-company ul li .active {
+  color: #ef5350;
+}
+
+.line-height {
+  position: relative;
+}
+.active::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #ff574d;
+  left: 0;
+  bottom: 0;
+}
+
+/* end nav */
+
+.logo-vin {
+  position: absolute;
+  width: 240px;
+  height: 180px;
+  background: white;
+  left: 80px;
+  bottom: 0px;
+  border-radius: 10px;
+}
+.logo-vin img {
+  width: 100%;
+  margin: 20px 0;
+}
+.nav-company ul li:hover a {
+  color: #ef5350;
+}
