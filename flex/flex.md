@@ -46,3 +46,18 @@ cách dòng 10px
 #
 
 \*các thuộc tính trong flex item
+-flex-grow: dãn các item để lấp đầy khoảng trống cần cách
+-flex-shrink: tự động co lại các item
+-flex-basis thiết lập kích thước ban đầu cho các item
+
+- ==>flex: grow shrink basis (gộp)
+
+  -align-self căn chỉnh 1 item
+  stretch mặc định, full chiều cao
+  flex-start: nằm trên
+  center: căn giữa
+  flex-end: nằm dưới
+  baseline: nằm trên khác với flex-start
+
+  -order: sắp xếp thứ tự các item
+  Nhận số nguyên

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bai_2.css" />
+    <title>Document</title>
+  </head>
+  <style>
+    .counter {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      display: inline-block;
+      border-radius: 20px;
+    }
+
+    .counter input[type="radio"] {
+      display: none;
+    }
+
+    .counter label {
+      padding: 5px 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .counter .value {
+      margin: 0 10px;
+      font-size: 18px;
+    }
+
+    .counter #decrease:checked ~ .value::before {
+      content: "-";
+    }
+
+    .counter #increase:checked ~ .value::before {
+      content: "+";
+    }
+
+    .counter #decrease:checked ~ #increase {
+      display: none;
+    }
+
+    .counter #increase:checked ~ #decrease {
+      display: none;
+    }
+  </style>
+  <body>
+    <div class="counter">
+      <input type="radio" name="counter" id="decrease" />
+      <label for="decrease">-</label>
+      <span class="value">1</span>
+      <input type="radio" name="counter" id="increase" />
+      <label for="increase">+</label>
+    </div>
+  </body>
+</html>

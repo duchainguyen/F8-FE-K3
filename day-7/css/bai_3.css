@@ -53,6 +53,10 @@
 .Provinces .active {
   background-color: #b87926;
 }
+.Provinces li:hover {
+  background-color: #b87926;
+}
+
 .Provinces .active .item-name a,
 .Provinces .active .item-text {
   color: white;
@@ -95,7 +99,9 @@
   border-radius: 10px;
   /* opacity: 0.25; */
 }
-
+.product-images img:hover {
+  scale: 102%;
+}
 .product-title {
   position: absolute;
   top: 40px;

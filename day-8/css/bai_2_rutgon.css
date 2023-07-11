@@ -1,0 +1,240 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito";
+}
+body {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  /* width: 1440px; */
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url(../font/Nunito-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: 400;
+  src: url(../font/Nunito-Regular.ttf);
+}
+@font-face {
+  font-family: "Nunito";
+  src: url(../font/Nunito-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Nunito";
+  src: url(../font/Nunito-Bold.ttf);
+  font-weight: 700;
+}
+
+.container {
+  background-color: #fefefe;
+  width: 400px;
+  height: auto;
+  /* height: 500px; */
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: #cbc9c9;
+  padding: 10px 20px;
+}
+.title-h2 {
+  position: relative;
+  font-weight: 400;
+}
+.title-h2::after {
+  content: "4";
+  position: absolute;
+  padding: 5px 8px;
+  border-radius: 50%;
+  background: #4060f3;
+  color: white;
+  font-size: 0.6rem;
+  font-weight: 700;
+  top: -8px;
+  right: -30px;
+}
+.title-h2 h2 {
+  font-weight: 400;
+}
+
+.close {
+  width: 20px;
+  height: 20px;
+  /* line-height: 30px; */
+  border-radius: 50%;
+  background: #d35128;
+  color: white;
+}
+
+.product {
+  margin: 30px auto;
+  display: flex;
+  background: #ffffff;
+  position: relative;
+  /* border-bottom: 1px solid #ccc; */
+}
+.product::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  /* right: 0; */
+  width: 100%;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+}
+
+.product-image {
+  padding: 25px 25px;
+  background: #fef9ef;
+}
+.product-image img {
+  width: 60px;
+  height: auto;
+}
+
+.detail {
+  padding: 10px 0;
+  width: 60%;
+  position: relative;
+}
+.detail::after {
+  content: "X";
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0 -25px;
+  color: #ccc;
+}
+.title {
+  font-size: 16px;
+  font-weight: 400;
+}
+.price {
+  padding: 30px 0 0 30px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 25px;
+}
+.item-price span {
+  font-size: 1.2rem;
+}
+
+/* Bill-total */
+.bill {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.total-bill {
+  font-size: 1.2rem;
+  color: #dd5529;
+}
+/* end */
+
+/* Thực hiện thi mua thủ tục */
+.implement {
+  margin: 10px 0;
+  display: flex;
+  font-size: 0.9rem;
+  color: #ccc;
+  padding: 10px 20px;
+}
+/* end */
+/* view-cart */
+.view-cart {
+  padding: 15px 25px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 20px;
+}
+.view-cart a {
+  color: #ccc;
+}
+
+/* end */
+.view-cart a,
+.add-to-cart a {
+  text-decoration: none;
+}
+
+/* Add to cart */
+.add-to-cart {
+  padding: 15px 25px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 20px;
+
+  background: #4060f3;
+}
+.add-to-cart a {
+  color: white;
+}
+/* end */
+
+/* foot-cart */
+.foot-cart {
+  margin: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.logo-car {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #4060f3;
+  border-radius: 50%;
+}
+.logo-car img {
+  width: 30px;
+  padding: 10px 0;
+  /* height: 30px; */
+}
+.foot-text {
+  line-height: 50px;
+}
+/*Tăng giảm số lượng  */
+.counter {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+.counter input[type="radio"] {
+  display: none;
+}
+
+.counter label {
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.counter .value {
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+.counter #decrease:checked ~ .value::before {
+  content: "-";
+}
+
+.counter #increase:checked ~ .value::before {
+  content: "+";
+}
+
+.counter #decrease:checked ~ #increase {
+  display: none;
+}
+
+.counter #increase:checked ~ #decrease {
+  display: none;
+}
+/* End */
