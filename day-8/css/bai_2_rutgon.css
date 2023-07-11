@@ -74,6 +74,7 @@ body {
   color: white;
   margin: 6px 0;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .product {
@@ -116,6 +117,7 @@ body {
   font-weight: 700;
   margin: -5px -25px;
   color: #ccc;
+  cursor: pointer;
 }
 .title {
   font-size: 16px;
@@ -162,6 +164,10 @@ body {
 .view-cart a {
   color: #ccc;
 }
+.view-cart:hover {
+  opacity: 0.8;
+  background-color: #7e7e7e;
+}
 
 /* end */
 .view-cart a,
@@ -177,6 +183,9 @@ body {
   margin: 10px 20px;
 
   background: #4060f3;
+}
+.add-to-cart:hover {
+  opacity: 0.6;
 }
 .add-to-cart a {
   color: white;
