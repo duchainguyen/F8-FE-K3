@@ -95,3 +95,22 @@ body {
   opacity: 1;
   visibility: visible;
 }
+
+/* làm ẩn các dòng của mega menu */
+.menu-item-1 li:nth-child(4),
+.menu-item-4 li:nth-child(1),
+.menu-item-5 li:nth-child(1),
+.menu-item-5 li:nth-child(5),
+.menu-item-5 li:nth-child(4) {
+  opacity: 0;
+}
+
+.menu-item-2 li:nth-child(1),
+.menu-item-2 li:nth-child(3),
+.menu-item-2 li:nth-child(4),
+.menu-item-2 li:nth-child(5),
+.menu-item-2 li:nth-child(8) {
+  opacity: 0;
+}
+
+/*end  */

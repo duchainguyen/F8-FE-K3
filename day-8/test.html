@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+      }
+
+      .column {
+        flex: 1;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-right: 10px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .column:last-child {
+        margin-right: 0;
+      }
+
+      .item {
+        flex: 1;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .missing-row-4 {
+        /* display: none; */
+      }
+
+      .missing-row-1-2 .item:nth-child(1),
+      .missing-row-1-2 .item:nth-child(2) {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="column">
+        <div class="item">Dòng 1</div>
+        <div class="item">Dòng 2</div>
+        <div class="item">Dòng 3</div>
+        <div class="item missing-row-4">Dòng 4</div>
+        <div class="item">Dòng 5</div>
+        <div class="item">Dòng 6</div>
+      </div>
+      <div class="column missing-row-1-2">
+        <div class="item">Dòng 3</div>
+        <div class="item">Dòng 3</div>
+
+        <div class="item">Dòng 3</div>
+        <div class="item missing-row-4">Dòng 4</div>
+        <div class="item">Dòng 5</div>
+        <div class="item">Dòng 6</div>
+      </div>
+      <div class="column">
+        <div class="item">Dòng 1</div>
+        <div class="item">Dòng 2</div>
+        <div class="item">Dòng 3</div>
+        <div class="item">Dòng 4</div>
+        <div class="item">Dòng 5</div>
+        <div class="item">Dòng 6</div>
+      </div>
+      <div class="column">
+        <div class="item">Dòng 1</div>
+        <div class="item">Dòng 2</div>
+        <div class="item">Dòng 3</div>
+        <div class="item">Dòng 4</div>
+        <div class="item">Dòng 5</div>
+        <div class="item">Dòng 6</div>
+      </div>
+      <div class="column">
+        <div class="item">Dòng 1</div>
+        <div class="item">Dòng 2</div>
+        <div class="item">Dòng 3</div>
+        <div class="item">Dòng 4</div>
+        <div class="item">Dòng 5</div>
+        <div class="item">Dòng 6</div>
+      </div>
+    </div>
+  </body>
+</html>
