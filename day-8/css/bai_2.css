@@ -6,9 +6,9 @@
 }
 body {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   text-align: center;
-  /* width: 1440px; */
+  background: #bbbbbb;
 }
 
 @font-face {
@@ -31,27 +31,17 @@ body {
   src: url(../font/Nunito-Bold.ttf);
   font-weight: 700;
 }
-.box {
-  display: flex;
-  width: 1200px;
-}
-/* Box-1 */
-.box-1 {
-  width: 800px;
-  height: auto;
-  background: #7e7e7e;
-}
 /*  */
 .container {
   background-color: #fefefe;
   width: 400px;
   height: auto;
-  /* height: 500px; */
+  height: 100%;
 }
 .header {
   display: flex;
   justify-content: space-between;
-  background: #cbc9c9;
+  background: #dddddd;
   padding: 10px 20px;
 }
 .title-h2 {

@@ -65,24 +65,16 @@ body {
   font-weight: 400;
 }
 
-.close {
-  width: 22px;
-  height: 22px;
-  /* line-height: 30px; */
-  border-radius: 50%;
-  background: #d35128;
-  color: white;
-  margin: 6px 0;
-  font-weight: 700;
+.close i {
+  font-size: 24px;
+  color: #d35128;
   cursor: pointer;
 }
-
 .product {
   margin: 30px auto;
   display: flex;
   background: #ffffff;
   position: relative;
-  /* border-bottom: 1px solid #ccc; */
 }
 .product::before {
   content: "";
