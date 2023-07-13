@@ -2,13 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto" sans-serif;
+  font-family: "Roboto";
   font-weight: 500;
 }
 body {
   display: flex;
   justify-content: center;
   text-align: center;
+
   /* width: 1440px; */
 }
 
@@ -32,7 +33,13 @@ body {
   src: url(../font/Roboto-Bold.ttf);
   font-weight: 700;
 }
-
+.title {
+  margin: 15px 0;
+}
+.text {
+  font-size: 0.7rem;
+  font-weight: 400;
+}
 .product {
   margin: 20px 0;
   display: flex;
@@ -50,6 +57,9 @@ body {
   height: 110px;
   padding: 10px 0;
 }
+.item-title h2 {
+  font-size: 1.2rem;
+}
 
 .item-title,
 .content,
@@ -61,6 +71,8 @@ body {
 }
 .content p {
   padding: 10px 0;
+  font-size: 0.9rem;
+  font-weight: 300;
   color: #898888;
 }
 .read-mode {
