@@ -76,6 +76,7 @@ body {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  line-height: 50px;
   opacity: 0;
   visibility: hidden;
   transition: 0.4s ease;
@@ -121,4 +122,16 @@ body {
 .menu-item-4 li,
 .menu-item-5 li {
   font-size: 0.9rem;
+}
+
+.menu-item-2 {
+  position: relative;
+}
+.menu-item-2::before {
+  content: "";
+  border: 1px solid #efecec;
+  height: calc(100% - 30px);
+  position: absolute;
+  right: 0;
+  margin-top: 30px;
 }
