@@ -73,19 +73,25 @@ body {
 .title-h2 h2 {
   font-weight: 400;
 }
-
-.close {
+/* Close */
+/* .close {
   width: 22px;
   height: 22px;
-  /* line-height: 30px; */
+  
   border-radius: 50%;
   background: #d35128;
   color: white;
   font-weight: 700;
   margin: 5px 0;
   cursor: pointer;
+} */
+.close i {
+  font-size: 24px;
+  color: #d35128;
+  cursor: pointer;
 }
 
+/*End close  */
 .product {
   margin: 30px auto;
   display: flex;
@@ -244,20 +250,3 @@ body {
   margin: 0 10px;
   font-size: 18px;
 }
-
-.counter #decrease:checked ~ .value::before {
-  content: "-";
-}
-
-.counter #increase:checked ~ .value::before {
-  content: "+";
-}
-
-.counter #decrease:checked ~ #increase {
-  display: none;
-}
-
-.counter #increase:checked ~ #decrease {
-  display: none;
-}
-/* End */
