@@ -114,3 +114,11 @@ body {
 .fa-sharp {
   font-size: 12px;
 }
+
+.menu-item-1 li,
+.menu-item-2 li,
+.menu-item-3 li,
+.menu-item-4 li,
+.menu-item-5 li {
+  font-size: 0.9rem;
+}
