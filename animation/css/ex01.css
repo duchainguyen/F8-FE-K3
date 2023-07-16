@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  border: 1px solid red;
+  margin: 30px auto;
+  position: relative;
+}
+
+.box span {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  left: 0;
+  display: block;
+  background: green;
+  animation: dichuyen 3s infinite linear;
+}
+@keyframes dichuyen {
+  24.99% {
+    background: aqua;
+  }
+  25% {
+    top: 0;
+    left: 100%;
+    translate: -100%;
+  }
+  49.99% {
+    background: rgb(255, 0, 191);
+  }
+  50% {
+    top: 100%;
+    left: 100%;
+    translate: -100% -100%;
+  }
+  69.99% {
+    background: rgb(64, 0, 255);
+  }
+  75% {
+    top: 100%;
+    left: 0;
+    translate: 0% -100%;
+  }
+  99.99% {
+    background: rgb(0, 170, 255);
+  }
+}
+
+/* Animation
+1.@keyframes
+@keyframes tenhieuung{
+    from{
+
+    }
+    ...
+    to{
+
+    }
+
+}
+
+
+
+2.Thuộc tính animation gọi Keyframes thiết lập thời gian tốc độ
+animation-name: tên keyframes
+animation-duration: thời gian
+animation-timing-function: giống transition
+animation-iteration-count: số vòng muốn chạy
+ animation-delay: sau s thì nó mới chạy 
+*/

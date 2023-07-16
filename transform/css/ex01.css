@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 400px;
+  height: 400px;
+  border: 1px solid red;
+  margin: 30px auto;
+}
+.box {
+  width: 200px;
+  height: 200px;
+  background: green;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  transition: all 0.6s linear;
+}
+.container:hover .box {
+  transform: scale(1.2) rotate(720deg);
+  rotate: 720deg;
+  /* transform: translate(50px); */
+  translate: 80px 100px;
+  background: aqua;
+}
+
+/* transform thay đổi hình dạng của elenment
+1. Xoay
+-rotate()
+-rotateX()
+-rotateY()
+
+2. Phóng to thu nhỏ
+scale()
+scaleX()
+scaleY()
+3.Nghiêng
+-skew(x,y)
+-skewX()
+-skewY()
+4.di chuyển
+-translate()
+-
+*/

@@ -1,0 +1,174 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+:root {
+  --font-family-heading: "SpaceGrotes";
+  --font-family-text: "Inter";
+  --font-site-heading: 20px;
+  --font-site-text: 14px;
+}
+/*  */
+@font-face {
+  font-family: "SpaceGrotes";
+  src: url(../font/SpaceGrotesk-Light.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: " SpaceGrotes";
+  font-weight: 400;
+  src: url(../font/SpaceGrotesk-Regular.ttf);
+}
+@font-face {
+  font-family: " SpaceGrotes";
+  src: url(../font/SpaceGrotesk-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: " SpaceGrotes";
+  src: url(../font/SpaceGrotesk-Bold.ttf);
+  font-weight: 700;
+}
+/* end Space */
+
+/* inter */
+@font-face {
+  font-family: "Inter";
+  src: url(../font/Inter-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  src: url(../font/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../font/Inter-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../font/Inter-Bold.ttf);
+  font-weight: 700;
+}
+/* end */
+.products {
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product {
+  width: 300px;
+  height: 300px;
+  border: 1px solid #ccc;
+  position: relative;
+  margin: 10px;
+  padding: 30px 20px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.logo {
+  padding-top: 40px;
+}
+.logo i {
+  font-size: 40px;
+  /* border: 1px solid; */
+  color: rgb(246, 123, 22);
+}
+
+.title-content {
+  position: absolute;
+  left: 20px;
+  top: 120px;
+  transition: 0.4s ease;
+}
+.title-content h2 {
+  font-family: var(--font-family-heading);
+  /* font-weight: 700; */
+  padding: 10px 0;
+  font-size: var(--font-site-heading);
+}
+.title-content p {
+  font-family: var(--font-family-text);
+  font-weight: 300;
+  font-size: var(--font-site-text);
+}
+.learn-more {
+  position: absolute;
+  bottom: 0;
+  transition: 0.4s ease;
+}
+.learn-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+.learn-more a {
+  text-decoration: none;
+  color: white;
+}
+.icon-right i {
+  color: white;
+}
+.icon-right:hover {
+  /* color: black; */
+  background: white;
+}
+
+.icon-right:hover i {
+  color: black;
+}
+
+.btn-learn {
+  padding: 0 10px;
+}
+.btn-learn a {
+  font-family: var(--font-family-heading);
+  font-size: 12px;
+  font-weight: 700;
+}
+.icon-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #999;
+  /* background-color: aqua; */
+  border-radius: 50%;
+}
+
+.icon-right {
+  font-size: 13px;
+}
+
+/* hiệu ứng khi hover */
+.product:hover .title-content {
+  top: 30px;
+  /* border: 1px solid red; */
+  color: white;
+}
+.product:hover .learn-more {
+  bottom: 50px;
+  opacity: 1;
+}
+
+.product:hover .logo {
+  opacity: 0;
+}
+.product:hover {
+  background-image: url(../images/4k.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/*  */

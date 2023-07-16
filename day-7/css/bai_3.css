@@ -34,10 +34,11 @@
   font-size: 20px;
 }
 .Provinces {
+  padding-left: 70px;
   display: flex;
   list-style: none;
   gap: 10px;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
   flex-wrap: wrap;
   padding-bottom: 10px;
@@ -82,7 +83,7 @@
 }
 .product {
   /* margin: 15px 0; */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
   border-radius: 10px;
   position: relative;
   color: white;
@@ -97,6 +98,7 @@
   width: 100%;
   height: 100%;
   border-radius: 10px;
+  filter: brightness(0.6);
   /* opacity: 0.25; */
 }
 .product-images img:hover {

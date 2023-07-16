@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animation-tiktok {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.animation-tiktok div:nth-child(1) {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fe136f;
+  position: absolute;
+  /*infinite chạy vô tận
+  linear chạy theo chiều kim đồng hồ
+    */
+  animation: animationtiktok 1s infinite linear;
+  animation-delay: -0.5s;
+}
+
+.animation-tiktok div:nth-child(2) {
+  width: 50px;
+  position: absolute;
+  height: 50px;
+  border-radius: 50%;
+  background: #31fffe;
+  animation: animationtiktok 1s infinite linear;
+  /* animation-delay: -0.5s; */
+}
+
+@keyframes animationtiktok {
+  0% {
+    transform: translateX(0);
+
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(50px);
+    /* transform: scale(1.5); */
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+}

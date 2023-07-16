@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hoat_anh {
+  padding: 100px 0;
+  display: flex;
+  position: relative;
+}
+
+.hoat_anh div:nth-child(1) img {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+  animation: hoatanh 2s infinite linear;
+  animation-delay: -1s;
+}
+
+.hoat_anh div:nth-child(2) img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  animation: hoatanh 2s infinite linear;
+}
+
+@keyframes hoatanh {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(200px);
+    opacity: 1;
+    transform: scale(2);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+}

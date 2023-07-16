@@ -32,7 +32,9 @@
 }
 .image-vin img {
   width: 100%;
-  filter: grayscale(40%);
+  /* Chỉnh tỷ lệ màu của ảnh */
+  filter: brightness(0.5);
+  /* filter: grayscale(40%); */
   /* opacity: 0.6; */
 }
 /* end */
@@ -111,7 +113,7 @@
   background: white;
   left: 80px;
   bottom: 0px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .logo-vin img {
   width: 100%;
