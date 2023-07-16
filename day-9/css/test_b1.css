@@ -164,6 +164,8 @@ body {
 .product:hover .time {
   right: 430px;
   /* text-align: left; */
+  /* sử dụng direction để đảo lại chữ */
+  direction: rtl;
 }
 
 .product-item:hover .btn {
