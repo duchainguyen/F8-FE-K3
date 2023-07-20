@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #323543;
+}
+
+.envelope {
+  position: relative;
+  width: 200px;
+  height: 120px;
+  background-color: #ffffff;
+  top: 0;
+  background: linear-gradient(to top left, #e46357 50%, transparent 50%);
+  position: 0.5s;
+}
+.envelope:hover {
+  top: 20px;
+}
+.flap {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 0;
+  /* background: #e46357; */
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 60px solid #e46357;
+  opacity: 0;
+  transition: 0.5s;
+}
+.envelope:hover .flap {
+  top: -60px;
+  opacity: 1;
+  /* background: #e46357; */
+}
+.flaps {
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-top: 60px solid #cb4e43;
+}
+.flapss {
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 60px 0 60px 100px;
+  border-color: transparent transparent transparent #dd564b;
+}
+.letter {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  opacity: 0;
+  transition: 0.5s;
+  transition-delay: 0.2s;
+}
+.envelope:hover .letter {
+  top: -90px;
+  opacity: 1;
+  /* background: #e46357; */
+}
+.box-letter {
+  /* position: absolute; */
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-top: 50px solid white;
+}
+.form-letter {
+  /* position: absolute; */
+
+  border-left: 0 solid transparent;
+  border-right: 0 solid transparent;
+  border-top: 100px solid white;
+}
+.form-letter {
+  position: relative;
+}
+.title {
+  position: absolute;
+  left: 5px;
+  top: -80px;
+  width: 50px;
+  height: 10px;
+  background: #cb4e43;
+}
+
+.content {
+  position: absolute;
+  left: 5px;
+  top: -60px;
+  width: 30px;
+  height: 10px;
+  background: #cb4e43;
+}
+.top {
+  position: absolute;
+  display: flex;
+  top: -100px;
+  left: 0;
+  justify-content: space-between;
+}
+span {
+  margin: 0 6px;
+  display: block;
+  width: 20px;
+  height: 10px;
+  background-color: #c95a5f;
+  transform: skew(-40deg);
+}
+
+/* Làm bóng đổ lá thứ */
+.shadowm-Letter {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: black;
+  filter: blur(40px);
+  transform: rotateX(80deg) translateZ(-150px);
+  box-shadow: 0 0 120px rgba(0, 0, 0, 0.8), 0 0 200px rgba(0, 0, 0, 0.8);
+  transition: all 0.5s;
+}
+.envelope:hover ~ .shadowm-Letter {
+  filter: blur(20px);
+  transform: rotateX(85deg) translateZ(-111px) translateY(50px);
+}
+
+/*  */

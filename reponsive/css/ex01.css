@@ -1,0 +1,45 @@
+/* luoon nhớ reset css */
+/* max-width: tối đa
+    min-width tối thiểu */
+*,
+::after,
+::before {
+  box-sizing: border-boxs;
+}
+/* 1. Media query
+   2. breakpoints */
+
+/* mobile */
+body {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  /* text-align: center; */
+}
+.mobile,
+.table,
+.destops {
+  font-size: 50px;
+  display: none;
+}
+/* mobile */
+@media screen and (max-width: 575.98px) {
+  .mobile {
+    display: block;
+    color: red;
+  }
+}
+/*Table  */
+@media screen and (min-width: 576px) and (max-width: 991.98px) {
+  .table {
+    display: block;
+    color: aqua;
+  }
+}
+/* Destop */
+@media screen and (min-width: 992px) {
+  .destops {
+    display: block;
+    color: green;
+  }
+}

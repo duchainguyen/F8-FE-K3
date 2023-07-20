@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #323543;
+    }
+
+    .envelope {
+      position: relative;
+      width: 200px;
+      height: 120px;
+      background-color: #ffffff;
+      top: 0;
+      background: linear-gradient(to top left, #e46357 50%, transparent 50%);
+      position: 0.5s;
+    }
+    .envelope:hover {
+      top: 20px;
+    }
+    .flap {
+      position: absolute;
+      top: 0px;
+      left: 0;
+      width: 0;
+      /* background: #e46357; */
+      height: 0;
+      border-left: 100px solid transparent;
+      border-right: 100px solid transparent;
+      border-bottom: 60px solid #e46357;
+      opacity: 0;
+      transition: 0.5s;
+    }
+    .envelope:hover .flap {
+      top: -60px;
+      opacity: 1;
+      /* background: #e46357; */
+    }
+    .flaps {
+      border-left: 100px solid transparent;
+      border-right: 100px solid transparent;
+      border-top: 60px solid #cb4e43;
+    }
+    .flapss {
+      position: absolute;
+      top: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 60px 0 60px 100px;
+      border-color: transparent transparent transparent #dd564b;
+    }
+    .lathu {
+      position: absolute;
+      left: 20px;
+      top: 0;
+      opacity: 0;
+      /* top: -90px; */
+      transition: 0.5s;
+      transition-delay: 0.2s;
+    }
+    .envelope:hover .lathu {
+      top: -90px;
+      opacity: 1;
+      /* background: #e46357; */
+    }
+    .lathus {
+      /* position: absolute; */
+      border-left: 80px solid transparent;
+      border-right: 80px solid transparent;
+      border-top: 50px solid white;
+    }
+    .thanlathu {
+      /* position: absolute; */
+
+      border-left: 0 solid transparent;
+      border-right: 0 solid transparent;
+      border-top: 100px solid white;
+    }
+    .thanlathu {
+      position: relative;
+    }
+    .title {
+      position: absolute;
+      left: 5px;
+      top: -80px;
+      width: 50px;
+      height: 10px;
+      background: #cb4e43;
+    }
+
+    .content {
+      position: absolute;
+      left: 5px;
+      top: -60px;
+      width: 30px;
+      height: 10px;
+      background: #cb4e43;
+    }
+    /*  */
+  </style>
+  <body>
+    <div class="envelope">
+      <div class="phongbi">
+        <div class="flap"></div>
+        <div class="flaps"></div>
+        <div class="flapss"></div>
+      </div>
+      <div class="lathu">
+        <div class="thanlathu">
+          <div class="title"></div>
+          <div class="content"></div>
+        </div>
+        <div class="lathus"></div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #919191;
+  font-family: sans-serif;
+}
+.container {
+  margin: 50px auto;
+  width: 800px;
+}
+li {
+  list-style: none;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+  /* justify-content: space-between; */
+}
+
+.menu ul li {
+  padding: 15px;
+  border: 1px solid #ccc;
+  background: white;
+}
+
+.menu ul li label {
+  padding: 14px 10px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.menu {
+  position: relative;
+}
+.content {
+  position: absolute;
+  transform-origin: top;
+  top: 50px;
+  margin: 0 49px;
+  overflow-x: scroll;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  transition: 0.5s ease;
+  transform: rotateX(-70deg);
+  opacity: 0;
+  visibility: hidden;
+}
+.content h2 {
+  color: #919191;
+  padding: 10px 0;
+}
+.content p {
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.6);
+}
+#tab-1:checked ~ .menu .tab-1 {
+  transform: rotateX(0deg);
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+  transition-delay: 0.5s;
+}
+#tab-2:checked ~ .menu .tab-2 {
+  transform: rotateX(0deg);
+  opacity: 1;
+  visibility: visible;
+
+  z-index: 1;
+  transition-delay: 0.5s;
+}
+#tab-3:checked ~ .menu .tab-3 {
+  transform: rotateX(0deg);
+  opacity: 1;
+  visibility: visible;
+
+  z-index: 1;
+  transition-delay: 0.5s;
+}
+#tab-4:checked ~ .menu .tab-4 {
+  transform: rotateX(0deg);
+  opacity: 1;
+  z-index: 1;
+  visibility: visible;
+
+  transition-delay: 0.5s;
+}
+
+.menu ul li:hover {
+  background: #31a8f7;
+  color: white;
+}
+
+#tab-1:checked ~ .menu li:nth-child(1),
+#tab-2:checked ~ .menu li:nth-child(2),
+#tab-3:checked ~ .menu li:nth-child(3),
+#tab-4:checked ~ .menu li:nth-child(4) {
+  background: #31a8f7;
+  color: white;
+}

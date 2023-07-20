@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: aqua;
+      }
+      .container {
+        position: relative;
+      }
+
+      .container:before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ff0000; /* Màu nền mới */
+        z-index: -1;
+        opacity: 0;
+        transition: all 1s ease;
+      }
+
+      .burger-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+      }
+
+      .burger-icon span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #000;
+        margin-bottom: 5px;
+      }
+
+      .content {
+        padding: 20px;
+      }
+
+      #burger-toggle:checked ~ .container:before {
+        opacity: 1;
+        transform: rotate(360deg);
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="burger-toggle" />
+    <label for="burger-toggle" class="burger-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <div class="container">
+      <div class="content">
+        <!-- Nội dung của trang web -->
+      </div>
+    </div>
+  </body>
+</html>
