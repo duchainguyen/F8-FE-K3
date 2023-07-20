@@ -45,6 +45,7 @@ i {
   position: absolute;
   top: 20px;
   left: 20px;
+  transition: all 1s ease;
 }
 .barss .fa-arrow-left {
   position: absolute;
@@ -89,8 +90,8 @@ input:checked ~ .overlay {
   color: black;
 }
 
-/*  */
-input:checked ~ label .barss {
+/* xoay bars 1 vòng */
+input:checked ~ label .barss .fa-bars {
   border-radius: 99px;
   transform: rotateZ(360deg);
 }
@@ -100,4 +101,32 @@ input:checked ~ label .barss .fa-bars {
 input:checked ~ label .barss .fa-arrow-left {
   opacity: 1;
   visibility: visible;
+}
+
+.content {
+  position: relative;
+  top: 200px;
+  left: 800px;
+}
+
+.content h1 {
+  font-size: 40px;
+  margin: 20px;
+  color: white;
+}
+
+.content span {
+  color: white;
+  font-size: 35px;
+  padding: 0 70px;
+  position: relative;
+  /* font-weight: 300; */
+}
+
+.content span::before {
+  content: "inspired by";
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+  left: -40px;
 }
