@@ -1,0 +1,55 @@
+/* 576px 
+768px
+992px
+1200px
+1400px
+*/
+body {
+  color: green;
+  /* background-color: aqua; */
+}
+
+/* desktop-first */
+@media screen and (max-width: 1399px) {
+}
+
+@media screen and (max-width: 1199px) {
+}
+
+@media screen and (max-width: 991px) {
+  body {
+    color: red;
+  }
+}
+
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 575px) {
+  body {
+    color: yellow;
+  }
+}
+
+/* desktop First */
+
+/*mobile first  */
+/* @media screen and (min-width: 576) {
+}
+
+@media screen and (min-width: 768) {
+}
+@media screen and (min-width: 992) {
+  body {
+    color: aqua;
+  }
+  p {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 1200) {
+}
+@media screen and (min-width: 1400) {
+} */
+
+/* end */
