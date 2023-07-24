@@ -378,6 +378,9 @@ input::placeholder {
   color: white;
   border: none;
 }
+.field-group input {
+  width: 100%;
+}
 /* end */
 
 /* footer */
@@ -462,22 +465,10 @@ input::placeholder {
     display: block;
     font-size: 30px;
   }
-}
-
-@media screen and (max-width: 575.98px) {
-  /* .contact-shipper-top {
-    display: flex;
+  .orders {
+    background-image: none;
   }
-  .contact-shipper {
-    display: none;
+  .field-group {
+    width: 97%;
   }
-  .list-menu li:not(.bars) {
-    display: none;
-  }
-  .bars {
-    display: block;
-    line-height: 62px;
-    font-size: 30px;
-    padding-left: 250px;
-  } */
 }
