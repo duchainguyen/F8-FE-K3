@@ -27,14 +27,42 @@
     margin-top: 76px;
     .form-register {
       display: flex;
+      position: relative;
       align-items: center;
       .register {
-        width: 30px;
-        height: 30px;
+        width: 22px;
+        height: 22px;
         padding-left: 34px;
       }
+      #register {
+        &:checked {
+          ~ {
+            .img-x {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+      }
+      .img-x {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 23px;
+        height: 23px;
+        left: 0;
+        background: $color-Aqua;
+        border-radius: 3px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.6s ease-in;
+      }
+
       .label-register {
         margin-left: 10px;
+        font-weight: 700;
+        opacity: 0.8;
       }
     }
     .btn-register {
@@ -43,11 +71,16 @@
       border-radius: 10px;
       border: none;
       margin-top: 20px;
-      background: #4739a6;
+      background: $color-Aqua;
       color: $color-White;
+      font-weight: 700;
     }
   }
   .text {
     margin-top: 30px;
+    a {
+      color: $color-Aqua;
+      font-weight: 700;
+    }
   }
 }

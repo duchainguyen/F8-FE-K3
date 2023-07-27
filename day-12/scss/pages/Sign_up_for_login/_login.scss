@@ -37,12 +37,50 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        .remember {
-          width: 30px;
-          height: 30px;
+        position: relative;
+        a {
+          font-weight: 700;
+          color: $color-Black;
+          opacity: 0.4;
+          &:hover {
+            color: $color-Aqua;
+            opacity: 1;
+          }
         }
+        .remember {
+          width: 22px;
+          height: 22px;
+        }
+        #remember {
+          &:checked {
+            ~ {
+              .img-x {
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+          }
+        }
+        .img-x {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          width: 23px;
+          height: 23px;
+          left: 0;
+          background: $color-Aqua;
+          border-radius: 3px;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.6s ease-in;
+        }
+
         .label-remember {
           padding-left: 10px;
+          font-weight: 700;
+          color: 14px;
+          opacity: 0.8;
         }
       }
     }
@@ -52,7 +90,7 @@
       border-radius: 10px;
       border: none;
       margin-top: 20px;
-      background: #4739a6;
+      background: #615dfa;
       color: $color-White;
     }
   }
@@ -60,23 +98,40 @@
     display: flex;
     justify-content: center;
     margin-top: 40px;
+    font-weight: 700;
   }
   .social {
     display: flex;
     justify-content: space-between;
-    padding: 0 90px;
+    padding: 0 75px;
     margin-top: 30px;
     .fb {
       background: #3763d2;
+      transition: margin-top 0.3s ease;
+      &:hover {
+        margin-top: -5px;
+      }
     }
     .tw {
       background: #1abcff;
+      transition: margin-top 0.3s ease;
+      &:hover {
+        margin-top: -5px;
+      }
     }
     .mess {
       background: #7b5dfa;
+      transition: margin-top 0.3s ease;
+      &:hover {
+        margin-top: -5px;
+      }
     }
     .ytb {
       background: #fd434f;
+      transition: margin-top 0.3s ease;
+      &:hover {
+        margin-top: -5px;
+      }
     }
   }
 }

@@ -92,7 +92,8 @@ input[type=password] {
   position: absolute;
   left: 20px;
   top: 25px;
-  color: black;
+  color: #adafca;
+  font-weight: 700;
   transition: 0.4s ease;
 }
 
@@ -526,13 +527,44 @@ input[type=password] {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.account-login form .form-row .form-item a {
+  font-weight: 700;
+  color: black;
+  opacity: 0.4;
+}
+.account-login form .form-row .form-item a:hover {
+  color: Aqua;
+  opacity: 1;
 }
 .account-login form .form-row .form-item .remember {
-  width: 30px;
-  height: 30px;
+  width: 22px;
+  height: 22px;
+}
+.account-login form .form-row .form-item #remember:checked ~ .img-x {
+  opacity: 1;
+  visibility: visible;
+}
+.account-login form .form-row .form-item .img-x {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  left: 0;
+  background: Aqua;
+  border-radius: 3px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.6s ease-in;
 }
 .account-login form .form-row .form-item .label-remember {
   padding-left: 10px;
+  font-weight: 700;
+  color: 14px;
+  opacity: 0.8;
 }
 .account-login form .btn-login {
   width: 100%;
@@ -540,31 +572,48 @@ input[type=password] {
   border-radius: 10px;
   border: none;
   margin-top: 20px;
-  background: #4739a6;
+  background: #615dfa;
   color: white;
 }
 .account-login p {
   display: flex;
   justify-content: center;
   margin-top: 40px;
+  font-weight: 700;
 }
 .account-login .social {
   display: flex;
   justify-content: space-between;
-  padding: 0 90px;
+  padding: 0 75px;
   margin-top: 30px;
 }
 .account-login .social .fb {
   background: #3763d2;
+  transition: margin-top 0.3s ease;
+}
+.account-login .social .fb:hover {
+  margin-top: -5px;
 }
 .account-login .social .tw {
   background: #1abcff;
+  transition: margin-top 0.3s ease;
+}
+.account-login .social .tw:hover {
+  margin-top: -5px;
 }
 .account-login .social .mess {
   background: #7b5dfa;
+  transition: margin-top 0.3s ease;
+}
+.account-login .social .mess:hover {
+  margin-top: -5px;
 }
 .account-login .social .ytb {
   background: #fd434f;
+  transition: margin-top 0.3s ease;
+}
+.account-login .social .ytb:hover {
+  margin-top: -5px;
 }
 
 @media screen and (max-width: 1365px) {
@@ -644,15 +693,36 @@ input[type=password] {
 }
 .account-register form .form-register {
   display: flex;
+  position: relative;
   align-items: center;
 }
 .account-register form .form-register .register {
-  width: 30px;
-  height: 30px;
+  width: 22px;
+  height: 22px;
   padding-left: 34px;
+}
+.account-register form .form-register #register:checked ~ .img-x {
+  opacity: 1;
+  visibility: visible;
+}
+.account-register form .form-register .img-x {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  left: 0;
+  background: Aqua;
+  border-radius: 3px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.6s ease-in;
 }
 .account-register form .form-register .label-register {
   margin-left: 10px;
+  font-weight: 700;
+  opacity: 0.8;
 }
 .account-register form .btn-register {
   width: 100%;
@@ -660,11 +730,16 @@ input[type=password] {
   border-radius: 10px;
   border: none;
   margin-top: 20px;
-  background: #4739a6;
+  background: Aqua;
   color: white;
+  font-weight: 700;
 }
 .account-register .text {
   margin-top: 30px;
+}
+.account-register .text a {
+  color: Aqua;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */
