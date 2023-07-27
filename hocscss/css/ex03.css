@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/*Kế thừa trong scss
+
+1.Extend
+    cú pháp @extend selector
+
+2.Placeholder
+    cú pháp 
+    %tenplaceholder{
+        code css
+    }
+
+3.mixin
+
+cú pháp @mixin tenmixin
+
+khi chạy gọi @include tenmixin;
+
+
+*/
+.services {
+  background: yellow;
+  padding: 30px 0;
+  border: 1px solid #ccc;
+}
+.services .content1 {
+  margin: auto;
+}
+
+.box, .products {
+  padding: 30px 0;
+  border: 1px solid #ccc;
+}
+
+.box, .products {
+  padding: 20px 0;
+  border: 1px solid #ccc;
+}
+
+.post {
+  background: green;
+}
+
+.products {
+  background: gray;
+}
+
+.menu li a.active, .menu li a:hover {
+  color: red;
+}
+.carousel-controls .nav-grew, .carousel-controls .nav-next {
+  background: green;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+.carousel-controls .nav-next {
+  left: auto;
+  right: 0;
+}
+
+.container {
+  margin: 30px auto;
+  right: 0;
+  left: auto;
+  width: 1000px;
+}
+
+/*# sourceMappingURL=ex03.css.map */

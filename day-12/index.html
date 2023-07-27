@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vikinger | Home</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="account">
+      <input type="radio" id="rdo_login" checked hidden />
+      <input type="radio" id="rdo_register" hidden />
+      <div class="info-account">
+        <div class="logo-vkinger">
+          <img src="./svg/svgexport-1.svg" alt="" />
+        </div>
+        <div class="content">
+          <h1>VIKINGER</h1>
+          <p>
+            The next generation social network & community! Connect with your
+            friends and play with our quests and badges gamification system!
+          </p>
+        </div>
+        <div class="btn-account">
+          <ul>
+            <li>
+              <label for="rdo_login">Login</label>
+            </li>
+            <li>
+              <label for="rdo_register">Register</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="account-login">
+        <h2 class="title">Account Login</h2>
+        <img class="logo-rocket" src="./images/rocket.png" alt="" />
+        <form action="" method="get">
+          <div class="form">
+            <input
+              type="email"
+              class="form-input"
+              name="email"
+              id="email"
+              required
+              placeholder=" "
+            />
+            <label for="email" class="form-label"
+              >Username or Email<i class="fa-solid fa-star"></i
+            ></label>
+          </div>
+          <div class="form">
+            <input
+              type="password"
+              class="form-input"
+              required
+              name="password"
+              id="password"
+              placeholder=" "
+            />
+            <label for="password" class="form-label"
+              >Password<i class="fa-solid fa-star"></i
+            ></label>
+          </div>
+          <div class="form-row">
+            <div class="form-item">
+              <input class="remember" type="checkbox" id="remember" />
+              <label class="label-remember" for="remember">Remember Me</label>
+            </div>
+            <div class="form-item"><a href="#!">Forgot Password?</a></div>
+          </div>
+          <button class="btn-login" type="submit">
+            Login to your Account!
+          </button>
+        </form>
+        <p>Login with your Social Account</p>
+        <div class="social">
+          <div class="fb" href="#!">
+            <img src="./svg/svgexport-3.svg" alt="" />
+          </div>
+          <div class="tw" href="#!">
+            <img src="./svg/svgexport-4.svg" alt="" />
+          </div>
+          <div class="mess" href="#!">
+            <img src="./svg/svgexport-5.svg" alt="" />
+          </div>
+          <div class="ytb" href="#!">
+            <img src="./svg/svgexport-6.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="account-register">
+        <h2>Create your Account!</h2>
+        <img class="logo-rocket" src="./images/rocket.png" alt="" />
+        <form action="" method="get">
+          <div class="form">
+            <input
+              type="email"
+              class="form-input"
+              name="email"
+              id="email"
+              required
+              placeholder=" "
+            />
+            <label for="email" class="form-label">Your Email</label>
+          </div>
+          <div class="form">
+            <input
+              type="password"
+              class="form-input"
+              required
+              name="password"
+              id="password"
+              placeholder=" "
+            />
+            <label for="text" class="form-label">Username</label>
+          </div>
+          <div class="form">
+            <input
+              type="password"
+              class="form-input"
+              name="password"
+              id="password"
+              required
+              placeholder=" "
+            />
+            <label for="password" class="form-label">Password</label>
+          </div>
+          <div class="form">
+            <input
+              type="password"
+              class="form-input"
+              name="repeat-password"
+              id="repeat-password"
+              required
+              placeholder=" "
+            />
+            <label for="repeat-password" class="form-label"
+              >Repear Password</label
+            >
+          </div>
+          <div class="form-register">
+            <input class="register" type="checkbox" id="register" />
+            <label class="label-register" for="register"
+              >Send me news and updates via email</label
+            >
+          </div>
+          <button class="btn-register" type="submit">Register Now!</button>
+        </form>
+        <p class="text">
+          You'll receive a confirmation email in your inbox with a link to
+          activate your account. If you have <a href="#!">contact us</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

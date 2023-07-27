@@ -1,0 +1,48 @@
+//vòng lặp for through
+//==> lặp với số lần xác định trước
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    --colum-site: #{$i};
+  }
+}
+
+@for $i from 1 through 5 {
+  .column-#{$i} {
+    @if ($i % 2 != 0) {
+      width: #{$i * 10 + 0%};
+    } @else {
+      width: #{$i * 15 + 0%};
+    }
+  }
+}
+
+// vòng lặp @each
+
+// Vòng lặp each 1 giá trị
+// $sizes: 10, 40, 60, 100;
+// @each $size in $sizes {
+//   .w-#{$size} {
+//     width: #{$size + 0%};
+//   }
+// }
+// end
+
+// vòng lặp each nhiều giá trị
+// $sizes: (small, 40, normal, red), (medium, 60, 400, #ccc),
+//   (large, 80, 600, aqua);
+
+// @each $name, $size, $weight, $color in $sizes {
+//   .col-#{$name} {
+//     width: #{$size + 0%};
+//     font-weight: #{$weight};
+//     color: #{$color};
+//   }
+// }
+// end
+
+$sizes: (
+  small: 40,
+  medium: 60,
+  larger: 80,
+  xlarge: 100,
+);

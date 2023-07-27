@@ -1,0 +1,151 @@
+/*account*/
+.account {
+  background-image: url("../images/landing-background.jpg");
+  background-repeat: no-repeat;
+  font-family: $font_Titillium;
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  #rdo_login {
+    &:checked {
+      ~ {
+        .account-login {
+          opacity: 1;
+          z-index: 1;
+          transform: translateX(0);
+          visibility: visible;
+        }
+      }
+    }
+  }
+  #rdo_register {
+    &:checked {
+      ~ {
+        .account-register {
+          opacity: 1;
+          z-index: 1;
+          transform: translateX(0);
+          visibility: visible;
+        }
+      }
+    }
+  }
+  #rdo_register {
+    &:checked {
+      ~ {
+        .account-login {
+          opacity: 0;
+          z-index: 1;
+          transform: translateX(0);
+          visibility: hidden;
+        }
+      }
+    }
+  }
+  #rdo_login {
+    &:checked {
+      ~ {
+        .info-account {
+          .btn-account {
+            ul {
+              li {
+                &:nth-child(1) {
+                  background: $color-White;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #rdo_register {
+    &:checked {
+      ~ {
+        .info-account {
+          .btn-account {
+            ul {
+              li {
+                &:nth-child(2) {
+                  background: $color-White;
+                  border-radius: 0 10px 10px 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .info-account {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      h1 {
+        padding-top: 50px;
+        position: relative;
+        font-size: 50px;
+        font-size: 104px;
+        font-weight: 900;
+        color: $color-White;
+      }
+      &::after {
+        content: "Welcom to";
+        text-transform: uppercase;
+        font-size: 20px;
+        position: absolute;
+        top: 110px;
+        color: $color-White;
+      }
+      p {
+        // margin: 0 auto;
+        text-align: center;
+        margin: 10px 100px 0;
+        font-family: $font_Rajdhani;
+        font-size: 18px;
+        font-weight: 500;
+        color: $color-White;
+      }
+    }
+    .btn-account {
+      margin-top: 40px;
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $color-White;
+        border-radius: 10px;
+        li {
+          padding: 10px 20px;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          width: 180px;
+          height: 54px;
+          font-weight: 700;
+
+          &:nth-child(1) {
+            border-radius: 10px 0 0 10px;
+          }
+          label {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,149 @@
+.account-login {
+  width: 484px;
+  font-family: $font_Rajdhani;
+  border-radius: 12px;
+  background: $color-White;
+  box-shadow: 0 0 60px 0 rgba(94, 92, 154, 0.12);
+  position: absolute;
+  right: 10%;
+  padding: 64px;
+  bottom: 10%;
+  transition: opacity 0.5s ease;
+  transition: visibility 0.5s ease;
+  transition: transform 0.4s ease-out;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(50%);
+  .logo-rocket {
+    position: absolute;
+    top: -50px;
+    left: -70px;
+  }
+  h2 {
+    color: $color-Black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // font-family: $font_Rajdhani;
+  }
+  & form {
+    margin-top: 50px;
+    .form-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 28px;
+      .form-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .remember {
+          width: 30px;
+          height: 30px;
+        }
+        .label-remember {
+          padding-left: 10px;
+        }
+      }
+    }
+    .btn-login {
+      width: 100%;
+      height: 54px;
+      border-radius: 10px;
+      border: none;
+      margin-top: 20px;
+      background: #4739a6;
+      color: $color-White;
+    }
+  }
+  p {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .social {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 90px;
+    margin-top: 30px;
+    .fb {
+      background: #3763d2;
+    }
+    .tw {
+      background: #1abcff;
+    }
+    .mess {
+      background: #7b5dfa;
+    }
+    .ytb {
+      background: #fd434f;
+    }
+  }
+}
+
+// REPONSIVE
+
+@media screen and (max-width: 1365px) {
+  .account {
+    background-image: url("../images/landing-background_1365.jpg");
+    padding: 80px 0 100px;
+    position: static;
+    background-size: cover;
+    #rdo_register {
+      &:checked {
+        ~ {
+          .account-register {
+            display: block;
+          }
+        }
+      }
+    }
+    #rdo_register {
+      &:checked {
+        ~ {
+          .account-login {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .info-account {
+      width: 100%;
+      position: static;
+      .content {
+        &::after {
+          top: 175px;
+        }
+        p {
+          display: none;
+        }
+      }
+    }
+    .account-login {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 0 auto;
+      position: static;
+      margin-top: 80px;
+      //   display: none;
+      .social {
+        & div {
+          margin: 0 10px;
+        }
+      }
+    }
+    .account-register {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 0 auto;
+      position: static;
+      margin-top: 80px;
+      display: none;
+    }
+  }
+}

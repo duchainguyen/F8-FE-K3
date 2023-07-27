@@ -1,0 +1,75 @@
+/*Kế thừa trong scss
+
+1.Extend
+    cú pháp @extend selector
+
+2.Placeholder
+    cú pháp 
+    %tenplaceholder{
+        code css
+    }
+
+3.mixin
+
+cú pháp @mixin tenmixin
+
+khi chạy gọi @include tenmixin;
+
+
+*/
+@import "parts/mixin";
+%section-base {
+  padding: 30px 0;
+  border: 1px solid #ccc;
+}
+// mixin
+
+// end mixin
+
+.box {
+  padding: 20px 0;
+  border: 1px solid #ccc;
+  @extend %section-base;
+}
+
+.post {
+  background: green;
+  //   @extend .box;
+}
+
+.products {
+  background: gray;
+  @extend .box;
+}
+.menu {
+  li {
+    a {
+      &.active {
+        color: red;
+      }
+      &:hover {
+        @extend .active;
+      }
+    }
+  }
+}
+
+.carousel-controls {
+  .nav-grew {
+    background: green;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+  .nav-next {
+    @extend .nav-grew;
+    left: auto;
+    right: 0;
+  }
+}
+
+.container {
+  @include center(1000px, 30px);
+}

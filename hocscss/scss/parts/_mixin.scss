@@ -1,0 +1,25 @@
+@mixin section-base {
+  padding: 30px 0;
+  border: 1px solid #ccc;
+  .content1 {
+    margin: auto;
+  }
+}
+
+.services {
+  background: yellow;
+  @include section-base;
+}
+
+@mixin center {
+  margin: 0 auto;
+  right: 0;
+  left: auto;
+}
+
+@mixin center($width, $box) {
+  margin: $box auto;
+  right: 0;
+  left: auto;
+  width: $width;
+}

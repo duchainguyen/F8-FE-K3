@@ -1,0 +1,69 @@
+.col-1 {
+  --colum-site: 1;
+}
+
+.col-2 {
+  --colum-site: 2;
+}
+
+.col-3 {
+  --colum-site: 3;
+}
+
+.col-4 {
+  --colum-site: 4;
+}
+
+.col-5 {
+  --colum-site: 5;
+}
+
+.col-6 {
+  --colum-site: 6;
+}
+
+.col-7 {
+  --colum-site: 7;
+}
+
+.col-8 {
+  --colum-site: 8;
+}
+
+.col-9 {
+  --colum-site: 9;
+}
+
+.col-10 {
+  --colum-site: 10;
+}
+
+.col-11 {
+  --colum-site: 11;
+}
+
+.col-12 {
+  --colum-site: 12;
+}
+
+.column-1 {
+  width: 10%;
+}
+
+.column-2 {
+  width: 30%;
+}
+
+.column-3 {
+  width: 30%;
+}
+
+.column-4 {
+  width: 60%;
+}
+
+.column-5 {
+  width: 50%;
+}
+
+/*# sourceMappingURL=ex05.css.map */

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login/Register Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      width: 400px;
+      border: 1px solid #ccc;
+      padding: 20px;
+    }
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-container .login-form,
+    .form-container .register-form {
+      opacity: 0;
+    }
+
+    #login:checked ~ .form-container .login-form {
+      opacity: 1;
+    }
+
+    #register:checked ~ .form-container .register-form {
+      opacity: 1;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <input type="radio" name="form" id="login" checked hidden />
+      <input type="radio" name="form" id="register" hidden />
+      <div class="form-container">
+        <div class="cc">
+          <label for="login">login</label>
+          <label for="register">register</label>
+        </div>
+        <div class="login-form">
+          <h2>Login Form</h2>
+          <form>
+            <!-- Thêm các input và button cho form login -->
+            <input type="text" placeholder="Username" />
+            <input type="password" placeholder="Password" />
+            <button type="submit">Login</button>
+          </form>
+        </div>
+
+        <div class="register-form">
+          <h2>Register Form</h2>
+          <form>
+            <!-- Thêm các input và button cho form register -->
+            <input type="text" placeholder="Username" />
+            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Confirm Password" />
+            <button type="submit">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

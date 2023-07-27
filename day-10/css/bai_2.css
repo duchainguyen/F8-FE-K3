@@ -61,7 +61,7 @@ li {
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.6);
 }
-#tab-1:checked ~ .menu .tab-1 {
+.container #tab-1:checked ~ .menu .tab-1 {
   transform: rotateX(0deg);
   opacity: 1;
   visibility: visible;

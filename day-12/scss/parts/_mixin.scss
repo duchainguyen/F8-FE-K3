@@ -1,0 +1,13 @@
+// grid
+@mixin column($name: "") {
+  $prefix: "col";
+  @if ($name != "") {
+    $prefix: $prefix + "-" + $name;
+  }
+  @for $i from 1 through 12 {
+    .#{$prefix}-#{$i} {
+      --colum-site: #{$i};
+    }
+  }
+}
+//

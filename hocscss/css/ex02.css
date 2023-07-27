@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/*moot số toán tử
+
+
+2. toán tử logic
+>,< , >= , <=, !=, ==
+
+3.toán tử gán
+vd $a: 1;
+4.toán tử lý luận
+
+nối chuỗi dùng dấu cộng
+
+vd; .col-md-5
+*/
+.col-md-5 {
+  width: 50%;
+}
+
+.size {
+  width: 10%;
+}
+
+/* câu lệnh rẽ nhánh @if @else
+@if(conition){
+    //body
+}
+@else{
+    //body
+}
+
+
+@if(conition){
+    //body
+}
+@else if(condition){
+    //body
+}
+@else if(condition){
+    //body
+}
+@else{
+    //body
+}
+*/
+/*
+
+
+*/
+
+/*# sourceMappingURL=ex02.css.map */

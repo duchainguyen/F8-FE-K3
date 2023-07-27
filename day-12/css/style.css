@@ -1,0 +1,670 @@
+@charset "UTF-8";
+/*fonts*/
+@font-face {
+  font-family: "Rajdhani";
+  src: url(../fonts/Rajdhani-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Rajdhani";
+  font-weight: 400;
+  src: url(../fonts/Rajdhani-Regular.ttf);
+}
+@font-face {
+  font-family: "Rajdhani";
+  src: url(../fonts/Rajdhani-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Rajdhani";
+  src: url(../fonts/Rajdhani-Bold.ttf);
+  font-weight: 700;
+}
+/*end*/
+@font-face {
+  font-family: "Titillium Web";
+  src: url(../fonts/TitilliumWeb-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Titillium Web";
+  font-weight: 400;
+  src: url(../fonts/TitilliumWeb-Regular.ttf);
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url(../fonts/TitilliumWeb-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url(../fonts/TitilliumWeb-Black.ttf);
+  font-weight: 900;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  line-height: 1.2;
+  color: #333;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*làm về input*/
+.form {
+  position: relative;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+
+input[type=email],
+input[type=password] {
+  position: relative;
+  padding: 0 20px;
+  width: 375px;
+  height: 50px;
+  margin: 0 auto;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.4);
+}
+
+.form-label {
+  position: absolute;
+  left: 20px;
+  top: 25px;
+  color: black;
+  transition: 0.4s ease;
+}
+
+.form-input:not(:placeholder-shown) + .form-label,
+.form-input:focus + .form-label {
+  top: 3px;
+  background: white;
+  font-size: 0.7rem;
+}
+
+.form-input:focus {
+  border: 1px solid #4739a6;
+}
+
+.social div {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.social div img {
+  width: 12px;
+}
+
+:root {
+  --container-width: 1200px;
+  --column-space: 20px;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 calc(-1 * var(--column-space) / 2);
+}
+
+.row [class^=col-] {
+  --column-width: calc(100% / (12 / var(--column-size)));
+  flex-basis: var(--column-width);
+  max-width: var(--column-width);
+  padding: 0 calc(var(--column-space) / 2);
+}
+
+.col-1 {
+  --colum-site: 1;
+}
+
+.col-2 {
+  --colum-site: 2;
+}
+
+.col-3 {
+  --colum-site: 3;
+}
+
+.col-4 {
+  --colum-site: 4;
+}
+
+.col-5 {
+  --colum-site: 5;
+}
+
+.col-6 {
+  --colum-site: 6;
+}
+
+.col-7 {
+  --colum-site: 7;
+}
+
+.col-8 {
+  --colum-site: 8;
+}
+
+.col-9 {
+  --colum-site: 9;
+}
+
+.col-10 {
+  --colum-site: 10;
+}
+
+.col-11 {
+  --colum-site: 11;
+}
+
+.col-12 {
+  --colum-site: 12;
+}
+
+@media screen and (min-width: 576px) {
+  .col-sm-1 {
+    --colum-site: 1;
+  }
+  .col-sm-2 {
+    --colum-site: 2;
+  }
+  .col-sm-3 {
+    --colum-site: 3;
+  }
+  .col-sm-4 {
+    --colum-site: 4;
+  }
+  .col-sm-5 {
+    --colum-site: 5;
+  }
+  .col-sm-6 {
+    --colum-site: 6;
+  }
+  .col-sm-7 {
+    --colum-site: 7;
+  }
+  .col-sm-8 {
+    --colum-site: 8;
+  }
+  .col-sm-9 {
+    --colum-site: 9;
+  }
+  .col-sm-10 {
+    --colum-site: 10;
+  }
+  .col-sm-11 {
+    --colum-site: 11;
+  }
+  .col-sm-12 {
+    --colum-site: 12;
+  }
+}
+@media screen and (min-width: 768px) {
+  .col-md-1 {
+    --colum-site: 1;
+  }
+  .col-md-2 {
+    --colum-site: 2;
+  }
+  .col-md-3 {
+    --colum-site: 3;
+  }
+  .col-md-4 {
+    --colum-site: 4;
+  }
+  .col-md-5 {
+    --colum-site: 5;
+  }
+  .col-md-6 {
+    --colum-site: 6;
+  }
+  .col-md-7 {
+    --colum-site: 7;
+  }
+  .col-md-8 {
+    --colum-site: 8;
+  }
+  .col-md-9 {
+    --colum-site: 9;
+  }
+  .col-md-10 {
+    --colum-site: 10;
+  }
+  .col-md-11 {
+    --colum-site: 11;
+  }
+  .col-md-12 {
+    --colum-site: 12;
+  }
+}
+@media screen and (min-width: 992px) {
+  .col-lg-1 {
+    --colum-site: 1;
+  }
+  .col-lg-2 {
+    --colum-site: 2;
+  }
+  .col-lg-3 {
+    --colum-site: 3;
+  }
+  .col-lg-4 {
+    --colum-site: 4;
+  }
+  .col-lg-5 {
+    --colum-site: 5;
+  }
+  .col-lg-6 {
+    --colum-site: 6;
+  }
+  .col-lg-7 {
+    --colum-site: 7;
+  }
+  .col-lg-8 {
+    --colum-site: 8;
+  }
+  .col-lg-9 {
+    --colum-site: 9;
+  }
+  .col-lg-10 {
+    --colum-site: 10;
+  }
+  .col-lg-11 {
+    --colum-site: 11;
+  }
+  .col-lg-12 {
+    --colum-site: 12;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .col-xl-1 {
+    --colum-site: 1;
+  }
+  .col-xl-2 {
+    --colum-site: 2;
+  }
+  .col-xl-3 {
+    --colum-site: 3;
+  }
+  .col-xl-4 {
+    --colum-site: 4;
+  }
+  .col-xl-5 {
+    --colum-site: 5;
+  }
+  .col-xl-6 {
+    --colum-site: 6;
+  }
+  .col-xl-7 {
+    --colum-site: 7;
+  }
+  .col-xl-8 {
+    --colum-site: 8;
+  }
+  .col-xl-9 {
+    --colum-site: 9;
+  }
+  .col-xl-10 {
+    --colum-site: 10;
+  }
+  .col-xl-11 {
+    --colum-site: 11;
+  }
+  .col-xl-12 {
+    --colum-site: 12;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .col-xxl-1 {
+    --colum-site: 1;
+  }
+  .col-xxl-2 {
+    --colum-site: 2;
+  }
+  .col-xxl-3 {
+    --colum-site: 3;
+  }
+  .col-xxl-4 {
+    --colum-site: 4;
+  }
+  .col-xxl-5 {
+    --colum-site: 5;
+  }
+  .col-xxl-6 {
+    --colum-site: 6;
+  }
+  .col-xxl-7 {
+    --colum-site: 7;
+  }
+  .col-xxl-8 {
+    --colum-site: 8;
+  }
+  .col-xxl-9 {
+    --colum-site: 9;
+  }
+  .col-xxl-10 {
+    --colum-site: 10;
+  }
+  .col-xxl-11 {
+    --colum-site: 11;
+  }
+  .col-xxl-12 {
+    --colum-site: 12;
+  }
+}
+/*grid*/
+/*account*/
+.account {
+  background-image: url("../images/landing-background.jpg");
+  background-repeat: no-repeat;
+  font-family: Titillium Web;
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+.account #rdo_login:checked ~ .account-login {
+  opacity: 1;
+  z-index: 1;
+  transform: translateX(0);
+  visibility: visible;
+}
+.account #rdo_register:checked ~ .account-register {
+  opacity: 1;
+  z-index: 1;
+  transform: translateX(0);
+  visibility: visible;
+}
+.account #rdo_register:checked ~ .account-login {
+  opacity: 0;
+  z-index: 1;
+  transform: translateX(0);
+  visibility: hidden;
+}
+.account #rdo_login:checked ~ .info-account .btn-account ul li:nth-child(1) {
+  background: white;
+}
+.account #rdo_register:checked ~ .info-account .btn-account ul li:nth-child(2) {
+  background: white;
+  border-radius: 0 10px 10px 0;
+}
+.account .info-account {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+.account .info-account .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.account .info-account .content h1 {
+  padding-top: 50px;
+  position: relative;
+  font-size: 50px;
+  font-size: 104px;
+  font-weight: 900;
+  color: white;
+}
+.account .info-account .content::after {
+  content: "Welcom to";
+  text-transform: uppercase;
+  font-size: 20px;
+  position: absolute;
+  top: 110px;
+  color: white;
+}
+.account .info-account .content p {
+  text-align: center;
+  margin: 10px 100px 0;
+  font-family: Rajdhani;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+.account .info-account .btn-account {
+  margin-top: 40px;
+}
+.account .info-account .btn-account ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+.account .info-account .btn-account ul li {
+  padding: 10px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  width: 180px;
+  height: 54px;
+  font-weight: 700;
+}
+.account .info-account .btn-account ul li:nth-child(1) {
+  border-radius: 10px 0 0 10px;
+}
+.account .info-account .btn-account ul li label {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-login {
+  width: 484px;
+  font-family: Rajdhani;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 0 60px 0 rgba(94, 92, 154, 0.12);
+  position: absolute;
+  right: 10%;
+  padding: 64px;
+  bottom: 10%;
+  transition: opacity 0.5s ease;
+  transition: visibility 0.5s ease;
+  transition: transform 0.4s ease-out;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(50%);
+}
+.account-login .logo-rocket {
+  position: absolute;
+  top: -50px;
+  left: -70px;
+}
+.account-login h2 {
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.account-login form {
+  margin-top: 50px;
+}
+.account-login form .form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+}
+.account-login form .form-row .form-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.account-login form .form-row .form-item .remember {
+  width: 30px;
+  height: 30px;
+}
+.account-login form .form-row .form-item .label-remember {
+  padding-left: 10px;
+}
+.account-login form .btn-login {
+  width: 100%;
+  height: 54px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 20px;
+  background: #4739a6;
+  color: white;
+}
+.account-login p {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.account-login .social {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 90px;
+  margin-top: 30px;
+}
+.account-login .social .fb {
+  background: #3763d2;
+}
+.account-login .social .tw {
+  background: #1abcff;
+}
+.account-login .social .mess {
+  background: #7b5dfa;
+}
+.account-login .social .ytb {
+  background: #fd434f;
+}
+
+@media screen and (max-width: 1365px) {
+  .account {
+    background-image: url("../images/landing-background_1365.jpg");
+    padding: 80px 0 100px;
+    position: static;
+    background-size: cover;
+  }
+  .account #rdo_register:checked ~ .account-register {
+    display: block;
+  }
+  .account #rdo_register:checked ~ .account-login {
+    display: none;
+  }
+  .account .info-account {
+    width: 100%;
+    position: static;
+  }
+  .account .info-account .content::after {
+    top: 175px;
+  }
+  .account .info-account .content p {
+    display: none;
+  }
+  .account .account-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    position: static;
+    margin-top: 80px;
+  }
+  .account .account-login .social div {
+    margin: 0 10px;
+  }
+  .account .account-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    position: static;
+    margin-top: 80px;
+    display: none;
+  }
+}
+.account-register {
+  width: 484px;
+  font-family: Rajdhani;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 0 60px 0 rgba(94, 92, 154, 0.12);
+  position: absolute;
+  right: 10%;
+  padding: 64px;
+  bottom: 0%;
+  transition: opacity 0.5s ease;
+  transition: visibility 0.5s ease;
+  transition: transform 0.4s ease-out;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(50%);
+}
+.account-register h2 {
+  display: flex;
+  justify-content: center;
+}
+.account-register .logo-rocket {
+  position: absolute;
+  top: -50px;
+  left: -70px;
+}
+.account-register form {
+  margin-top: 76px;
+}
+.account-register form .form-register {
+  display: flex;
+  align-items: center;
+}
+.account-register form .form-register .register {
+  width: 30px;
+  height: 30px;
+  padding-left: 34px;
+}
+.account-register form .form-register .label-register {
+  margin-left: 10px;
+}
+.account-register form .btn-register {
+  width: 100%;
+  height: 54px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 20px;
+  background: #4739a6;
+  color: white;
+}
+.account-register .text {
+  margin-top: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,64 @@
+/*moot số toán tử
+
+
+2. toán tử logic
+>,< , >= , <=, !=, ==
+
+3.toán tử gán
+vd $a: 1;
+4.toán tử lý luận
+
+nối chuỗi dùng dấu cộng
+
+vd; .col-md-5
+*/
+$prefix: "col";
+$breakpoint: "md";
+$number: 5;
+
+$selector: #{"." + $prefix}-#{$number};
+
+@if ($breakpoint != "") {
+  $selector: #{"." + $prefix}-#{$breakpoint}-#{$number};
+}
+
+#{$selector} {
+  width: 50%;
+}
+
+$width: 10;
+.size {
+  @if ($width>0) {
+    width: $width + 0%;
+  } @else {
+    width: 0;
+  }
+}
+
+/* câu lệnh rẽ nhánh @if @else
+@if(conition){
+    //body
+}
+@else{
+    //body
+}
+
+
+@if(conition){
+    //body
+}
+@else if(condition){
+    //body
+}
+@else if(condition){
+    //body
+}
+@else{
+    //body
+}
+*/
+
+/*
+
+
+*/
