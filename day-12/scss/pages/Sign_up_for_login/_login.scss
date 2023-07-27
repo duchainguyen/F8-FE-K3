@@ -137,6 +137,49 @@
 }
 
 // REPONSIVE
+@media screen and (min-width: 1501px) {
+  .account {
+    .info-account {
+      .content {
+        p {
+          margin: 30px 100px 0;
+        }
+      }
+      .btn-account {
+        margin-top: 90px;
+      }
+    }
+    .img-right {
+      opacity: 1;
+      visibility: visible;
+    }
+    .account-login {
+      bottom: 10%;
+    }
+    .account-register {
+      bottom: 0%;
+      right: 10%;
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .account {
+    width: 100%;
+    height: 100%;
+    .info-account {
+      left: 6%;
+    }
+    .account-login {
+      bottom: 15%;
+      right: 5%;
+    }
+    .account-register {
+      bottom: 10%;
+      right: 5%;
+    }
+  }
+}
 
 @media screen and (max-width: 1365px) {
   .account {

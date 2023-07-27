@@ -384,13 +384,24 @@ input[type=password] {
 /*grid*/
 /*account*/
 .account {
-  background-image: url("../images/landing-background.jpg");
-  background-repeat: no-repeat;
+  background: url("../images/landing-background.jpg") repeat 0 0 #fff;
   font-family: Titillium Web;
   background-size: cover;
   position: fixed;
   width: 100%;
   height: 100%;
+}
+.account .img-right {
+  background: url("../images/dot-texture.png") repeat 0 0 #fff;
+  width: 64%;
+  height: 140%;
+  border-radius: 50%;
+  position: absolute;
+  top: -20%;
+  right: -32%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 .account #rdo_login:checked ~ .account-login {
   opacity: 1;
@@ -422,10 +433,10 @@ input[type=password] {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  width: 600px;
+  width: 584px;
   position: absolute;
-  top: 20%;
-  left: 10%;
+  top: 16%;
+  left: 13%;
 }
 .account .info-account .content {
   display: flex;
@@ -616,6 +627,42 @@ input[type=password] {
   margin-top: -5px;
 }
 
+@media screen and (min-width: 1501px) {
+  .account .info-account .content p {
+    margin: 30px 100px 0;
+  }
+  .account .info-account .btn-account {
+    margin-top: 90px;
+  }
+  .account .img-right {
+    opacity: 1;
+    visibility: visible;
+  }
+  .account .account-login {
+    bottom: 10%;
+  }
+  .account .account-register {
+    bottom: 0%;
+    right: 10%;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .account {
+    width: 100%;
+    height: 100%;
+  }
+  .account .info-account {
+    left: 6%;
+  }
+  .account .account-login {
+    bottom: 15%;
+    right: 5%;
+  }
+  .account .account-register {
+    bottom: 10%;
+    right: 5%;
+  }
+}
 @media screen and (max-width: 1365px) {
   .account {
     background-image: url("../images/landing-background_1365.jpg");
