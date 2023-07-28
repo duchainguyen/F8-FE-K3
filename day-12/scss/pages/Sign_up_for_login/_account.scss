@@ -59,10 +59,8 @@
         .info-account {
           .btn-account {
             ul {
-              li {
-                &:nth-child(1) {
-                  background: $color-White;
-                }
+              .tab-login {
+                background: $color-White;
               }
             }
           }
@@ -76,11 +74,9 @@
         .info-account {
           .btn-account {
             ul {
-              li {
-                &:nth-child(2) {
-                  background: $color-White;
-                  border-radius: 0 10px 10px 0;
-                }
+              .tab-register {
+                background: $color-White;
+                border-radius: 0 10px 10px 0;
               }
             }
           }

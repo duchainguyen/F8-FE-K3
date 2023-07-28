@@ -420,10 +420,10 @@ input[type=password] {
   transform: translateX(0);
   visibility: hidden;
 }
-.account #rdo_login:checked ~ .info-account .btn-account ul li:nth-child(1) {
+.account #rdo_login:checked ~ .info-account .btn-account ul .tab-login {
   background: white;
 }
-.account #rdo_register:checked ~ .info-account .btn-account ul li:nth-child(2) {
+.account #rdo_register:checked ~ .info-account .btn-account ul .tab-register {
   background: white;
   border-radius: 0 10px 10px 0;
 }
@@ -693,6 +693,9 @@ input[type=password] {
     position: static;
     margin-top: 80px;
   }
+  .account .account-login .logo-rocket {
+    display: none;
+  }
   .account .account-login .social div {
     margin: 0 10px;
   }
@@ -704,6 +707,9 @@ input[type=password] {
     margin: 0 auto;
     position: static;
     margin-top: 80px;
+    display: none;
+  }
+  .account .account-register .logo-rocket {
     display: none;
   }
 }

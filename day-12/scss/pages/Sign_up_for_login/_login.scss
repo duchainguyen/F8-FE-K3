@@ -225,6 +225,9 @@
       margin: 0 auto;
       position: static;
       margin-top: 80px;
+      .logo-rocket {
+        display: none;
+      }
       //   display: none;
       .social {
         & div {
@@ -241,6 +244,9 @@
       position: static;
       margin-top: 80px;
       display: none;
+      .logo-rocket {
+        display: none;
+      }
     }
   }
 }
