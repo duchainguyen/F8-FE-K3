@@ -399,8 +399,7 @@ input[type=password] {
   position: absolute;
   top: -20%;
   right: -32%;
-  opacity: 0;
-  visibility: hidden;
+  display: none;
   pointer-events: none;
 }
 .account #rdo_login:checked ~ .account-login {
@@ -635,8 +634,7 @@ input[type=password] {
     margin-top: 90px;
   }
   .account .img-right {
-    opacity: 1;
-    visibility: visible;
+    display: block;
   }
   .account .account-login {
     bottom: 10%;
