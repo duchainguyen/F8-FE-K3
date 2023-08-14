@@ -25,7 +25,7 @@ function animateRedText(index) {
 
   setTimeout(() => {
     animateRedText((index + 1) % words.length);
-  }, 100);
+  }, 500);
 }
 
 animateRedText(0);
