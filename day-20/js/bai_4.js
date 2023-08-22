@@ -30,21 +30,25 @@ var dataArray = [
 var dataList = document.getElementById("list-item");
 
 function data(dataArray) {
-  dataArray.forEach((data) => {
+  dataArray.forEach((data, index) => {
     var item = document.createElement("div");
     // div có class item
     item.classList.add("item");
+    const content = document.createElement("div");
+    // div có class là content
+    content.classList.add("content");
 
+    // mảng lẻ thì add thêm class right để chuyển img sang phái
+    if (index % 2 !== 0) {
+      item.classList.add("right");
+    }
     // images
     var image = document.createElement("img");
     image.src = data.image;
     item.appendChild(image);
     // end
-    // thẻ h2
-    const content = document.createElement("div");
-    // div có class là content
-    content.classList.add("content");
 
+    // thẻ h2
     var textContent = document.createElement("h2");
     textContent.textContent = ` ${data.title}`;
     content.appendChild(textContent);
@@ -62,3 +66,53 @@ function data(dataArray) {
 }
 
 data(dataArray);
+
+/*
+  
+  cách 1 làm thủ công thì sử dụng nth-child(2) và nth-child(4)
+  để có thể chuyển ảnh sang bên phải
+  
+
+
+  cách 2 sử dụng if else những mảng lẻ thì ta thêm class right để
+  css cho nó
+
+*/
+
+// Thử cách này rút gọn hơn
+
+// var dataArr = dataArray.forEach(function (data, index) {
+//   var item = document.createElement("div");
+//   // div có class item
+//   item.classList.add("item");
+//   const content = document.createElement("div");
+//   // div có class là content
+//   content.classList.add("content");
+
+//   // mảng lẻ thì add thêm class right để chuyển img sang phái
+//   if (index % 2 !== 0) {
+//     item.classList.add("right");
+//   }
+//   // images
+//   var image = document.createElement("img");
+//   image.src = data.image;
+//   item.appendChild(image);
+//   // end
+
+//   // thẻ h2
+//   var textContent = document.createElement("h2");
+//   textContent.textContent = ` ${data.title}`;
+//   content.appendChild(textContent);
+//   // end
+
+//   // thẻ p
+//   var textContent = document.createElement("p");
+//   textContent.textContent = ` ${data.content}`;
+//   content.appendChild(textContent);
+//   //end p
+
+//   item.appendChild(content);
+//   dataList.appendChild(item);
+// });
+
+// console.log(dataArr);
