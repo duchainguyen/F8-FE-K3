@@ -6,12 +6,23 @@
     <title>Document</title>
     <style>
       h2 {
+        margin: 0;
         font-size: 30px;
       }
       .item {
         display: flex;
         gap: 40px;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
+        position: relative;
+      }
+      #list-item .item::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        height: 2px;
+        top: -25px;
+        background: #ccc;
       }
       .item:nth-child(2),
       .item:nth-child(4) {
