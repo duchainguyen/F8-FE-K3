@@ -79,7 +79,7 @@ data(dataArray);
 
 */
 
-// Thử cách này rút gọn hơn
+//
 
 // var dataArr = dataArray.forEach(function (data, index) {
 //   var item = document.createElement("div");
