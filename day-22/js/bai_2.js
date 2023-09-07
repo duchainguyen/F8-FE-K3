@@ -3,8 +3,18 @@ Array.prototype.reduce2 = function (callback, value) {
   // value là giá trị khởi tạo để ktra xem nó đc truyền vào hay chưa
   // console.log(callback, prev, index)
   // console.log(this[0]);
-  // xem value ban đầu đc truyền vào hay chưa
+  // xem value ban đầu đc truyền vào hay chưa dùng toán tử 3 ngôi
   var result = value !== undefined ? value : this[0];
+
+  // sử dụng if else
+  // var result = value;
+  // if (value === undefined) {
+  //   result === this[0];
+  // } else {
+  //   result === 0;
+  // }
+  // end
+
   // console.log(result);
   // nếu đc truyền vào thì nó sẽ chạy từ 0 còn chưa thì sẽ chạy từ 1
   for (var i = value === undefined ? 1 : 0; i < this.length; i++) {
@@ -30,7 +40,6 @@ console.log(result);
 // },0);
 
 // console.log(result);
-
 // bài tập
 var students = ["An", "Dương", "Vương", "Hải", "Khang"];
 

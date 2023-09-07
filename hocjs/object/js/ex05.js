@@ -65,8 +65,138 @@ function Calculator(a, b) {
 var result = new Calculator(1, 0);
 // console.log(result.divi());
 
-console.log(`
-  Cộng: ${result.add()},
-  Trừ:  ${result.sub()},
-  Nhân: ${result.mul()},
-  chia: ${result.divi()} `);
+// console.log(`
+//   Cộng: ${result.add()},
+//   Trừ:  ${result.sub()},
+//   Nhân: ${result.mul()},
+//   chia: ${result.divi()} `);
+
+var getMessage = function () {
+  console.log("Hello");
+};
+// console.log(window);
+// window.getMessage();
+
+Calculator.getMessage2 = function () {
+  console.log("Hello F8S");
+};
+
+// Calculator.getMessage2();
+
+// cú pháp
+// tenhamtao.tenham = function(){}
+// tenhamtao.tenbien = giatri
+
+// vd array.isArray(), Number.isInteger()
+
+// Kiểm tra biến xem nó đc tạo từ hàm tạo nào
+var a = [];
+var b = "Hoàng An";
+var c = new Calculator(5, 10);
+var d = true;
+// console.log(a.constructor.name);
+// console.log(b.constructor.name);
+// console.log(c.constructor.name);
+// console.log(d.constructor.name);
+
+// khong áp dụng cho null và undefined
+
+var User = function () {
+  this.name = "Hoàng An";
+  this.email = "abc.@gmail.com";
+  return "Hello F8";
+};
+
+var user = new User();
+// console.log(user);
+// console.log(user.name);
+// console.log(User());
+
+// nối 2 Object
+var a = {
+  name: "An",
+  age: 31,
+};
+
+var b = {
+  email: "abc@gmail.com",
+  title: "Giảng viên",
+};
+
+// Object.prototype.getFirst = function () {
+//   var keys = Object.keys(b);
+//   return keys;
+// };
+
+// cách nối 2 object
+// Object.keys(b).forEach(function (key) {
+//   a[key] = b[key];
+// });
+// end
+// console.log(a.getFirst());
+
+// c2 Object.assign(target, source)
+// nối object source vào target và trả về object mới
+
+// var result = Object.assign(a, b);
+// console.log(result);
+//  end c2
+
+// console.log(a);
+// console.log(b);
+
+// bài tập
+// sử dụng assign để nối object a và b lại với nhau nhưng k làm thay đổi Object a và
+// b ban đầu
+
+// c1
+// var aClone = Object.assign({}, a); //copy a vao object moi
+// var result = Object.assign(aClone, b);
+// // end
+
+// // c2
+// var result = Object.assign(Object.assign({}, a), b);
+// console.log(result);
+// // end
+
+// bài tập
+var query = {
+  name: "Hoàng An F8",
+  status: 1,
+  category: 1,
+  keyword: "fullstack Offline",
+};
+
+var querys = Object.entries(query);
+console.log(querys);
+
+var result = querys
+  .map(function (s) {
+    return s.join("=");
+  })
+  .join("&");
+
+// console.log(result.replaceAll(" ", "+"));
+
+// end
+
+var url = `https://fullstack.edu.vn/search?_type=course&q=Javascript+cơ+bản&status=`;
+// var index = url.indexOf("?") + 1;
+// var s = url.slice(index);
+// console.log(s);
+
+var queryString = url.split("?").splice(-1).join();
+console.log(queryString);
+
+var result = {};
+var query = queryString
+  .split("&")
+  .map(function (item) {
+    return item.split("=");
+  })
+  .forEach(function (item) {
+    if (item[1].length > 0) {
+      result[item[0]] = item[1].replaceAll("+", " ");
+    }
+  });
+console.log(result);
