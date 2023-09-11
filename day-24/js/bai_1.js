@@ -14,4 +14,4 @@ function reverseInteger(number) {
 // Sử dụng hàm
 var originalNumber = 12345;
 var reversedNumber = reverseInteger(originalNumber);
-console.log(reversedNumber); // Hiển thị 54321
+console.log(reversedNumber);
