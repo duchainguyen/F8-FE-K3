@@ -89,6 +89,40 @@ function passCheck(field) {
   return isValid;
 }
 
+function passCheckDK(field) {
+  const newPasswordValue = field.value;
+  // if (newPasswordValue.length < 6) {
+  //   const passAnnouncement = document.querySelector(".announcementPasss");
+  //   passAnnouncement.innerText = "Mật khẩu phải chứa ít nhất 6 ký tự";
+  //   newPassword.classList.add("error");
+  //   isValid = false;
+  // } else {
+  //   const passAnnouncement = document.querySelector(".announcementPass");
+  //   passAnnouncement.innerText = ""; // Xóa thông báo lỗi nếu hợp lệ
+  //   newPassword.classList.remove("error");
+  const mess =
+    field.parentElement.parentElement.querySelector(".announcementPasss");
+  let isValid;
+  if (field.value == "") {
+    mess.innerText = "Vui lòng nhập thông tin";
+    isValid = false;
+  }
+  // bắt điều kiện cho đki mật khẩu dài từ 6-20 kí tự
+  else if (newPasswordValue.length < 6 || newPasswordValue.length > 20) {
+    mess.innerText = "Mật khẩu tối thiểu 6 - 20 ký tự";
+    isValid = false;
+  } else {
+    mess.innerText = "";
+    isValid = true;
+  }
+  if (isValid) {
+    field.classList.remove("error");
+  } else {
+    field.classList.add("error");
+  }
+  return isValid;
+}
+
 function textCheck(field) {
   const text =
     field.parentElement.parentElement.querySelector(".announcementText");
@@ -125,7 +159,7 @@ var dkValidateAll = function () {
   // isValid = emailCheck(loginEmail);
   isValid = emailCheck(registerEmail);
   // isValid = passCheck(loginPassword);
-  isValid = passCheck(newPassword);
+  isValid = passCheckDK(newPassword);
 
   return isValid;
 };

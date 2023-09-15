@@ -144,7 +144,8 @@ img {
 
 .announcement,
 .announcementText,
-.announcementPass {
+.announcementPass,
+.announcementPasss {
   color: red;
   font-size: 14px;
   margin-bottom: 20px;
