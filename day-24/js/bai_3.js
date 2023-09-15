@@ -12,4 +12,4 @@ function getRandomHexColor() {
 
 // Sử dụng hàm để lấy một mã màu hexa ngẫu nhiên
 const randomColor = getRandomHexColor();
-console.log(`màu hexa: ${randomColor}`); // In ra một mã màu hexa ngẫu nhiên, ví dụ: "#1A2B3C"
+console.log(`màu hexa: ${randomColor}`);

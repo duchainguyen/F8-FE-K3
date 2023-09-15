@@ -1,0 +1,165 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+img {
+  width: 100%;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .button .active {
+  background: #fff;
+}
+.button #loginButton,
+.button #registerButton {
+  /* padding: 20px 64px; */
+  width: 230px;
+  height: 56px;
+  /* background: #ccc; */
+}
+.container {
+  background-color: #fff;
+  position: fixed;
+  /* max-width: 460px; */
+  width: 460px;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+
+.container button {
+  border: none;
+}
+
+.form {
+  padding: 0 40px 30px;
+}
+.socal,
+.line {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+}
+.socal span {
+  margin-top: 16px;
+}
+
+.socal img,
+.line {
+  margin-top: 16px;
+}
+.line span {
+  position: relative;
+}
+.line span::after {
+  content: "";
+  position: absolute;
+  width: 500%;
+  top: 50%;
+  height: 1px;
+  background: #ccc;
+}
+.line span::before {
+  content: "";
+  position: absolute;
+  width: 500%;
+  left: -175px;
+  top: 50%;
+  height: 1px;
+  background: #ccc;
+}
+.form-group {
+  margin-top: 16px;
+  /* margin-bottom: 20px; */
+}
+.form-group label {
+  display: block;
+  /* font-weight: bold; */
+}
+.forgot {
+  display: flex;
+  justify-content: flex-end;
+}
+.forgot a {
+  text-decoration: none;
+  color: #adaaaa;
+  font-size: 14px;
+}
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.form-group button {
+  padding: 10px 20px;
+  background-color: #1a7900;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.form-group button:hover {
+  background-color: #0056b3;
+}
+
+#registerForm .socal span {
+  margin-top: 24px;
+}
+.btn-dk,
+.btn-dn {
+  width: 100%;
+  height: 44px;
+}
+.control span {
+  font-size: 14px;
+}
+
+.control span a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #2361ff;
+}
+
+/* error */
+.error {
+  border: 1px solid #f00 !important;
+}
+
+.announcement,
+.announcementText,
+.announcementPass {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.Login-notifications {
+  margin-top: 16px;
+  color: #f00;
+  font-size: 14px;
+}
+
+.tb-DKTC {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  color: #2361ff;
+}
