@@ -148,11 +148,13 @@ img {
   color: red;
   font-size: 14px;
   margin-bottom: 20px;
+  font-style: italic;
 }
 .Login-notifications {
   margin-top: 16px;
   color: #f00;
   font-size: 14px;
+  font-style: italic;
 }
 
 .tb-DKTC {
@@ -162,4 +164,5 @@ img {
   margin-top: 16px;
   margin-bottom: 16px;
   color: #2361ff;
+  font-style: italic;
 }

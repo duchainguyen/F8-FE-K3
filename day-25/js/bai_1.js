@@ -6,6 +6,7 @@ var container = document.querySelector(".container");
 var btnlogin = document.querySelector(".btnlogin");
 var overlay = document.querySelector(".overlay");
 var active = document.querySelector(".active");
+// var notifications = document.querySelector(".login-notifications");
 
 btnlogin.addEventListener("click", function () {
   container.removeAttribute("hidden");
@@ -17,13 +18,19 @@ loginButton.addEventListener("click", function () {
   registerButton.classList.remove("active");
   loginForm.style.display = "block";
   registerForm.style.display = "none";
+  newPassword.value = "";
+  newUsername.value = "";
+  registerEmail.value = "";
+  // notifications.innerText = "";
 });
-
 registerButton.addEventListener("click", function () {
   registerButton.classList.add("active");
   loginButton.classList.remove("active");
   loginForm.style.display = "none";
   registerForm.style.display = "block";
+  loginEmail.value = "";
+  loginPassword.value = "";
+  // notifications.innerText = "";
 });
 
 // ẩn hiện overlay
@@ -36,6 +43,9 @@ overlay.addEventListener("click", function () {
 var loginEmail = document.getElementById("loginEmail");
 var loginPassword = document.getElementById("loginPassword");
 
+// đăngki
+
+// end
 function emailCheck(field) {
   var regexCheck =
     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
@@ -80,14 +90,14 @@ function passCheck(field) {
 }
 
 function textCheck(field) {
-  const mess =
+  const text =
     field.parentElement.parentElement.querySelector(".announcementText");
   let isValid;
   if (field.value == "") {
-    mess.innerText = "Vui lòng nhập thông tin";
+    text.innerText = "Vui lòng nhập thông tin";
     isValid = false;
   } else {
-    mess.innerText = "";
+    text.innerText = "";
     isValid = true;
   }
   if (isValid) {
@@ -101,14 +111,27 @@ function textCheck(field) {
 var lgValidateAll = function () {
   let isValid;
   isValid = emailCheck(loginEmail);
-  isValid = emailCheck(registerEmail);
+  // isValid = emailCheck(registerEmail);
   isValid = passCheck(loginPassword);
-  isValid = passCheck(newPassword);
-  isValid = textCheck(newUsername);
   return isValid;
 };
+
+var registerEmail = document.getElementById("registerEmail");
+var newUsername = document.getElementById("newUsername");
+var newPassword = document.getElementById("newPassword");
+var dkValidateAll = function () {
+  let isValid;
+  isValid = textCheck(newUsername);
+  // isValid = emailCheck(loginEmail);
+  isValid = emailCheck(registerEmail);
+  // isValid = passCheck(loginPassword);
+  isValid = passCheck(newPassword);
+
+  return isValid;
+};
+
+// đăng nhập
 var btnDN = document.querySelector(".btn-dn");
-var btnDK = document.querySelector(".btn-dk");
 var lgSuccess = document.querySelector(".Login-notifications");
 loginEmail.oninput = lgValidateAll;
 loginPassword.oninput = lgValidateAll;
@@ -120,11 +143,14 @@ btnDN.onclick = function (e) {
 };
 
 // đăng kí
-var lgSuccess = document.querySelector(".tb-DKTC");
-
+var btnDK = document.querySelector(".btn-dk");
+var dkSuccess = document.querySelector(".tb-DKTC");
+newUsername.oninput = dkValidateAll;
+registerEmail.oninput = dkValidateAll;
+newPassword.oninput = dkValidateAll;
 btnDK.onclick = function (e) {
   e.preventDefault();
-  if (lgValidateAll()) {
-    lgSuccess.innerText = "Đăng kí thành công!";
+  if (dkValidateAll()) {
+    dkSuccess.innerText = "Đăng kí thành công!";
   }
 };
