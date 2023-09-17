@@ -100,8 +100,9 @@ function editTask(taskItem) {
 addTaskButton.addEventListener("click", addTask);
 
 // Thêm sự kiện thêm task khi nhấn phím "Enter" trong input
-newTaskInput.addEventListener("keyup", function (event) {
+newTaskInput.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
+    event.preventDefault();
     addTask();
   }
 });
