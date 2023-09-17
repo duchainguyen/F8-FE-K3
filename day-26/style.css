@@ -13,6 +13,7 @@ body {
 }
 #todo-list h1 {
   color: white;
+  font-size: 28px;
 }
 ul {
   width: 395px;
