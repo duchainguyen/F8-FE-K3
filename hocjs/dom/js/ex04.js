@@ -72,3 +72,6 @@ console.log(title.classList.contains("title-2"));
 //toggle class
 title.classList.toggle("show");
 title.classList.toggle("show");
+
+// xóa element tenelement.remove()
+title.remove();
