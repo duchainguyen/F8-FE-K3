@@ -62,8 +62,8 @@ function editTask(taskItem) {
   // class của input
   inputElement.classList.add("text-edit");
   inputElement.type = "text";
+  inputElement.placeholder = "Update Task";
   inputElement.value = originalText;
-
   // Thêm input vào taskItem
   taskItem.replaceChild(inputElement, taskTextElement);
 
@@ -106,3 +106,12 @@ newTaskInput.addEventListener("keydown", function (event) {
     addTask();
   }
 });
+// var textEdit = document.querySelector(".text-edit");
+// textEdit.editButton("keydown", function (event) {
+//   if (event.key === "Enter") {
+//     event.preventDefault();
+//     addTask();
+//   }
+// });
+
+// console.log(textEdit);
