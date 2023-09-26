@@ -9,6 +9,7 @@ var currentPercent = 0;
 
 var isPlaying = false;
 var isDragging = false;
+var isSeeking = false;
 
 progressBar.addEventListener("mousedown", function (e) {
   // Lấy offsetX của progress-bar
@@ -23,6 +24,7 @@ progressBar.addEventListener("mousedown", function (e) {
   // Kích hoạt hành động bấm chuột và kéo
   initialClientX = e.clientX;
   currentPercent = percent;
+
   document.addEventListener("mousemove", handleDrag);
 });
 
@@ -36,14 +38,20 @@ progessSpan.addEventListener("mousedown", function (e) {
 
 // Hủy sự kiện mousemove nếu mouseup vào document
 document.addEventListener("mouseup", function () {
+  isSeeking = false;
   document.removeEventListener("mousemove", handleDrag);
 
   // Lấy phần trăm cuối cùng và cập nhật vào biến currentPercent
   currentPercent = percent;
+
+  //tua xog mới update nhạc
+  var newTime = (percent * audio.duration) / 100;
+  audio.currentTime = newTime;
 });
 
 // Kéo thả thay đổi vị trí
 var handleDrag = function (e) {
+  isSeeking = true;
   // Lấy giá trị clientX mới nhất tại vị trí chuột
 
   // Khoảng cách kéo = clientX mới nhất - clientX ban đầu
@@ -70,7 +78,10 @@ var handleDrag = function (e) {
   var newTime = (percent * audio.duration) / 100;
 
   // Đặt thời gian mới cho audio
-  audio.currentTime = newTime;
+
+  // audio.currentTime = newTime;
+  // khi tua thì k update nhạc chỉ update time chạy
+  currentTimeEl.innerText = getTime(newTime);
 };
 
 // Xây dựng trình phát nhạc
@@ -122,25 +133,22 @@ audio.addEventListener("pause", function () {
 
 // Lắng nghe sự kiện timeUpdate
 audio.addEventListener("timeupdate", function () {
+  // console.log(isSeeking);
   // Lấy thời gian hiện tại của bài hát
   var currentTime = audio.currentTime;
 
-  // Hiển thị lên UI
-  currentTimeEl.innerText = getTime(currentTime);
-
   // Chuyển currentTime thành phần trăm
   var percent = (currentTime * 100) / audio.duration;
-  progress.style.width = `${percent}%`;
+
+  if (!isSeeking) {
+    // Hiển thị lên UI
+    currentTimeEl.innerText = getTime(currentTime);
+
+    progress.style.width = `${percent}%`;
+  }
 });
 
 // Bài tập về nhà
-audio.addEventListener("timeupdate", function () {
-  if (!isDragging) {
-    // Cập nhật thanh tua theo thời gian hiện tại
-    var progress = (audio.currentTime / audio.duration) * 100;
-    progressBar.value = progress;
-  }
-});
 
 progressBar.addEventListener("mousedown", function (e) {
   isDragging = false;
