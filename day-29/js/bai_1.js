@@ -22,14 +22,19 @@ for (var i = 0; i < products.length; i++) {
 }
 
 tableHTML += "</tbody></table>";
-
+tableHTML += `<div class="cart-product"><h3>Giỏ Hàng</h3><p>Giỏ hàng không có sản phẩm</p></div>`;
 document.write(`<h3 class="list-products">DANH SÁCH SẢN PHẨM</h3>
 
     <div class="container">${tableHTML}</div>
     <div id="cart"></div>`);
 
 var cart = {};
+var cartProduct = document.querySelector(".container .cart-product");
+// cartProduct.classList.remove(".container .cart-product");
+
 function addToCart(productId) {
+  cartProduct.style.display = "none";
+  console.log(cartProduct);
   var quantity = parseInt(
     document.getElementById(`quantity_${productId}`).value
   );
