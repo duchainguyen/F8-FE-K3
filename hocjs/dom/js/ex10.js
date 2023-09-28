@@ -156,23 +156,6 @@ progressBar.addEventListener("mousedown", function (e) {
   audio.play();
 });
 
-progressBar.addEventListener("mouseup", function (e) {
-  // Tính thời gian mới dựa trên vị trí chuột
-  var clickPosition =
-    (e.clientX - progressBar.offsetLeft) / progressBar.clientWidth;
-  var newTime = clickPosition * audio.duration;
-
-  // Đặt thời gian mới
-  audio.currentTime = newTime;
-
-  // Chạy bài hát lại nếu trước đó đang chạy
-  if (isPlaying) {
-    audio.play();
-  }
-
-  isDragging = false;
-});
-
 // Case 3
 var timeTooltips = document.querySelector(".tooltips-time");
 
