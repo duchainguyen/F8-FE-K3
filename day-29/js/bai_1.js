@@ -95,8 +95,8 @@ function updateCart() {
   cartInfo += `<td colspan="2">${totalPrice}</td>`;
   cartInfo += "</tbody>";
   cartInfo += "</table>";
-  cartInfo += `<button onclick="updateAllCart(${productId})">Cập nhật giỏ hàng</button>`;
-  cartInfo += `<button onclick="deleteAllCart(${productId})">Xóa giỏ hàng </button>`;
+  cartInfo += `<button class="pd-5" onclick="updateAllCart(${productId})">Cập nhật giỏ hàng</button>`;
+  cartInfo += `<button class="pd-5" onclick="deleteAllCart(${productId})">Xóa giỏ hàng </button>`;
 
   // cartInfo += `<strong>Tổng cộng: ${totalPrice} đồng</strong>`;
   document.getElementById("cart").innerHTML = cartInfo;

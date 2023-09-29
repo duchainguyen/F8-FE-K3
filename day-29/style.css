@@ -25,3 +25,8 @@ h3 {
   justify-content: center;
   align-items: center;
 }
+
+.pd-5 {
+  padding: 5px;
+  margin: 10px 10px 0 0;
+}
