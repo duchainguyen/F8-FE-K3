@@ -33,8 +33,8 @@ var cartProduct = document.querySelector(".container .cart-product");
 // cartProduct.classList.remove(".container .cart-product");
 
 function addToCart(productId) {
+  cartElement.style.display = "block";
   cartProduct.style.display = "none";
-  console.log(cartProduct);
   var quantity = parseInt(
     document.getElementById(`quantity_${productId}`).value
   );
@@ -81,7 +81,7 @@ function updateCart() {
     cartInfo += `<td>${productId}</td>`;
     cartInfo += `<td>${productName}</td>`;
     cartInfo += `<td>${productPrice}</td>`;
-    cartInfo += `<td>${quantity}</td>`;
+    cartInfo += `<td><input type="number" value="${quantity}" style="width: 90%; display: block; margin: 0 auto" onchange="updateQuantity(${productId}, this.value)"/></td>`;
     cartInfo += `<td>${subtotal}</td>`;
     cartInfo += `<td><button onclick="deleteCart(${productId})">Xóa</button></td>`;
     cartInfo += "</tr>";
@@ -102,32 +102,19 @@ function updateCart() {
   document.getElementById("cart").innerHTML = cartInfo;
 }
 
-// function deleteCart(productId) {
-//   if (confirm("Are u sure")) {
-//     alert("Xóa giỏ hàng thành công");
-//     delete cart[productId];
-//   }
+// dùng để cập nhật lại số lượng vs tiền trong giỏ hàng mỗi khi tăng
+function updateQuantity(productId, newQuantity) {
+  cart[productId] = parseInt(newQuantity);
+  updateCart();
+}
 
-//   updateCart();
-// }
-
-// function deleteAllCart(productId) {
-//   if (confirm("Are u sure")) {
-//     alert("Xóa tất cả giỏ hàng thành công");
-//     document.write(`<h3 class="list-products">DANH SÁCH SẢN PHẨM</h3>
-
-//     <div class="container">${tableHTML}</div>
-//   `);
-//   }
-
-//   // updateCart();
-// }
-
+// update tất cả
 function updateAllCart(productId) {
   alert("Cập nhật giỏ hàng thành công");
   updateCart();
 }
 
+// xóa sản phẩm khỏi giỏ hàng
 function deleteCart(productId) {
   if (confirm("Are u sure?")) {
     alert("Xóa sản phẩm khỏi giỏ hàng thành công");
@@ -135,11 +122,20 @@ function deleteCart(productId) {
   }
   updateCart();
 }
-
+var cartElement = document.getElementById("cart");
+// xóa tất cả trong giỏ hàng
 function deleteAllCart() {
+  // var cart = document.getElementById("cart");
+  // cart.style.display.none;
   if (confirm("Are u sure?")) {
     alert("Xóa toàn bộ giỏ hàng thành công");
     cart = {};
+
+    cartElement.style.display = "none";
+    // cartElement.parentNode.removeChild(cartElement);
+    cartProduct.style.display = "block";
   }
-  updateCart();
+  // updateCart();
 }
+
+// console.log(cart);
