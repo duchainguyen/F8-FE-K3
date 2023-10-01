@@ -68,3 +68,76 @@
 .audio {
   display: none;
 }
+
+/* .lyricDisplay {
+  display: none;
+} */
+
+.active {
+  color: red; /* Change to your preferred color */
+  font-weight: bold;
+}
+
+.open-karaoke {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.open-karaoke button {
+  background: #8a2be2;
+  color: white;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+.karaoke {
+  color: #fff;
+  background: #892be2;
+  padding: 15px;
+  transition: transform 0.4s;
+  position: fixed;
+  inset: 0;
+  /* opacity: 0; */
+  /* visibility: hidden; */
+}
+.karaoke.show {
+  /* translate: 0; */
+  transform: translateY(100%);
+  /* translate: ; */
+}
+.karaoke .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.karaoke .container .karaoke-header {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  font-size: 2.6rem;
+  /* background: #892be2; */
+}
+
+.lyricDisplay {
+  text-align: center;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  font-size: 3rem;
+  font-weight: 700;
+  display: flex;
+}
+
+.lyricDisplay span {
+  padding: 10px;
+}
+
+.karaokeName {
+  padding-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

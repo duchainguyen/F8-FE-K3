@@ -1,7 +1,8 @@
 var progressBar = document.querySelector(".progress-bar");
 var progress = progressBar.querySelector(".progress");
 var progessSpan = progress.querySelector("span");
-
+var lyricContent = document.querySelector(".lyricDisplay");
+console.log(lyricContent);
 // Giá trị khởi tạo
 var initialClientX;
 var percent;
@@ -132,21 +133,55 @@ audio.addEventListener("pause", function () {
 });
 
 // Lắng nghe sự kiện timeUpdate
+var sentences = lyric.data.sentences;
+console.log(sentences);
 audio.addEventListener("timeupdate", function () {
-  // console.log(isSeeking);
-  // Lấy thời gian hiện tại của bài hát
   var currentTime = audio.currentTime;
-
-  // Chuyển currentTime thành phần trăm
-  var percent = (currentTime * 100) / audio.duration;
+  var percent = (currentTime / audio.duration) * 100;
 
   if (!isSeeking) {
-    // Hiển thị lên UI
     currentTimeEl.innerText = getTime(currentTime);
-
     progress.style.width = `${percent}%`;
+
+    const currentSentence = getCurrentSentence(currentTime);
+    console.log("Current Sentence:", currentSentence);
+
+    if (currentSentence && !audio.paused) {
+      console.log("Displaying lyrics");
+      console.log("Lyrics data:", currentSentence.words);
+      displayLyrics(lyricContent, currentSentence.words, currentTime);
+    }
   }
 });
+function getCurrentSentence(currentTime) {
+  const currentSentence = sentences.find((sentence) => {
+    const startTime = sentence.words[0].startTime / 1000; // convert to seconds
+    const endTime = sentence.words[sentence.words.length - 1].endTime / 1000; // convert to seconds
+    const isCurrent = currentTime >= startTime && currentTime <= endTime;
+    return isCurrent;
+  });
+
+  // console.log("Current Sentence:", currentSentence);
+  return currentSentence;
+}
+function displayLyrics(lyricContent, words, currentTime) {
+  // console.log(" lyrics:", words);
+  const html = words
+    .map((word) => {
+      const isActive =
+        currentTime >= word.startTime && currentTime <= word.endTime;
+      return `
+        
+      <span
+                data-start="${word.startTime}" 
+                data-end="${word.endTime}" 
+                class="${isActive ? "active" : ""}">
+                 ${word.data}
+              </span>`;
+    })
+    .join(`   `);
+  lyricContent.innerHTML = html;
+}
 
 // Bài tập về nhà
 
@@ -184,3 +219,22 @@ audio.addEventListener("ended", function () {
   // Thiết lập lại thời gian và trạng thái âm thanh về ban đầu
   audio.currentTime = 0;
 });
+
+// sự kiện click vào button karaok
+var btnKaraoke = document.querySelector(".btn-karaoke");
+var karaok = document.querySelector(".karaoke");
+btnKaraoke.onclick = function () {
+  // karaok.style.transform === "translateY(100%)";
+  karaok.style.transform =
+    karaok.style.transform === "translateY(0%)"
+      ? "translateY(100%)"
+      : "translateY(0%)";
+};
+
+var cloSe = document.querySelector(".close");
+cloSe.onclick = function () {
+  karaok.style.transform =
+    karaok.style.transform === "translateY(100%)"
+      ? "translateY(0%)"
+      : "translateY(100%)";
+};
