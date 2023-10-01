@@ -143,7 +143,7 @@ audio.addEventListener("timeupdate", function () {
     currentTimeEl.innerText = getTime(currentTime);
     progress.style.width = `${percent}%`;
 
-    const currentSentence = getCurrentSentence(currentTime);
+    var currentSentence = getCurrentSentence(currentTime);
     console.log("Current Sentence:", currentSentence);
 
     if (currentSentence && !audio.paused) {
@@ -154,10 +154,10 @@ audio.addEventListener("timeupdate", function () {
   }
 });
 function getCurrentSentence(currentTime) {
-  const currentSentence = sentences.find((sentence) => {
-    const startTime = sentence.words[0].startTime / 1000; // convert to seconds
-    const endTime = sentence.words[sentence.words.length - 1].endTime / 1000; // convert to seconds
-    const isCurrent = currentTime >= startTime && currentTime <= endTime;
+  var currentSentence = sentences.find((sentence) => {
+    var startTime = sentence.words[0].startTime / 1000; // convert to seconds
+    var endTime = sentence.words[sentence.words.length - 1].endTime / 1000; // convert to seconds
+    var isCurrent = currentTime >= startTime && currentTime <= endTime;
     return isCurrent;
   });
 
@@ -166,9 +166,9 @@ function getCurrentSentence(currentTime) {
 }
 function displayLyrics(lyricContent, words, currentTime) {
   // console.log(" lyrics:", words);
-  const html = words
+  var html = words
     .map((word) => {
-      const isActive =
+      var isActive =
         currentTime >= word.startTime && currentTime <= word.endTime;
       return `
         
