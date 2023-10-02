@@ -73,11 +73,6 @@
   display: none;
 } */
 
-.active {
-  color: red; /* Change to your preferred color */
-  font-weight: bold;
-}
-
 .open-karaoke {
   display: flex;
   justify-content: center;

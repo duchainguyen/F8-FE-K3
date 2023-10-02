@@ -144,19 +144,19 @@ audio.addEventListener("timeupdate", function () {
     progress.style.width = `${percent}%`;
 
     var currentSentence = getCurrentSentence(currentTime);
-    console.log("Current Sentence:", currentSentence);
+    // console.log("Current Sentence:", currentSentence);
 
     if (currentSentence && !audio.paused) {
-      console.log("Displaying lyrics");
-      console.log("Lyrics data:", currentSentence.words);
       displayLyrics(lyricContent, currentSentence.words, currentTime);
+    } else {
+      lyricContent.innerHTML = "";
     }
   }
 });
 function getCurrentSentence(currentTime) {
   var currentSentence = sentences.find((sentence) => {
-    var startTime = sentence.words[0].startTime / 1000; // convert to seconds
-    var endTime = sentence.words[sentence.words.length - 1].endTime / 1000; // convert to seconds
+    var startTime = sentence.words[0].startTime / 1000;
+    var endTime = sentence.words[sentence.words.length - 1].endTime / 1000;
     var isCurrent = currentTime >= startTime && currentTime <= endTime;
     return isCurrent;
   });
@@ -171,15 +171,14 @@ function displayLyrics(lyricContent, words, currentTime) {
       var isActive =
         currentTime >= word.startTime && currentTime <= word.endTime;
       return `
-        
-      <span
+              <span
                 data-start="${word.startTime}" 
                 data-end="${word.endTime}" 
                 class="${isActive ? "active" : ""}">
                  ${word.data}
               </span>`;
     })
-    .join(`   `);
+    .join(``);
   lyricContent.innerHTML = html;
 }
 
