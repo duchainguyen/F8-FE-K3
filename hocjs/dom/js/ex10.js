@@ -12,6 +12,8 @@ var isPlaying = false;
 var isDragging = false;
 var isSeeking = false;
 
+var checkDrag = false;
+
 progressBar.addEventListener("mousedown", function (e) {
   // Lấy offsetX của progress-bar
   var offsetX = e.offsetX;
@@ -25,7 +27,8 @@ progressBar.addEventListener("mousedown", function (e) {
   // Kích hoạt hành động bấm chuột và kéo
   initialClientX = e.clientX;
   currentPercent = percent;
-
+  var timeUpdate = (percent * audio.duration) / 100;
+  audio.currentTime = timeUpdate;
   document.addEventListener("mousemove", handleDrag);
 });
 
@@ -46,8 +49,11 @@ document.addEventListener("mouseup", function () {
   currentPercent = percent;
 
   //tua xog mới update nhạc
-  var newTime = (percent * audio.duration) / 100;
-  audio.currentTime = newTime;
+  if (checkDrag) {
+    var newTime = (percent * audio.duration) / 100;
+    audio.currentTime = newTime;
+  }
+  checkDrag = false;
 });
 
 // Kéo thả thay đổi vị trí
@@ -83,6 +89,7 @@ var handleDrag = function (e) {
   // audio.currentTime = newTime;
   // khi tua thì k update nhạc chỉ update time chạy
   currentTimeEl.innerText = getTime(newTime);
+  checkDrag = true;
 };
 
 // Xây dựng trình phát nhạc
