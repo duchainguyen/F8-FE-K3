@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (
       target.classList.contains("list-item") ||
-      target.classList.contains("list-main-item")
+      target.classList.contains("active")
     ) {
       var rect = target.getBoundingClientRect();
       var nextElement =
