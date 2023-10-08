@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editor</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <div id="root">
+      <div class="container">
+        <div class="title">
+          <h4>Doc Editor</h4>
+        </div>
+        <div class="tool">
+          <div class="controls-left">
+            <div class="dropdown">
+              <button class="file">File</button>
+              <div class="dropdown-menu">
+                <button id="new-btn" class="item">New</button>
+                <button id="text-btn" class="item">Save as TXT</button>
+                <button id="pdf-btn" class="item">Save as PDF</button>
+              </div>
+            </div>
+            <input id="name-input" type="text" />
+          </div>
+          <div class="controls-right">
+            <button class="item-controls-right" id="bold-btn"><b>b</b></button>
+            <button class="item-controls-right" id="underline-btn">
+              <u>u</u>
+            </button>
+            <button class="item-controls-right" id="italic-btn">
+              <i>i</i>
+            </button>
+            <input class="item-controls-right" id="color" type="color" />
+          </div>
+        </div>
+        <div class="content" contenteditable="true" spellcheck="false"></div>
+        <div class="count">
+          <span class="character">Số kí tự: <span>0</span></span>
+          <span class="number">Số từ: <span>0</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Thư viện html2pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js"></script>
+    <script src="./js/bai_1.js"></script>
+  </body>
+</html>

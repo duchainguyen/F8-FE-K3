@@ -53,6 +53,7 @@ function renderList(data) {
 // kéo
 function handleDragStart(event) {
   var itemDragging = event.target;
+  // đổ bóng
   itemDragging.classList.add("dragging");
   event.dataTransfer.setData("text", itemDragging.innerHTML);
 }
