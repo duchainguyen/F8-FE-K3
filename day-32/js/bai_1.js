@@ -98,7 +98,7 @@ var textBtn = document.getElementById("text-btn");
 textBtn.addEventListener("click", saveAsText);
 function saveAsText() {
   var fileName = (nameInput.value || "document") + ".txt";
-  var blob = new Blob([contentDiv.innerHTML], {
+  var blob = new Blob([contentDiv.innerText], {
     type: "text/plain;charset=utf-8",
   });
   var link = document.createElement("a");
