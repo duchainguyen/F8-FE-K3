@@ -56,7 +56,7 @@ contentDiv.addEventListener("input", function () {
 // đếm kí tự số từ
 function updateCount() {
   var content = contentDiv.innerText;
-  var charCount = content.length;
+  var charCount = content.trim().length;
   var wordCount = content.split(/\s+/).filter(function (word) {
     return word.length > 0;
   }).length;
