@@ -82,7 +82,7 @@ var pdfBtn = document.getElementById("pdf-btn");
 pdfBtn.addEventListener("click", saveAsPDF);
 
 function saveAsPDF() {
-  var fileName = (nameInput.value || "document") + ".pdf";
+  var fileName = (nameInput.value || "untitled") + ".pdf";
   html2pdf(contentDiv, {
     margin: 10,
     filename: fileName,
@@ -97,7 +97,7 @@ function saveAsPDF() {
 var textBtn = document.getElementById("text-btn");
 textBtn.addEventListener("click", saveAsText);
 function saveAsText() {
-  var fileName = (nameInput.value || "document") + ".txt";
+  var fileName = (nameInput.value || "untitled") + ".txt";
   var blob = new Blob([contentDiv.innerText], {
     type: "text/plain;charset=utf-8",
   });
