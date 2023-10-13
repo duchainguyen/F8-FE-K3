@@ -5,6 +5,7 @@ countdownElement.innerHTML = count;
 var flag = true;
 var frameInterval = 1000;
 var startTimestamp;
+
 function updateCountdown(timestamp) {
   if (!startTimestamp) startTimestamp = timestamp;
   var progress = timestamp - startTimestamp;
@@ -26,7 +27,15 @@ function updateCountdown(timestamp) {
     requestAnimationFrame(updateCountdown);
   }
 }
+// Sự kiện khi tab đang chứa trang web trở thành không hiển thị
+document.addEventListener("visibilitychange", function () {
+  if (document.visibilityState === "hidden") {
+    flag = false;
+  } else {
+    flag = true;
+    startTimestamp = null;
+    updateCountdown(performance.now());
+  }
+});
 
-window.onblur = () => (flag = false);
-window.onfocus = () => (flag = true);
 updateCountdown();
