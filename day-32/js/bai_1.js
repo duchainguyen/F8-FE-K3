@@ -72,7 +72,7 @@ newButton.addEventListener("click", function () {
   // var nameInput = document.getElementById("name-input");
   // console.log("new");
   contentDiv.innerText = "";
-  nameInput.value = "";
+  // nameInput.value = "";
   updateCount();
 });
 // end
