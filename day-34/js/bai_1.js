@@ -1,0 +1,47 @@
+var box = document.querySelector(".box");
+var zoom = document.querySelector(".zoom");
+var zoomBox = document.querySelector(".zoom-box");
+var zoomImage = document.querySelector(".zoom-image");
+
+box.addEventListener("mousemove", function (e) {
+  zoom.style.top = `${e.clientY}px`;
+  zoom.style.left = `${e.clientX}px`;
+
+  var x = (e.clientX / box.offsetWidth) * 2;
+  var y = (e.clientY / box.offsetHeight) * 2;
+
+  zoom.style.visibility = "visible";
+  zoom.style.opacity = 0.5;
+
+  zoomBox.style.visibility = "visible";
+  zoomBox.style.opacity = 1;
+
+  var zoomPositionTop = e.offsetY - 60;
+  var zoomPositionLeft = e.offsetX - 110;
+
+  // Giới hạn vị trí của zoom trong box
+  zoomPositionTop = Math.min(
+    Math.max(zoomPositionTop, 0),
+    box.offsetHeight - 120
+  );
+
+  zoomPositionLeft = Math.min(
+    Math.max(zoomPositionLeft, 0),
+    box.offsetWidth - 220
+  );
+
+  zoom.style.top = zoomPositionTop + "px";
+  zoom.style.left = zoomPositionLeft + "px";
+
+  var topPercent = (zoomPositionTop / (box.offsetHeight - 120)) * 100;
+  var leftPercent = (zoomPositionLeft / (box.offsetWidth - 220)) * 100;
+
+  zoomImage.style.transform = `translate(-${leftPercent}%, -${topPercent}%) scale(2)`;
+});
+
+box.addEventListener("mouseout", function () {
+  zoom.style.visibility = "hidden";
+  zoom.style.opacity = 0;
+  zoomBox.style.visibility = "hidden";
+  zoomBox.style.opacity = 0;
+});
