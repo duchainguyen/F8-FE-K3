@@ -7,9 +7,6 @@ box.addEventListener("mousemove", function (e) {
   zoom.style.top = `${e.clientY}px`;
   zoom.style.left = `${e.clientX}px`;
 
-  var x = (e.clientX / box.offsetWidth) * 2;
-  var y = (e.clientY / box.offsetHeight) * 2;
-
   zoom.style.visibility = "visible";
   zoom.style.opacity = 0.5;
 
@@ -32,11 +29,13 @@ box.addEventListener("mousemove", function (e) {
 
   zoom.style.top = zoomPositionTop + "px";
   zoom.style.left = zoomPositionLeft + "px";
-
+  // zoom.style.transform = `translate(-50%, -50%)`;
+  // tính phần trăm khi di chuột
   var topPercent = (zoomPositionTop / (box.offsetHeight - 120)) * 100;
   var leftPercent = (zoomPositionLeft / (box.offsetWidth - 220)) * 100;
 
   zoomImage.style.transform = `translate(-${leftPercent}%, -${topPercent}%) scale(2)`;
+  // console.log(topPercent, leftPercent);
 });
 
 box.addEventListener("mouseout", function () {
