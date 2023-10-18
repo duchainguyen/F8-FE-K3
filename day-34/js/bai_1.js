@@ -19,12 +19,12 @@ box.addEventListener("mousemove", function (e) {
   // Giới hạn vị trí của zoom trong box
   zoomPositionTop = Math.min(
     Math.max(zoomPositionTop, 0),
-    box.offsetHeight - 120
+    box.offsetHeight - 120 //height
   );
 
   zoomPositionLeft = Math.min(
     Math.max(zoomPositionLeft, 0),
-    box.offsetWidth - 220
+    box.offsetWidth - 220 //width
   );
 
   zoom.style.top = zoomPositionTop + "px";
