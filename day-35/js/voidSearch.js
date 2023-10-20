@@ -10,6 +10,7 @@ const handleVoice = (result) => {
   }
   if (result.includes("youtube")) {
     window.location.href = "https://www.youtube.com/";
+    // window.open("https://www.youtube.com/");
   }
   if (result.includes("google drive")) {
     window.location.href = "https://drive.google.com/drive/my-drive";

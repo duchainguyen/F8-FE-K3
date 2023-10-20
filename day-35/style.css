@@ -49,3 +49,19 @@ h1 {
   color: black;
   border: 1px solid #008000;
 }
+.record {
+  padding-top: 10px;
+  font-size: 30px;
+  color: #ff0000;
+  text-shadow: 0 0 10px red;
+  display: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* .record:hover {
+  transform: rotate(360deg) scale(1.5);
+} */
+
+/* .record:active {
+  transform: scale(0.8);
+} */
