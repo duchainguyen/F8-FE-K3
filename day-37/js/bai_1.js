@@ -1,7 +1,7 @@
 const imageBanner = "./img/anh1.jpg"; // Thay đổi đường dẫn ảnh này bằng đường dẫn ảnh thực tế
 
 const banner = document.querySelector(".banner");
-const imagePromise = Delay(imageBanner, 2000);
+const imagePromise = Delay(imageBanner, 500);
 
 imagePromise.then((image) => {
   // Hiển thị ảnh
@@ -85,7 +85,7 @@ const fakeProducts = [
 
 const productContainer = document.querySelector(".product");
 const title = document.querySelector(".title");
-const productsPromise = Delay(fakeProducts, 2000);
+const productsPromise = Delay(fakeProducts, 0);
 
 productsPromise.then((products) => {
   title.innerHTML = `<h2 class="skeleton">Featured Products</h2>`;
@@ -109,8 +109,11 @@ productsPromise.then((products) => {
 });
 
 window.addEventListener("DOMContentLoaded", () => {
-  const allSkeleton = document.querySelectorAll(".skeleton");
-  allSkeleton.forEach((item) => {
-    item.classList.remove("skeleton");
-  });
+  setTimeout(() => {
+    const allSkeleton = document.querySelectorAll(".skeleton");
+    allSkeleton.forEach((item) => {
+      item.classList.remove("skeleton");
+    });
+    console.log(allSkeleton);
+  }, 3000);
 });
