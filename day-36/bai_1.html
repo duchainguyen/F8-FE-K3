@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom UI Library</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script>
+      class F8 {
+        static components = {};
+
+        static component(name, props) {
+          F8.components[name] = class extends HTMLElement {
+            constructor() {
+              super();
+
+              // Ensure no children before setting the template
+              this.innerHTML = "";
+
+              if (props.data) {
+                const data = props.data();
+                Object.keys(data).forEach((key) => {
+                  window[key] = data[key];
+                });
+              }
+
+              const loop = () => {
+                Array.from(this.children).forEach((element) => {
+                  Array.from(element.attributes).forEach((att) => {
+                    if (att.localName.includes("v-on:")) {
+                      const event = att.localName.split(":")[1];
+                      const action = att.value;
+                      element.addEventListener(event, (e) => {
+                        if (
+                          props.methods &&
+                          typeof props.methods[action] === "function"
+                        ) {
+                          props.methods[action].call(this);
+                          this.render();
+                        } else {
+                          console.error(
+                            `Method "${action}" not found or not a function.`
+                          );
+                        }
+                      });
+                    }
+                  });
+                });
+              };
+
+              this.render = function () {
+                try {
+                  const results = props.template.match(/{{\s*[\w.]+\s*}}/g);
+                  let html = props.template;
+                  if (results) {
+                    results.forEach((variable) => {
+                      const vari = variable.slice(2, -2).trim();
+                      html = html.replace(variable, this[vari]);
+                    });
+                  }
+                  this.innerHTML = html;
+                  loop();
+                } catch (error) {
+                  console.error("Error rendering component:", error);
+                }
+              };
+
+              this.render();
+            }
+          };
+
+          customElements.define(name, F8.components[name]);
+          console.log(`Component ${name} defined and registered.`);
+        }
+      }
+
+      F8.component("header-component", {
+        template: `<h1>HEADER</h1>`,
+      });
+      F8.component("counter-app", {
+        data: () => ({
+          count: 0,
+          title: "Counter App",
+        }),
+        template: `
+          <h1>{{ title }}</h1>
+          <h2>Đã đếm: {{ count }} lần</h2>
+          <button v-on:click="methods.increment">+</button>
+          <button v-on:click="methods.decrement">-</button>
+        `,
+        methods: {
+          increment() {
+            this.count++;
+            this.render();
+          },
+          decrement() {
+            this.count--;
+            this.render();
+          },
+        },
+      });
+
+      // Create elements and append them to #app
+      const headerComponent = document.createElement("header-component");
+      const counterAppComponent = document.createElement("counter-app");
+
+      document.getElementById("app").appendChild(headerComponent);
+      document.getElementById("app").appendChild(counterAppComponent);
+    </script>
+  </body>
+</html>
