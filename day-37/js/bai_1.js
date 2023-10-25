@@ -4,7 +4,6 @@ const banner = document.querySelector(".banner");
 const imagePromise = Delay(imageBanner, 2000);
 
 imagePromise.then((image) => {
-  //   loadingMessage.style.display = "none";
   // Hiển thị ảnh
   banner.innerHTML = `<div class="skeleton"><img src="${image}" alt="Image"></div>`;
 });
@@ -84,15 +83,11 @@ const fakeProducts = [
   },
 ];
 
-// const loadingMessage = document.getElementById("loading-message")const productContainer = document.querySelector('.product');
-
-// Simulate delay for products
 const productContainer = document.querySelector(".product");
 const title = document.querySelector(".title");
 const productsPromise = Delay(fakeProducts, 2000);
 
 productsPromise.then((products) => {
-  // Display product data
   title.innerHTML = `<h2 class="skeleton">Featured Products</h2>`;
   products.forEach((product) => {
     productContainer.innerHTML += `
@@ -114,7 +109,6 @@ productsPromise.then((products) => {
 });
 
 window.addEventListener("DOMContentLoaded", () => {
-  // Remove the 'skeleton' class from individual elements after the DOM has been completely loaded
   const allSkeleton = document.querySelectorAll(".skeleton");
   allSkeleton.forEach((item) => {
     item.classList.remove("skeleton");
