@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <div class="todo-container">
+      <h1 class="title"><span>Smatyx</span> Todos App</h1>
+      <div class="header">
+        <div class="todo-search-box">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search Todos"
+            oninput="searchTasks()"
+          />
+
+          <div class="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+        <label class="add-todo-btn" for="add-form-toggle">Add Todos</label>
+      </div>
+      <ul class="incomplete-todo" id="taskList"></ul>
+
+      <input type="checkbox" hidden id="show-completed-todo-toggle" />
+      <label class="show-completed-todo" for="show-completed-todo-toggle">
+        Completed Todos
+        <span class="completed-quantity"></span>
+        <i class="fa-regular fa-circle-right"></i>
+      </label>
+      <ul class="completed-todo"></ul>
+
+      <!-- Add form -->
+      <input type="checkbox" hidden id="add-form-toggle" />
+      <form action="" class="add-form">
+        <input type="text" class="todo-title" placeholder="Add Todos" />
+        <div class="line"></div>
+        <div class="actions">
+          <button type="button" onclick="addTask()">Save</button>
+          <label class="cancel" for="add-form-toggle">Cancel</label>
+        </div>
+      </form>
+
+      <!-- Edit form -->
+      <input type="checkbox" hidden id="edit-form-toggle" />
+      <form action="" class="edit-form">
+        <input type="text" class="todo-title" placeholder="Edit Todos" />
+        <div class="line"></div>
+        <div class="actions">
+          <button type="button" onclick="saveEditedTask()">Save</button>
+          <button type="button" onclick="hideEditForm()">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="./js/bai_1.js"></script>
+  </body>
+</html>
