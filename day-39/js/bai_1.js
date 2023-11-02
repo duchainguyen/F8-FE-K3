@@ -11,7 +11,7 @@ const app = {
   query: {},
   render: function (blog) {
     const html = blog.map(
-      ({ title, content, img }) => `
+      ({ name, title, content, img }) => `
            <div class="container">
           <div class="article">
             <div class="Author">
@@ -19,7 +19,7 @@ const app = {
                 <img src=${img} alt="" />
               </div>
               <div class="name-time">
-                <span class="name">Đức Hải</span>
+                <span class="name">${name}</span>
                 <span class="time"
                   ><i class="fa-solid fa-earth-americas"></i> 4h</span
                 >
