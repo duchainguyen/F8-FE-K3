@@ -13,32 +13,32 @@ const app = {
     const html = blog.map(
       ({ name, title, content, img }) => `
            <div class="container">
-          <div class="article">
-            <div class="Author">
-              <div class="avatar">
+          <div class="article skeleton">
+            <div class="Author skeleton ">
+              <div class="avatar skeleton">
                 <img src=${img} alt="" />
               </div>
               <div class="name-time">
-                <span class="name">${name}</span>
-                <span class="time"
+                <span class="name skeleton">${name}</span>
+                <span class="time skeleton"
                   ><i class="fa-solid fa-earth-americas"></i> 4h</span
                 >
               </div>
             </div>
             <div class="info">
               <div class="title">
-                <h4>${title}</h4>
+                <h4 class="skeleton">${title}</h4>
               </div>
               <div class="content">
-                <p>
+                <p class="skeleton">
                   ${content}
                 </p>
               </div>
             </div>
             <div class="action">
-             <div class="like" id="like-button"><i class="fa-regular fa-thumbs-up"></i>Thích</div>
-              <div class="comment"><i class="fa-regular fa-comment"></i>Bình Luận</div>
-              <div class="share"><i class="fa-regular fa-share-from-square"></i>Chia sẻ</div>
+             <div class="like skeleton" id="like-button"><i class="fa-regular fa-thumbs-up"></i>Thích</div>
+              <div class="comment skeleton"><i class="fa-regular fa-comment"></i>Bình Luận</div>
+              <div class="share skeleton"><i class="fa-regular fa-share-from-square"></i>Chia sẻ</div>
             </div>
           </div>
         </div>
@@ -69,6 +69,10 @@ const app = {
 
           window.addEventListener("scroll", infinityScroll);
         }
+        const allSkeleton = document.querySelectorAll(".skeleton");
+        allSkeleton.forEach((item) => {
+          item.classList.remove("skeleton");
+        });
       }
     };
 
@@ -106,28 +110,12 @@ const app = {
 };
 
 app.start();
-// JavaScript// JavaScript
-// JavaScript
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const likeButton = document.querySelector("like");
-//   console.log(likeButton);
-//   const likeContainer = document.getElementById("like-container");
-
-//   if (likeButton && likeContainer) {
-//     likeButton.addEventListener("mouseenter", () => {
-//       likeContainer.style.display = "block";
-//       console.log("Hovered over like button");
-//     });
-
-//     likeButton.addEventListener("mouseleave", () => {
-//       likeContainer.style.display = "none";
-//       console.log("Left like button");
-//     });
-
-//     likeContainer.addEventListener("mouseleave", () => {
-//       likeContainer.style.display = "none";
-//       console.log("Left like container");
-//     });
-//   }
-// });
+window.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    const allSkeleton = document.querySelectorAll(".skeleton");
+    allSkeleton.forEach((item) => {
+      item.classList.remove("skeleton");
+    });
+    console.log(allSkeleton);
+  }, 3000);
+});

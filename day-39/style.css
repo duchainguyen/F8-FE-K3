@@ -87,24 +87,23 @@ img {
 }
 
 /* CSS */
-.like-container {
-  display: none;
-  position: absolute;
-  top: -40px; /* Adjust the positioning as needed */
-  left: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 5px;
-  border-radius: 5px;
-  z-index: 100;
-}
-/* 
-.like-reaction {
-  display: inline-block;
-  margin-right: 10px;
-  cursor: pointer;
-} */
 
 .info .title {
   padding-bottom: 10px;
+}
+
+.skeleton {
+  opacity: 0.4;
+  animation: skeleton-loading 1s linear infinite alternate !important;
+  user-select: none;
+  pointer-events: none;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background: hsl(200, 20%, 80%);
+  }
+  100% {
+    background: hsl(200, 20%, 95%);
+  }
 }
