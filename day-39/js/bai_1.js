@@ -54,6 +54,8 @@ const app = {
       );
 
       if (lastBlog && scrollTop > lastBlog.offsetTop + lastBlog.offsetHeight) {
+        const loader = document.querySelector(".loader");
+        loader.style.display = "block";
         if (this.currentPage < this.totalPage) {
           window.removeEventListener("scroll", infinityScroll);
 
@@ -68,6 +70,7 @@ const app = {
           loadMoreMessage.innerHTML = "";
 
           window.addEventListener("scroll", infinityScroll);
+          loader.style.display = "none";
         }
         const allSkeleton = document.querySelectorAll(".skeleton");
         allSkeleton.forEach((item) => {
@@ -110,11 +113,18 @@ const app = {
 };
 
 app.start();
+window.addEventListener("load", function () {
+  const loader = document.querySelector(".loader");
+  loader.style.display = "block";
+});
 window.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     const allSkeleton = document.querySelectorAll(".skeleton");
+    const loader = document.querySelector(".loader");
+
     allSkeleton.forEach((item) => {
       item.classList.remove("skeleton");
+      loader.style.display = "none";
     });
     console.log(allSkeleton);
   }, 3000);
