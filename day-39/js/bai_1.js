@@ -36,7 +36,7 @@ const app = {
               </div>
             </div>
             <div class="action">
-              <div class="like"><i class="fa-regular fa-thumbs-up"></i>Thích</div>
+             <div class="like" id="like-button"><i class="fa-regular fa-thumbs-up"></i>Thích</div>
               <div class="comment"><i class="fa-regular fa-comment"></i>Bình Luận</div>
               <div class="share"><i class="fa-regular fa-share-from-square"></i>Chia sẻ</div>
             </div>
@@ -106,3 +106,28 @@ const app = {
 };
 
 app.start();
+// JavaScript// JavaScript
+// JavaScript
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const likeButton = document.querySelector("like");
+//   console.log(likeButton);
+//   const likeContainer = document.getElementById("like-container");
+
+//   if (likeButton && likeContainer) {
+//     likeButton.addEventListener("mouseenter", () => {
+//       likeContainer.style.display = "block";
+//       console.log("Hovered over like button");
+//     });
+
+//     likeButton.addEventListener("mouseleave", () => {
+//       likeContainer.style.display = "none";
+//       console.log("Left like button");
+//     });
+
+//     likeContainer.addEventListener("mouseleave", () => {
+//       likeContainer.style.display = "none";
+//       console.log("Left like container");
+//     });
+//   }
+// });

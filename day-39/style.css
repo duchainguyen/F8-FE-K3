@@ -85,3 +85,26 @@ img {
   align-items: center;
   cursor: pointer;
 }
+
+/* CSS */
+.like-container {
+  display: none;
+  position: absolute;
+  top: -40px; /* Adjust the positioning as needed */
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 100;
+}
+/* 
+.like-reaction {
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+} */
+
+.info .title {
+  padding-bottom: 10px;
+}
