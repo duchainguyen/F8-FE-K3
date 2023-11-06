@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trắc nghiệm</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="start">
+      <button class="btn-start">Start</button>
+      <p id="countdown"></p>
+    </div>
+    <div class="box">
+      <p id="score">Score: 0</p>
+      <p id="timer">Thời gian còn lại: 10s</p>
+      <p class="total"></p>
+      <div id="quiz-container">
+        <div class="notice">
+          <div class="correcttb">ĐÚNG</div>
+          <div class="wrong">SAI</div>
+        </div>
+      </div>
+      <div class="notice">
+        <div class="correcttb">ĐÚNG</div>
+        <div class="wrong">SAI</div>
+      </div>
+
+      <div class="showResult"></div>
+    </div>
+
+    <audio>
+      <source
+        class="connectado"
+        type="audio/mp3"
+        src="./audio/rightAnswer.mp3"
+      />
+      <source class="wrongado" type="audio/mp3" src="./audio/wrongAnswer.mp3" />
+    </audio>
+    <script type="module" src="./js/bai_1.js"></script>
+  </body>
+</html>

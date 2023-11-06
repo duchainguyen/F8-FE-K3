@@ -1,0 +1,174 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: url("http://42.96.41.29:880/quiz/static/media/background.9d9912f8005511120746.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+}
+#quiz-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h2 {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 70px;
+}
+#options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  gap: 50px;
+  /* background: #ccc; */
+}
+#options button {
+  font-size: 25px;
+  padding: 70px 100px;
+  background: initial;
+  border-radius: 8px;
+  color: #fff;
+  border: 1px solid #ccc;
+}
+#options button:hover {
+  background: aqua;
+}
+#score {
+  position: absolute;
+  top: 0;
+  right: 20px;
+
+  color: #fff;
+  font-size: 30px;
+}
+#timer {
+  padding-left: 20px;
+  color: #fff;
+  font-size: 30px;
+}
+
+.Score-result,
+.totalquiz,
+.streak,
+.correct {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 244px;
+  height: 85px;
+  background: black;
+  color: white;
+  font-size: 25px;
+  border-radius: 10px;
+}
+.container {
+  max-width: 550px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 10px;
+  border: 1px solid #ccc;
+}
+.result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 512px;
+  margin: 0 auto;
+  gap: 20px;
+}
+.btn-play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 98%;
+  height: 40px;
+  border-radius: 5px;
+}
+.btn-play button {
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 20px;
+  height: 100%;
+  font-weight: bold;
+  background: violet;
+  cursor: pointer;
+}
+
+.total {
+  padding-left: 20px;
+  color: #fff;
+  font-size: 30px;
+}
+
+.notice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  /* display: none; */
+}
+.correcttb,
+.wrong {
+  position: absolute;
+  top: 0;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  /* background: red; */
+  align-items: center;
+  color: #fff;
+}
+
+.correcttb {
+  display: none;
+  background: yellow;
+}
+.wrong {
+  display: none;
+  background: red;
+}
+
+/* start */
+.start {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.btn-start {
+  padding: 60px 100px;
+  background: inherit;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+}
+.box {
+  display: none;
+}
+#countdown {
+  font-size: 100px;
+  color: #fff;
+  display: none;
+}

@@ -9,7 +9,20 @@ const app = {
   totalPage: 0,
   currentPage: 1,
   query: {},
+  order: "latest",
   render: function (blog) {
+    const htmlSort = document.querySelector(".htmlSort");
+    htmlSort.innerHTML = `<div class="row mb-3">
+      <div class="col-3">
+        <select class="form-select sort-by">
+          <option value="latest" ${
+            this.order === "latest" ? "selected" : ""
+          }>Mới nhất</option>
+          <option value="oldest" ${
+            this.order === "oldest" ? "selected" : ""
+          }>Cũ nhất</option>
+        </select>
+      </div>`;
     const html = blog.map(
       ({ name, title, content, img }) => `
            <div class="container">
@@ -47,6 +60,12 @@ const app = {
     root.innerHTML += html.join("");
   },
   addEvent() {
+    root.addEventListener("change", (e) => {
+      if (e.target.classList.contains("sort-by")) {
+        const value = e.target.value;
+        this.handleSort(value);
+      }
+    });
     const infinityScroll = async () => {
       const scrollTop = document.documentElement.scrollTop + window.innerHeight;
       const lastBlog = document.querySelector(
@@ -71,6 +90,8 @@ const app = {
 
           window.addEventListener("scroll", infinityScroll);
           loader.style.display = "none";
+        } else {
+          loader.style.display = "none";
         }
         const allSkeleton = document.querySelectorAll(".skeleton");
         allSkeleton.forEach((item) => {
@@ -81,7 +102,13 @@ const app = {
 
     window.addEventListener("scroll", infinityScroll);
   },
-
+  handleSort: function (value) {
+    this.order = value;
+    this.query._order = value === "latest" ? "desc" : "asc";
+    this.query._sort = "id"; // Assuming your API supports sorting by the 'id' field
+    this.currentPage = 1; // Reset current page when sorting
+    this.getBlogs(this.query);
+  },
   getBlogs: async function (query = {}) {
     try {
       let queryString = new URLSearchParams(query).toString();

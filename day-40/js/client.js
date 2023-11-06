@@ -2,7 +2,6 @@ import { config } from "./config.js";
 const { SERVER_API } = config;
 export const client = {
   send: async function (url, method = "GET", body = null) {
-    console.log(url);
     url = `${SERVER_API}${url}`;
     //tác vụ call api
     const headers = {
@@ -16,7 +15,6 @@ export const client = {
       options.body = JSON.stringify(body);
     }
     try {
-      console.log(options);
       const response = await fetch(url, options);
       const data = await response.json();
       return { response, data };
@@ -29,7 +27,6 @@ export const client = {
     return this.send(url);
   },
   post: function (url, body) {
-    console.log(body);
     //call api với get method
     return this.send(url, "POST", body);
   },

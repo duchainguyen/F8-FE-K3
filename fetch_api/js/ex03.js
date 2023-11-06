@@ -5,12 +5,15 @@ const root = document.querySelector("#root");
 const app = {
   query: {},
   order: "latest",
+  modalEl: document.querySelector("#modal-add"),
+  modal: new bootstrap.Modal(document.querySelector("#modal-add")),
   render: function (users, maxPage) {
     const htmlEntities = (html) => {
       return html.replaceAll("<", "&lt;").replaceAll(">", "&gt;");
     };
     root.innerHTML = `<div class="container py-3">
     <h2>Danh sách người dùng</h2>
+    <button class="btn btn-primary mb-2 btn-add">Thêm mới</button>
     <div class="row mb-3">
       <div class="col-3">
         <select class="form-select sort-by">
@@ -22,13 +25,13 @@ const app = {
           }>Cũ nhất</option>
         </select>
       </div>
-      <div class="col-3">
-          <form class="search">
-            <input type="search" class="form-control keyword" placeholder="từ khóa..." value="${
-              this.query.q ?? ""
-            }"  />
-          </form>
-      </div>
+      <div class="col-9">
+        <form class="search">
+         <input type="search" class="form-control keyword" placeholder="Từ khóa..." value="${
+           this.query.q ?? ""
+         }"/>
+        </form>
+      </div>    
     </div>
     <table class="table table-bordered">
       <thead>
@@ -62,26 +65,34 @@ const app = {
           .join("")}
       </tbody>
     </table>
-    ${this.getPagination()}
+    ${this.getPagination(maxPage)}
   </div>`;
   },
+
   getPagination: function (maxPage) {
     const range = [...Array(maxPage).keys()];
-    return `<nav aria-label="Page navigation example">
-  <ul class="pagination justify-content-end pagination-sm">
-    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-    ${range.map(
-      (index) =>
-        `<li class="page-item ${
-          index + 1 === this.query._page ? "active" : ""
-        }"><a lass="page-link" href="#">${index + 1}</a>
-        
-        </li>`
-    )}
-    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-  </ul>
-</nav>`;
+    return `<ul class="pagination justify-content-end pagination-sm">
+    ${
+      this.query._page > 1
+        ? `<li class="page-item"><a class="page-link page-prev" href="#">Previous</a></li>`
+        : ""
+    }
+    ${range
+      .map(
+        (index) =>
+          `<li class="page-item ${
+            index + 1 === this.query._page ? "active" : ""
+          }"><a class="page-link page-number" href="#">${index + 1}</a></li>`
+      )
+      .join("")}
+      ${
+        this.query._page < maxPage
+          ? `<li class="page-item"><a class="page-link page-next" href="#">Next</a></li>`
+          : ""
+      }
+  </ul>`;
   },
+
   addEvent: function () {
     root.addEventListener("change", (e) => {
       if (e.target.classList.contains("sort-by")) {
@@ -89,6 +100,7 @@ const app = {
         this.handleSort(value);
       }
     });
+
     root.addEventListener("submit", (e) => {
       if (e.target.classList.contains("search")) {
         e.preventDefault();
@@ -96,6 +108,64 @@ const app = {
         this.handleSearch(keyword);
       }
     });
+
+    root.addEventListener("click", (e) => {
+      if (e.target.classList.contains("page-number")) {
+        e.preventDefault();
+        const page = e.target.innerText;
+        this.goPage(page);
+      }
+      if (e.target.classList.contains("page-next")) {
+        e.preventDefault();
+        this.goPage(this.query._page + 1);
+      }
+      if (e.target.classList.contains("page-prev")) {
+        e.preventDefault();
+        this.goPage(this.query._page - 1);
+      }
+      if (e.target.classList.contains("btn-add")) {
+        this.showFormAdd();
+      }
+    });
+    this.modalEl.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const form = Object.fromEntries([...new FormData(e.target)]);
+      // console.log(form);
+      // Submit => Lấy data => Call API => Response ok => Đóng modal => Render Table
+      const response = await this.postUser(form);
+      if (response.ok) {
+        this.modal.hide();
+        this.query._page = 1;
+        this.getUsers(this.query);
+      }
+    });
+  },
+
+  goPage: function (page) {
+    this.query._page = +page;
+    this.getUsers(this.query);
+  },
+
+  showFormAdd: function () {
+    this.modal.show();
+    this.modalEl.querySelector(".modal-title").innerText = `Thêm người dùng`;
+    this.modalEl.querySelector(".modal-body").innerHTML = `
+      <form>
+      <div class="mb-3">
+        <label>Tên</label>
+        <input type="text" name="name" class="form-control" placeholder="Tên..." required>
+      </div>
+      <div class="mb-3">
+        <label>Email</label>
+        <input type="email" name="email" class="form-control" placeholder="Email ..." required>
+      </div>
+      <button type="submit" class="btn btn-primary">Lưu</button>
+    </form>`;
+  },
+
+  postUser: async function (data) {
+    const { response } = await client.post("/users", data);
+    return response;
   },
 
   handleSort: function (value) {
@@ -103,21 +173,24 @@ const app = {
     this.query._order = value === "latest" ? "desc" : "asc";
     this.getUsers(this.query);
   },
+
   handleSearch: function (keyword) {
     this.query.q = keyword;
     this.getUsers(this.query);
   },
+
   getUsers: async function (query = {}) {
     let queryString = new URLSearchParams(query).toString();
     if (queryString) {
       queryString = "?" + queryString;
     }
     const { response, data: users } = await client.get("/users" + queryString);
-
     const total = response.headers.get("x-total-count");
     const maxPage = Math.ceil(total / PAGE_LIMIT);
-    console.log(maxPage);
     this.render(users, maxPage);
+    window.scroll({
+      top: 0,
+    });
   },
 
   start: function () {
@@ -134,3 +207,30 @@ const app = {
 };
 
 app.start();
+
+/*
+phân tích chức năng sửa
+-click edit button -> id cần sửa
+show form
+lấy dữ liệu của user theo id (call api)
+lắng nghe sự kiện submit form
+lấy data
+call api với data và id cần sửa
+kiểm tra response
+đóng modal
+render()
+*/
+
+/*
+click delete button -> id cần xóa
+call api
+kiểm tra response
+render
+*/
+
+/*
+lưu ý khi làm chức năng thêm và xóa
+chuyển vào trang 1 khi thêm xog hoặc xóa
+
+
+*/
