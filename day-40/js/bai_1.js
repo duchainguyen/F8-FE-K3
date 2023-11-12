@@ -113,8 +113,9 @@ const app = {
       } else {
         wrongAudio.play();
         streak++;
-        console.log(wrong);
         wrong.style.display = "block";
+
+        console.log(wrong.style.color);
       }
     } else {
       streak++;

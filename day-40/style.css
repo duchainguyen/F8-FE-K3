@@ -71,6 +71,7 @@ h2 {
   color: white;
   font-size: 25px;
   border-radius: 10px;
+  cursor: pointer;
 }
 .container {
   max-width: 550px;
@@ -139,11 +140,15 @@ h2 {
 
 .correcttb {
   display: none;
+  color: black;
+  font-weight: bold;
   background: yellow;
 }
 .wrong {
   display: none;
   background: red;
+  font-weight: bold;
+  color: #fff;
 }
 
 /* start */
@@ -171,4 +176,7 @@ h2 {
   font-size: 100px;
   color: #fff;
   display: none;
+}
+.btns {
+  cursor: pointer;
 }

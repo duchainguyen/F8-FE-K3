@@ -13,12 +13,13 @@ call API
 cho biết bạn là ai?
 đăng nhập
 
-luồng request: đăng nhập => server verify => khởi tạo mã số
+luồng request: đăng nhập => server verify => khởi tạo mã số(sessionID, token)
+=> trả về client
 
 ##authorization
 ủy quyền
 cho phép được làm gì? không được làm gì
-server: kiểm tra mã số hợp lệ hay k?
+server: kiểm tra mã số(sessionID, token) hợp lệ hay k?
 
 không hợp lệ: trả về thông báo lỗi(401)
 hợp lệ: xử lý nghiệp vụ tiếp theo
