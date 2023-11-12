@@ -143,7 +143,7 @@ const app = {
         this.login(data, e.target);
       }
     });
-    root.addEventListener("click", async (e) => {
+    root.addEventListener("click", (e) => {
       if (e.target.classList.contains("logout")) {
         e.preventDefault();
         this.handleLogout();
@@ -173,7 +173,7 @@ const app = {
           name: title,
           content: content,
         };
-        await this.postBlogs(data, postForm);
+        this.postBlogs(data, postForm);
         console.log("form", data);
       }
     });
@@ -244,13 +244,13 @@ const app = {
       console.log(data, response);
 
       if (!response.ok) {
-        this.showMessage(el, "Failed to post blog. Please try again.");
+        this.showMessage(el, "Lỗi");
         return;
       }
       console.log("Post thành công", data);
       el.reset();
     } catch (error) {
-      this.showMessage(el, "An error occurred while posting the blog.");
+      this.showMessage(el, "Lỗi");
     }
   },
 
