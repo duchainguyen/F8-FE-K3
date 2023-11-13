@@ -1,6 +1,7 @@
 import { client } from "./client.js";
 import { config } from "./config.js";
-
+// import { article } from "./article.js";
+const rootBlog = document.querySelector("#rootBlog");
 client.setUrl(config.SERVER_AUTH_API);
 
 const root = document.querySelector("#root");
@@ -19,13 +20,14 @@ const app = {
   isLogin: function () {
     return this.loginStatus;
   },
-  dashboard: function () {
+  dashboard: function (blogs) {
     return `<div class="container py-3">
       <h1>Chào mừng bạn quay trở lại</h1>
       <ul class="list-unstyled d-flex gap-2 profile">
         <li>Chào bạn: <span>Loading...</span></li>
         <li><a href="#" class="logout">Đăng xuất</a></li>
       </ul>
+      <div class="articlee">
      <form id="postForm">
                     <div class="mb-3">
                         <label for="">Title</label>
@@ -38,7 +40,7 @@ const app = {
                     </div>
                     
                     <div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+  <label for="exampleFormControlTextarea1" class="form-label">Content</label>
   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 </div>
                     <div class="d-grid">
@@ -46,6 +48,12 @@ const app = {
                     </div>
                     <div class="msg text-danger text-center"></div>
                 </form>
+               <div class="articleAll">
+                  <h1>Tổng hợp bài đăng</h1>
+                  <div id="rootBlog"></div>
+                
+                </div>
+              </div>
     </div>`;
   },
   loginForm: function () {
@@ -308,6 +316,7 @@ const app = {
     this.render();
     this.addEvent();
     this.checkAuth();
+    // this.getBlog(this.query);
     // this.showProfile();
   },
 };
