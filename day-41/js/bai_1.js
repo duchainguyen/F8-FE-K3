@@ -21,7 +21,9 @@ const app = {
     return this.loginStatus;
   },
   dashboard: function (blogs) {
-    rootBlog.style.display = "block";
+    setTimeout(() => {
+      rootBlog.style.display = "block";
+    }, 1000);
     return `<div class="container py-3">
       <h1>Chào mừng bạn quay trở lại</h1>
       <ul class="list-unstyled d-flex gap-2 profile">
@@ -86,7 +88,7 @@ const app = {
             />
           </div>
           <div class="d-grid">
-            <button class="btn btn-primary">Đăng nhập</button>
+            <button class="btn btn-dn btn-primary">Đăng nhập</button>
           </div>
           <div class="msg text-danger text-center"></div>
         </form>
@@ -154,15 +156,18 @@ const app = {
         this.postBlogs(data, e.target);
       } else {
         this.login(data, e.target);
+        const btnClick = rootBlog.querySelector(".btn-clickLogin");
+        btnClick.style.opacity = "0";
+        btnClick.style.visibility = "hidden";
       }
     });
     root.addEventListener("click", (e) => {
       if (e.target.classList.contains("logout")) {
         e.preventDefault();
         this.handleLogout();
-        const btnClick = rootBlog.querySelector(".btn-clickLogin");
-        btnClick.style.display = "none";
-        console.log(btnClick);
+        // const btnClick = rootBlog.querySelector(".btn-clickLogin");
+        // btnClick.style.display = "none";
+        // console.log(btnClick);
         rootBlog.style.display = "none";
       }
       if (e.target.classList.contains("btn-dk")) {
