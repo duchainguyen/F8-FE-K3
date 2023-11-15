@@ -317,15 +317,19 @@ const app = {
     profile.innerText = `${user.data.name}`;
   },
   postBlogs: async function ({ title, content }, el) {
+    this.loading(el);
+
     try {
       const { data, response } = await client.post("/blogs", {
         title,
         content,
       });
+      this.loading(el, false);
       if (!response.ok) {
         this.showMessage(el, "Lỗi");
         return;
       }
+
       console.log("Post thành công", data);
       // Clear the form
       el.reset();
