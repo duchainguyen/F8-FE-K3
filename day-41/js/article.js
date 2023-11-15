@@ -51,9 +51,9 @@ const app = {
       </div>
     `;
     });
-    console.log("lolo", blogs.createdAt);
+    // console.log("lolo", blogs.createdAt);
     rootBlogs.innerHTML = btnHtml + html.join("");
-    console.log(rootBlogs);
+    // console.log(rootBlogs);
   },
 
   getBlogs: async function (query = {}) {
@@ -63,7 +63,7 @@ const app = {
     }
     const { data: blogs } = await client.get("/blogs" + queryString);
     this.blogs = blogs.data;
-    console.log(blogs);
+    console.log("blogs", blogs);
     this.render(blogs.data);
   },
   addEvent: function () {

@@ -189,9 +189,9 @@ const app = {
         const dateTime = postForm.querySelector("#daytime").value;
 
         const data = {
-          name: title,
+          title: title,
           content: content,
-          dateTime: dateTime,
+          // dateTime: dateTime,
         };
 
         this.postBlogs(data, postForm);
