@@ -21,6 +21,7 @@ const app = {
     return this.loginStatus;
   },
   dashboard: function (blogs) {
+    rootBlog.style.display = "block";
     return `<div class="container py-3">
       <h1>Chào mừng bạn quay trở lại</h1>
       <ul class="list-unstyled d-flex gap-2 profile">
@@ -43,14 +44,18 @@ const app = {
   <label for="exampleFormControlTextarea1" class="form-label">Content</label>
   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 </div>
+       <div class="mb-3">
+
+  <input type="datetime-local" id="daytime" name="daytime">
+</div>
                     <div class="d-grid">
                         <button class="btn btn-primary" id="postArticle">Post</button>
                     </div>
                     <div class="msg text-danger text-center"></div>
                 </form>
                <div class="articleAll">
-                  <h1>Tổng hợp bài đăng</h1>
-                  <div id="rootBlog"></div>
+                     <img src="./img/thuong.jpg" alt="">
+
                 
                 </div>
               </div>
@@ -155,11 +160,16 @@ const app = {
       if (e.target.classList.contains("logout")) {
         e.preventDefault();
         this.handleLogout();
+        const btnClick = rootBlog.querySelector(".btn-clickLogin");
+        btnClick.style.display = "none";
+        console.log(btnClick);
+        rootBlog.style.display = "none";
       }
       if (e.target.classList.contains("btn-dk")) {
         e.preventDefault();
         root.innerHTML = this.registerForm();
       }
+
       if (e.target.id === "registerBtn") {
         e.preventDefault();
         const registerForm = document.getElementById("registerForm");
@@ -176,13 +186,16 @@ const app = {
         const content = postForm.querySelector(
           "#exampleFormControlTextarea1"
         ).value;
+        const dateTime = postForm.querySelector("#daytime").value;
 
         const data = {
           name: title,
           content: content,
+          dateTime: dateTime,
         };
+
         this.postBlogs(data, postForm);
-        console.log("form", data);
+        console.log("Form data:", data);
       }
     });
   },
@@ -223,6 +236,8 @@ const app = {
     // this.render();
   },
   register: async function ({ name, email, password }, el) {
+    this.loading(el);
+
     try {
       const userData = {
         name,
@@ -231,6 +246,7 @@ const app = {
       };
 
       const { data, response } = await client.post("/auth/register", userData);
+      this.loading(el, false);
 
       if (!response.ok) {
         this.showMessage(el, "Đăng ký không thành công. Vui lòng thử lại.");
@@ -241,24 +257,6 @@ const app = {
     } catch (error) {
       console.error("Error during registration:", error);
       this.showMessage(el, "Đã xảy ra lỗi trong quá trình đăng ký.");
-    }
-  },
-  postBlogs: async ({ title, content }, el) => {
-    try {
-      const { data, response } = await client.post("/blogs", {
-        title,
-        content,
-      });
-      console.log(data, response);
-
-      if (!response.ok) {
-        this.showMessage(el, "Lỗi");
-        return;
-      }
-      console.log("Post thành công", data);
-      el.reset();
-    } catch (error) {
-      this.showMessage(el, "Lỗi");
     }
   },
 
@@ -287,7 +285,8 @@ const app = {
         }
 
         client.setToken(accessToken);
-        const result = await client.get("/users/profile"); // Make sure this is correct
+        const result = await client.get("/users/profile");
+
         if (!result) {
           this.handleLogout();
           return;
@@ -297,12 +296,18 @@ const app = {
         this.loginStatus = true;
         this.user = user;
 
-        this.render();
+        // Nếu đã đăng nhập, render dashboard ngay tại đây
+        this.renderDashboard();
+
         this.showProfile();
       } catch (e) {
         this.loginStatus = false;
       }
     }
+  },
+
+  renderDashboard: function () {
+    root.innerHTML = this.dashboard();
   },
 
   showProfile: async function () {
@@ -311,11 +316,50 @@ const app = {
     console.log("profile", user);
     profile.innerText = `${user.data.name}`;
   },
+  postBlogs: async function ({ title, content }, el) {
+    try {
+      const { data, response } = await client.post("/blogs", {
+        title,
+        content,
+      });
+      if (!response.ok) {
+        this.showMessage(el, "Lỗi");
+        return;
+      }
+      console.log("Post thành công", data);
+      // Clear the form
+      el.reset();
+
+      this.getBlogs();
+      this.showMessage(el, "Bài viết đã được đăng thành công!");
+    } catch (error) {
+      this.showMessage(el, "Lỗi");
+    }
+  },
+  getBlogs: async function (query = {}) {
+    try {
+      let queryString = new URLSearchParams(query).toString();
+      if (queryString) {
+        queryString = "?" + queryString;
+      }
+      const { data: blogs } = await client.get("/blogs" + queryString);
+      this.blogs = blogs.data;
+      console.log(blogs);
+      this.render(blogs.data);
+    } catch (error) {
+      console.error("Error fetching blogs:", error);
+    }
+  },
 
   start: function () {
-    this.render();
+    if (this.isLogin()) {
+      this.renderDashboard();
+    } else {
+      this.render();
+    }
     this.addEvent();
     this.checkAuth();
+    this.getBlogs();
     // this.getBlog(this.query);
     // this.showProfile();
   },
